@@ -1,5 +1,3 @@
-package com.liang.wang;
-
 /**
  * 　　　　　　 ＿＿＿
  * 　　　　　／＞　　フ ＼
@@ -13,13 +11,10 @@ package com.liang.wang;
  * 　＼二つ
  *
  * @author wangl
- * @title: ${NAME}
- * @projectName ${PROJECT_NAME}
+ * @title: Test
+ * @projectName project_20221008
  * @description: TODO
- * @date ${DATE} ${TIME}
+ * @date 2022-10-1411:53
  */
-public class Main {
-    public static void main(String[] args) {
-        System.out.println("Hello world!");
-    }
+public class Test {
 }
