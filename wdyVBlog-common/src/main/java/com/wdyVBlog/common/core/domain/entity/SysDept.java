@@ -12,7 +12,7 @@ import com.wdyVBlog.common.core.domain.BaseEntity;
 /**
  * 部门表 sys_dept
  * 
- * @author ruoyi
+ * @author wdy
  */
 public class SysDept extends BaseEntity
 {

@@ -5,7 +5,7 @@ import com.wdyVBlog.common.utils.uuid.UUID;
 /**
  * ID生成器工具类
  * 
- * @author ruoyi
+ * @author wdy
  */
 public class IdUtils
 {

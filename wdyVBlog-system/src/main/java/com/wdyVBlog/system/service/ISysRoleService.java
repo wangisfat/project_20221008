@@ -7,7 +7,7 @@ import com.wdyVBlog.common.core.domain.entity.SysRole;
 /**
  * 角色业务层
  * 
- * @author ruoyi
+ * @author wdy
  */
 public interface ISysRoleService
 {

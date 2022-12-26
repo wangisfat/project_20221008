@@ -31,7 +31,7 @@ import java.util.stream.Collectors;
  *
  * @author wangl
  * @title: CommonCache
- * @projectName RuoYi-flowable
+ * @projectName wdyVBlog-flowable
  * @description: TODO
  * @date 2022/12/209:51
  */

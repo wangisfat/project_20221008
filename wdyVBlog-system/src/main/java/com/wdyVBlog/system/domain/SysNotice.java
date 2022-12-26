@@ -9,7 +9,7 @@ import com.wdyVBlog.common.core.domain.BaseEntity;
 /**
  * 通知公告表 sys_notice
  * 
- * @author ruoyi
+ * @author wdy
  */
 public class SysNotice extends BaseEntity
 {

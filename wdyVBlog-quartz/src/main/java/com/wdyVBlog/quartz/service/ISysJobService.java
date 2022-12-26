@@ -8,7 +8,7 @@ import com.wdyVBlog.quartz.domain.SysJob;
 /**
  * 定时任务调度信息信息 服务层
  * 
- * @author ruoyi
+ * @author wdy
  */
 public interface ISysJobService
 {

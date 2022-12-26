@@ -12,7 +12,7 @@ import com.wdyVBlog.common.core.text.Convert;
 /**
  * 客户端工具类
  * 
- * @author ruoyi
+ * @author wdy
  */
 public class ServletUtils
 {

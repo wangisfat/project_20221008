@@ -13,7 +13,7 @@
 	<dependencies>
 
 		<dependency>
-			<groupId>com.ruoyi</groupId>
+			<groupId>com.wdyVBlog</groupId>
 			<artifactId>wdyVBlog-framework</artifactId>
 		</dependency>
 		<dependency>

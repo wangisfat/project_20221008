@@ -15,7 +15,7 @@ import com.wdyVBlog.common.utils.html.EscapeUtil;
 /**
  * XSS过滤处理
  * 
- * @author ruoyi
+ * @author wdy
  */
 public class XssHttpServletRequestWrapper extends HttpServletRequestWrapper
 {

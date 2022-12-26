@@ -3,7 +3,7 @@ package com.wdyVBlog.common.constant;
 /**
  * 代码生成通用常量
  * 
- * @author ruoyi
+ * @author wdy
  */
 public class GenConstants
 {

@@ -27,7 +27,7 @@ import com.wdyVBlog.system.service.ISysDeptService;
 /**
  * 部门信息
  * 
- * @author ruoyi
+ * @author wdy
  */
 @RestController
 @RequestMapping("/system/dept")

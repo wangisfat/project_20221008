@@ -3,7 +3,7 @@ package com.wdyVBlog.common.constant;
 /**
  * 用户常量信息
  * 
- * @author ruoyi
+ * @author wdy
  */
 public class UserConstants
 {

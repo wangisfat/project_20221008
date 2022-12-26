@@ -32,7 +32,7 @@ import com.wdyVBlog.system.service.ISysUserService;
 /**
  * 角色信息
  * 
- * @author ruoyi
+ * @author wdy
  */
 @RestController
 @RequestMapping("/system/role")

@@ -17,7 +17,7 @@ import com.wdyVBlog.system.service.ISysUserService;
 /**
  * 用户验证处理
  *
- * @author ruoyi
+ * @author wdy
  */
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService

@@ -22,7 +22,7 @@ import com.wdyVBlog.common.utils.uuid.IdUtils;
 /**
  * 验证码操作处理
  * 
- * @author ruoyi
+ * @author wdy
  */
 @RestController
 public class CaptchaController
@@ -37,7 +37,7 @@ public class CaptchaController
     private CommonCache redisCache;
     
     // 验证码类型
-    @Value("${ruoyi.captchaType}")
+    @Value("${wdy.captchaType}")
     private String captchaType;
 
     /**

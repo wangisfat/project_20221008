@@ -3,7 +3,7 @@ package com.wdyVBlog.common.constant;
 /**
  * 返回状态码
  * 
- * @author ruoyi
+ * @author wdy
  */
 public class HttpStatus
 {

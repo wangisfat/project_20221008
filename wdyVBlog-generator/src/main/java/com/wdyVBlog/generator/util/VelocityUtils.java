@@ -14,7 +14,7 @@ import com.wdyVBlog.generator.domain.GenTableColumn;
 /**
  * 模板处理工具类
  * 
- * @author ruoyi
+ * @author wdy
  */
 public class VelocityUtils
 {

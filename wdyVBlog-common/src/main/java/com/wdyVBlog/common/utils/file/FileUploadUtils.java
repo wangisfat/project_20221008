@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.web.multipart.MultipartFile;
-import com.wdyVBlog.common.config.RuoYiConfig;
+import com.wdyVBlog.common.config.WdyVBlogConfig;
 import com.wdyVBlog.common.constant.Constants;
 import com.wdyVBlog.common.exception.file.FileNameLengthLimitExceededException;
 import com.wdyVBlog.common.exception.file.FileSizeLimitExceededException;
@@ -16,7 +16,7 @@ import com.wdyVBlog.common.utils.uuid.IdUtils;
 /**
  * 文件上传工具类
  *
- * @author ruoyi
+ * @author wdy
  */
 public class FileUploadUtils
 {
@@ -33,7 +33,7 @@ public class FileUploadUtils
     /**
      * 默认上传的地址
      */
-    private static String defaultBaseDir = RuoYiConfig.getProfile();
+    private static String defaultBaseDir = WdyVBlogConfig.getProfile();
 
     public static void setDefaultBaseDir(String defaultBaseDir)
     {
@@ -144,7 +144,7 @@ public class FileUploadUtils
 
     private static final String getPathFileName(String uploadDir, String fileName) throws IOException
     {
-        int dirLastIndex = RuoYiConfig.getProfile().length() + 1;
+        int dirLastIndex = WdyVBlogConfig.getProfile().length() + 1;
         String currentDir = StringUtils.substring(uploadDir, dirLastIndex);
         String pathFileName = Constants.RESOURCE_PREFIX + "/" + currentDir + "/" + fileName;
         return pathFileName;

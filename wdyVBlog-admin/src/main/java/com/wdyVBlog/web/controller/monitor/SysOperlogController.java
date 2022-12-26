@@ -20,7 +20,7 @@ import com.wdyVBlog.system.service.ISysOperLogService;
 /**
  * 操作日志记录
  * 
- * @author ruoyi
+ * @author wdy
  */
 @RestController
 @RequestMapping("/monitor/operlog")

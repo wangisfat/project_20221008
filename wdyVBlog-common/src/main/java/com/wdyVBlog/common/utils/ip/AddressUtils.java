@@ -3,7 +3,7 @@ package com.wdyVBlog.common.utils.ip;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import com.alibaba.fastjson.JSONObject;
-import com.wdyVBlog.common.config.RuoYiConfig;
+import com.wdyVBlog.common.config.WdyVBlogConfig;
 import com.wdyVBlog.common.constant.Constants;
 import com.wdyVBlog.common.utils.StringUtils;
 import com.wdyVBlog.common.utils.http.HttpUtils;
@@ -11,7 +11,7 @@ import com.wdyVBlog.common.utils.http.HttpUtils;
 /**
  * 获取地址类
  * 
- * @author ruoyi
+ * @author wdy
  */
 public class AddressUtils
 {
@@ -31,7 +31,7 @@ public class AddressUtils
         {
             return "内网IP";
         }
-        if (RuoYiConfig.isAddressEnabled())
+        if (WdyVBlogConfig.isAddressEnabled())
         {
             try
             {

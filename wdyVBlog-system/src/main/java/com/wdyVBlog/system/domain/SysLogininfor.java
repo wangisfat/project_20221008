@@ -9,7 +9,7 @@ import com.wdyVBlog.common.core.domain.BaseEntity;
 /**
  * 系统访问记录表 sys_logininfor
  * 
- * @author ruoyi
+ * @author wdy
  */
 public class SysLogininfor extends BaseEntity
 {

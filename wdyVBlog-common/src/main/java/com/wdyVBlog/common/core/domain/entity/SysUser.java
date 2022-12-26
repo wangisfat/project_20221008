@@ -18,7 +18,7 @@ import com.wdyVBlog.common.core.domain.BaseEntity;
 /**
  * 用户对象 sys_user
  * 
- * @author ruoyi
+ * @author wdy
  */
 public class SysUser extends BaseEntity
 {

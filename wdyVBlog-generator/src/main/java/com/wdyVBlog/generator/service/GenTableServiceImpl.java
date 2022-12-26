@@ -39,7 +39,7 @@ import com.wdyVBlog.generator.util.VelocityUtils;
 /**
  * 业务 服务层实现
  * 
- * @author ruoyi
+ * @author wdy
  */
 @Service
 public class GenTableServiceImpl implements IGenTableService

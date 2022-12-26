@@ -3,7 +3,7 @@ package com.wdyVBlog.common.exception;
 /**
  * 自定义异常
  * 
- * @author ruoyi
+ * @author wdy
  */
 public class CustomException extends RuntimeException
 {

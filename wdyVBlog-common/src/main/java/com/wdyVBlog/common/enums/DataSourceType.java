@@ -3,7 +3,7 @@ package com.wdyVBlog.common.enums;
 /**
  * 数据源
  * 
- * @author ruoyi
+ * @author wdy
  */
 public enum DataSourceType
 {

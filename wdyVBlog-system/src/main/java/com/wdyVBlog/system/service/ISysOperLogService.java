@@ -6,7 +6,7 @@ import com.wdyVBlog.system.domain.SysOperLog;
 /**
  * 操作日志 服务层
  * 
- * @author ruoyi
+ * @author wdy
  */
 public interface ISysOperLogService
 {

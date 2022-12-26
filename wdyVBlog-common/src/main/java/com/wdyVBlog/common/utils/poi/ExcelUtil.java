@@ -47,7 +47,7 @@ import com.wdyVBlog.common.annotation.Excel;
 import com.wdyVBlog.common.annotation.Excel.ColumnType;
 import com.wdyVBlog.common.annotation.Excel.Type;
 import com.wdyVBlog.common.annotation.Excels;
-import com.wdyVBlog.common.config.RuoYiConfig;
+import com.wdyVBlog.common.config.WdyVBlogConfig;
 import com.wdyVBlog.common.core.domain.AjaxResult;
 import com.wdyVBlog.common.core.text.Convert;
 import com.wdyVBlog.common.exception.CustomException;
@@ -61,7 +61,7 @@ import com.wdyVBlog.common.utils.reflect.ReflectUtils;
 /**
  * Excel相关处理
  * 
- * @author ruoyi
+ * @author wdy
  */
 public class ExcelUtil<T>
 {
@@ -885,7 +885,7 @@ public class ExcelUtil<T>
      */
     public String getAbsoluteFile(String filename)
     {
-        String downloadPath = RuoYiConfig.getDownloadPath() + filename;
+        String downloadPath = WdyVBlogConfig.getDownloadPath() + filename;
         File desc = new File(downloadPath);
         if (!desc.getParentFile().exists())
         {

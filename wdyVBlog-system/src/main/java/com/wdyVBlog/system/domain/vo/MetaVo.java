@@ -3,7 +3,7 @@ package com.wdyVBlog.system.domain.vo;
 /**
  * 路由显示信息
  * 
- * @author ruoyi
+ * @author wdy
  */
 public class MetaVo
 {

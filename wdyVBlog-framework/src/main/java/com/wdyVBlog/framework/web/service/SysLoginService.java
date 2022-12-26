@@ -23,7 +23,7 @@ import com.wdyVBlog.framework.manager.factory.AsyncFactory;
 /**
  * 登录校验方法
  * 
- * @author ruoyi
+ * @author wdy
  */
 @Component
 public class SysLoginService

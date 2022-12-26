@@ -11,7 +11,7 @@ import com.wdyVBlog.system.service.ISysRoleService;
 /**
  * 用户权限处理
  * 
- * @author ruoyi
+ * @author wdy
  */
 @Component
 public class SysPermissionService

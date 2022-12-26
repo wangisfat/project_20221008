@@ -5,7 +5,7 @@ import com.wdyVBlog.common.exception.BaseException;
 /**
  * 文件信息异常类
  * 
- * @author ruoyi
+ * @author wdy
  */
 public class FileException extends BaseException
 {

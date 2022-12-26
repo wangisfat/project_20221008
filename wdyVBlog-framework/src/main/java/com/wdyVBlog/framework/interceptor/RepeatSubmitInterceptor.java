@@ -14,7 +14,7 @@ import com.wdyVBlog.common.utils.ServletUtils;
 /**
  * 防止重复提交拦截器
  *
- * @author ruoyi
+ * @author wdy
  */
 @Component
 public abstract class RepeatSubmitInterceptor extends HandlerInterceptorAdapter

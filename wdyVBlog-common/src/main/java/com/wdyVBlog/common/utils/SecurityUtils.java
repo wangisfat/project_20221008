@@ -10,7 +10,7 @@ import com.wdyVBlog.common.exception.CustomException;
 /**
  * 安全服务工具类
  * 
- * @author ruoyi
+ * @author wdy
  */
 public class SecurityUtils
 {

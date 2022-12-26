@@ -18,7 +18,7 @@ import com.wdyVBlog.system.service.ISysDictTypeService;
 /**
  * 字典 业务层处理
  * 
- * @author ruoyi
+ * @author wdy
  */
 @Service
 public class SysDictTypeServiceImpl implements ISysDictTypeService

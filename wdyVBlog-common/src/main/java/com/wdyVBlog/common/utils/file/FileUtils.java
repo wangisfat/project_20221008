@@ -16,7 +16,7 @@ import com.wdyVBlog.common.utils.StringUtils;
 /**
  * 文件处理工具类
  * 
- * @author ruoyi
+ * @author wdy
  */
 public class FileUtils extends org.apache.commons.io.FileUtils
 {

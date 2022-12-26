@@ -1,5 +1,5 @@
 import request from '@/utils/request'
-import { praseStrEmpty } from "@/utils/ruoyi";
+import { praseStrEmpty } from "@/utils/wdy";
 
 // 查询调查问卷模板列表
 export function listPaper(query) {

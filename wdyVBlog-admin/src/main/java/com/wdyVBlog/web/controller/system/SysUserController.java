@@ -35,7 +35,7 @@ import com.wdyVBlog.system.service.ISysUserService;
 /**
  * 用户信息
  * 
- * @author ruoyi
+ * @author wdy
  */
 @RestController
 @RequestMapping("/system/user")

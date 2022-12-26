@@ -7,7 +7,7 @@ import com.wdyVBlog.generator.domain.GenTable;
 /**
  * 业务 服务层
  * 
- * @author ruoyi
+ * @author wdy
  */
 public interface IGenTableService
 {

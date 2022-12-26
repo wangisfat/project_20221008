@@ -3,7 +3,7 @@ package com.wdyVBlog.framework.web.domain.server;
 /**
  * 系统相关信息
  * 
- * @author ruoyi
+ * @author wdy
  */
 public class Sys
 {

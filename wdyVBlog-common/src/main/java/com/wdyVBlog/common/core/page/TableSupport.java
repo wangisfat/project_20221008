@@ -5,7 +5,7 @@ import com.wdyVBlog.common.utils.ServletUtils;
 /**
  * 表格数据处理
  * 
- * @author ruoyi
+ * @author wdy
  */
 public class TableSupport
 {

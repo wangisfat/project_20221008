@@ -9,7 +9,7 @@ import com.wdyVBlog.common.core.controller.BaseController;
 /**
  * swagger 接口
  * 
- * @author ruoyi
+ * @author wdy
  */
 @Controller
 @RequestMapping("/tool/swagger")

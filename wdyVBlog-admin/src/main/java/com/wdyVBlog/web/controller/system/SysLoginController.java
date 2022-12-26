@@ -22,7 +22,7 @@ import com.wdyVBlog.system.service.ISysMenuService;
 /**
  * 登录验证
  * 
- * @author ruoyi
+ * @author wdy
  */
 @RestController
 public class SysLoginController

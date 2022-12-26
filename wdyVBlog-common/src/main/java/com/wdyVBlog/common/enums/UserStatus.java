@@ -3,7 +3,7 @@ package com.wdyVBlog.common.enums;
 /**
  * 用户状态
  * 
- * @author ruoyi
+ * @author wdy
  */
 public enum UserStatus
 {

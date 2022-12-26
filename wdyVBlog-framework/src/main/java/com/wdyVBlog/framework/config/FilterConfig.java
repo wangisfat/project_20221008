@@ -14,7 +14,7 @@ import com.wdyVBlog.common.utils.StringUtils;
 /**
  * Filter配置
  *
- * @author ruoyi
+ * @author wdy
  */
 @Configuration
 public class FilterConfig

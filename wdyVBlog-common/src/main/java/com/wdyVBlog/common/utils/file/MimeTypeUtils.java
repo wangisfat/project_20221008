@@ -3,7 +3,7 @@ package com.wdyVBlog.common.utils.file;
 /**
  * 媒体类型工具类
  * 
- * @author ruoyi
+ * @author wdy
  */
 public class MimeTypeUtils
 {

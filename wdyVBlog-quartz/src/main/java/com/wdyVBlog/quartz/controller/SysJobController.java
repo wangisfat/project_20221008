@@ -27,7 +27,7 @@ import com.wdyVBlog.quartz.util.CronUtils;
 /**
  * 调度任务信息操作处理
  * 
- * @author ruoyi
+ * @author wdy
  */
 @RestController
 @RequestMapping("/monitor/job")

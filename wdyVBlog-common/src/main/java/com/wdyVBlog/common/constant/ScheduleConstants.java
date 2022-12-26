@@ -3,7 +3,7 @@ package com.wdyVBlog.common.constant;
 /**
  * 任务调度通用常量
  * 
- * @author ruoyi
+ * @author wdy
  */
 public class ScheduleConstants
 {

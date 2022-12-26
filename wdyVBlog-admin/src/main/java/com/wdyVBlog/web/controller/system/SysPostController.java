@@ -26,7 +26,7 @@ import com.wdyVBlog.system.service.ISysPostService;
 /**
  * 岗位信息操作处理
  * 
- * @author ruoyi
+ * @author wdy
  */
 @RestController
 @RequestMapping("/system/post")

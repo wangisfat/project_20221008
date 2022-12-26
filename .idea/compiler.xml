@@ -13,9 +13,9 @@
         <module name="wdy-common" />
         <module name="wdy-quartz" />
         <module name="wdy-flowable" />
-        <module name="ruoyi-flowable" />
         <module name="wdy-system" />
         <module name="wdyVBlog-framework" />
+        <module name="wdyVBlog-flowable" />
         <module name="wdyVBlog-system" />
         <module name="wdy-generator" />
         <module name="wdyVBlog-admin" />
@@ -23,7 +23,6 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="project_20221008" target="1.8" />
-      <module name="ruoyi-flowable" target="1.5" />
       <module name="wdy-admin" target="1.8" />
       <module name="wdy-common" target="1.8" />
       <module name="wdy-flowable" target="1.5" />
@@ -31,13 +30,14 @@
       <module name="wdy-generator" target="1.8" />
       <module name="wdy-quartz" target="1.8" />
       <module name="wdy-system" target="1.8" />
-      <module name="wdyVBlog" target="1.5" />
-      <module name="wdyVBlog-admin" target="1.5" />
-      <module name="wdyVBlog-common" target="1.5" />
-      <module name="wdyVBlog-framework" target="1.5" />
-      <module name="wdyVBlog-generator" target="1.5" />
-      <module name="wdyVBlog-quartz" target="1.5" />
-      <module name="wdyVBlog-system" target="1.5" />
+      <module name="wdyVBlog" target="1.8" />
+      <module name="wdyVBlog-admin" target="1.8" />
+      <module name="wdyVBlog-common" target="1.8" />
+      <module name="wdyVBlog-flowable" target="1.8" />
+      <module name="wdyVBlog-framework" target="1.8" />
+      <module name="wdyVBlog-generator" target="1.8" />
+      <module name="wdyVBlog-quartz" target="1.8" />
+      <module name="wdyVBlog-system" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

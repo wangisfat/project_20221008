@@ -3,7 +3,7 @@ package com.wdyVBlog.system.domain;
 /**
  * 当前在线会话
  * 
- * @author ruoyi
+ * @author wdy
  */
 public class SysUserOnline
 {

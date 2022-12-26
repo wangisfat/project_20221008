@@ -10,7 +10,7 @@ import com.wdyVBlog.common.core.domain.entity.SysUser;
 /**
  * 登录用户身份权限
  * 
- * @author ruoyi
+ * @author wdy
  */
 public class LoginUser implements UserDetails
 {

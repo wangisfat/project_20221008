@@ -5,7 +5,7 @@ import com.wdyVBlog.common.utils.StringUtils;
 /**
  * 分页数据
  * 
- * @author ruoyi
+ * @author wdy
  */
 public class PageDomain
 {

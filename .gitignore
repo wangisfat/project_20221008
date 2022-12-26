@@ -31,10 +31,12 @@ build/*
 nbbuild/
 dist/
 nbdist/
+target/
 .nb-gradle/
 
 ######################################################################
 # Others
+*.target
 *.log
 *.xml.versionsBackup
 *.swp

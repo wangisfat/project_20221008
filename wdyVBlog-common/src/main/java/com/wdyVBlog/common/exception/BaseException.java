@@ -6,7 +6,7 @@ import com.wdyVBlog.common.utils.StringUtils;
 /**
  * 基础异常
  * 
- * @author ruoyi
+ * @author wdy
  */
 public class BaseException extends RuntimeException
 {

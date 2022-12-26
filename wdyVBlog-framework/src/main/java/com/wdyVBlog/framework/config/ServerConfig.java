@@ -7,7 +7,7 @@ import com.wdyVBlog.common.utils.ServletUtils;
 /**
  * 服务相关配置
  * 
- * @author ruoyi
+ * @author wdy
  */
 @Component
 public class ServerConfig
