@@ -27,6 +27,8 @@
     <file url="file://$PROJECT_DIR$/wdyVBlog-generator/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/wdyVBlog-quartz/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/wdyVBlog-quartz/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wdyVBlog-report/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wdyVBlog-report/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/wdyVBlog-system/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/wdyVBlog-system/src/main/resources" charset="UTF-8" />
   </component>

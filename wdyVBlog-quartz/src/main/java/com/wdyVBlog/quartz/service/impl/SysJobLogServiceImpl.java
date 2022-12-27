@@ -1,6 +1,11 @@
 package com.wdyVBlog.quartz.service.impl;
 
-import java.util.List;
+
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.wdyVBlog.common.core.page.PageDomain;
+import com.wdyVBlog.common.core.page.TableSupport;
+import com.wdyVBlog.common.utils.PageResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.wdyVBlog.quartz.domain.SysJobLog;
@@ -13,7 +18,7 @@ import com.wdyVBlog.quartz.service.ISysJobLogService;
  * @author wdy
  */
 @Service
-public class SysJobLogServiceImpl implements ISysJobLogService
+public class SysJobLogServiceImpl extends ServiceImpl<SysJobLogMapper,SysJobLog> implements ISysJobLogService
 {
     @Autowired
     private SysJobLogMapper jobLogMapper;
@@ -25,9 +30,12 @@ public class SysJobLogServiceImpl implements ISysJobLogService
      * @return 调度任务日志集合
      */
     @Override
-    public List<SysJobLog> selectJobLogList(SysJobLog jobLog)
+    public PageResult<SysJobLog> selectJobLogList(SysJobLog jobLog)
     {
-        return jobLogMapper.selectJobLogList(jobLog);
+        PageDomain pageDomain = TableSupport.buildPageRequest();
+        Page<SysJobLog> sysRolePage = new Page<>(pageDomain.getPageNum(),pageDomain.getPageSize());
+        Page<SysJobLog> page = this.baseMapper.selectJobLogPage(sysRolePage,jobLog);
+        return new PageResult<SysJobLog>(page);
     }
 
     /**

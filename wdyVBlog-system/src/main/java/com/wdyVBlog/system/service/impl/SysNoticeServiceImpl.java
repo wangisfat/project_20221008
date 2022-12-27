@@ -1,7 +1,15 @@
 package com.wdyVBlog.system.service.impl;
 
 import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
+
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.wdyVBlog.common.core.domain.BaseEntity;
+import com.wdyVBlog.common.core.page.PageDomain;
+import com.wdyVBlog.common.core.page.TableSupport;
+import com.wdyVBlog.common.utils.PageResult;
+import com.wdyVBlog.common.utils.StringUtils;
 import org.springframework.stereotype.Service;
 import com.wdyVBlog.system.domain.SysNotice;
 import com.wdyVBlog.system.mapper.SysNoticeMapper;
@@ -13,10 +21,8 @@ import com.wdyVBlog.system.service.ISysNoticeService;
  * @author wdy
  */
 @Service
-public class SysNoticeServiceImpl implements ISysNoticeService
+public class SysNoticeServiceImpl extends ServiceImpl<SysNoticeMapper,SysNotice> implements ISysNoticeService
 {
-    @Autowired
-    private SysNoticeMapper noticeMapper;
 
     /**
      * 查询公告信息
@@ -27,7 +33,7 @@ public class SysNoticeServiceImpl implements ISysNoticeService
     @Override
     public SysNotice selectNoticeById(Long noticeId)
     {
-        return noticeMapper.selectNoticeById(noticeId);
+        return this.baseMapper.selectNoticeById(noticeId);
     }
 
     /**
@@ -39,7 +45,20 @@ public class SysNoticeServiceImpl implements ISysNoticeService
     @Override
     public List<SysNotice> selectNoticeList(SysNotice notice)
     {
-        return noticeMapper.selectNoticeList(notice);
+        return this.baseMapper.selectNoticeList(notice);
+    }
+
+    @Override
+    public PageResult<SysNotice> selectNoticePage(SysNotice notice) {
+        LambdaQueryWrapper<SysNotice> wrapper = new LambdaQueryWrapper<>();
+        wrapper.select(SysNotice::getNoticeId,SysNotice::getNoticeTitle,SysNotice::getNoticeType,SysNotice::getNoticeContent,SysNotice::getStatus,BaseEntity::getCreateBy,BaseEntity::getCreateTime,BaseEntity::getUpdateBy,BaseEntity::getUpdateTime,BaseEntity::getRemark)
+                .like(StringUtils.isNotNull(notice.getNoticeTitle()), SysNotice::getNoticeTitle, notice.getNoticeTitle())
+                .eq(StringUtils.isNotNull(notice.getNoticeType()), SysNotice::getNoticeType, notice.getNoticeType())
+                .like(StringUtils.isNotNull(notice.getCreateBy()), BaseEntity::getCreateBy, notice.getCreateBy());
+        PageDomain pageDomain = TableSupport.buildPageRequest();
+        Page<SysNotice> sysNoticePage = new Page<>(pageDomain.getPageNum(), pageDomain.getPageSize());
+        Page<SysNotice> page = this.page(sysNoticePage, wrapper);
+        return new PageResult<SysNotice>(page);
     }
 
     /**
@@ -51,7 +70,7 @@ public class SysNoticeServiceImpl implements ISysNoticeService
     @Override
     public int insertNotice(SysNotice notice)
     {
-        return noticeMapper.insertNotice(notice);
+        return this.baseMapper.insertNotice(notice);
     }
 
     /**
@@ -63,7 +82,7 @@ public class SysNoticeServiceImpl implements ISysNoticeService
     @Override
     public int updateNotice(SysNotice notice)
     {
-        return noticeMapper.updateNotice(notice);
+        return this.baseMapper.updateNotice(notice);
     }
 
     /**
@@ -75,7 +94,7 @@ public class SysNoticeServiceImpl implements ISysNoticeService
     @Override
     public int deleteNoticeById(Long noticeId)
     {
-        return noticeMapper.deleteNoticeById(noticeId);
+        return this.baseMapper.deleteNoticeById(noticeId);
     }
 
     /**
@@ -87,6 +106,6 @@ public class SysNoticeServiceImpl implements ISysNoticeService
     @Override
     public int deleteNoticeByIds(Long[] noticeIds)
     {
-        return noticeMapper.deleteNoticeByIds(noticeIds);
+        return this.baseMapper.deleteNoticeByIds(noticeIds);
     }
 }

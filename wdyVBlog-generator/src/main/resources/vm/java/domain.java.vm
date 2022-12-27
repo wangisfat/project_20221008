@@ -3,13 +3,9 @@ package ${packageName}.domain;
 #foreach ($import in $importList)
 import ${import};
 #end
-import org.apache.commons.lang3.builder.ToStringBuilder;
-import org.apache.commons.lang3.builder.ToStringStyle;
 import com.wdyVBlog.common.annotation.Excel;
 #if($table.crud || $table.sub)
-import com.wdyVBlog.common.core.domain.BaseEntity;
 #elseif($table.tree)
-import com.wdyVBlog.common.core.domain.TreeEntity;
 #end
 
 /**

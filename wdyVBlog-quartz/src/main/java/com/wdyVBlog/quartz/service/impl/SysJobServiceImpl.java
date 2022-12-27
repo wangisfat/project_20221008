@@ -2,6 +2,15 @@ package com.wdyVBlog.quartz.service.impl;
 
 import java.util.List;
 import javax.annotation.PostConstruct;
+
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.wdyVBlog.common.core.domain.BaseEntity;
+import com.wdyVBlog.common.core.page.PageDomain;
+import com.wdyVBlog.common.core.page.TableSupport;
+import com.wdyVBlog.common.utils.PageResult;
+import com.wdyVBlog.common.utils.StringUtils;
 import org.quartz.JobDataMap;
 import org.quartz.JobKey;
 import org.quartz.Scheduler;
@@ -23,7 +32,7 @@ import com.wdyVBlog.quartz.util.ScheduleUtils;
  * @author wdy
  */
 @Service
-public class SysJobServiceImpl implements ISysJobService
+public class SysJobServiceImpl extends ServiceImpl<SysJobMapper,SysJob> implements ISysJobService
 {
     @Autowired
     private Scheduler scheduler;
@@ -52,9 +61,19 @@ public class SysJobServiceImpl implements ISysJobService
      * @return
      */
     @Override
-    public List<SysJob> selectJobList(SysJob job)
+    public PageResult<SysJob> selectJobList(SysJob job)
     {
-        return jobMapper.selectJobList(job);
+        LambdaQueryWrapper<SysJob> wrapper = new LambdaQueryWrapper<>();
+        wrapper.select(SysJob::getJobId, SysJob::getJobName, SysJob::getJobGroup, SysJob::getInvokeTarget, SysJob::getCronExpression, SysJob::getMisfirePolicy, SysJob::getConcurrent
+                        , SysJob::getStatus, BaseEntity::getCreateTime)
+                .like(StringUtils.isNotBlank(job.getJobName()), SysJob::getJobName, job.getJobName())
+                .eq(StringUtils.isNotBlank(job.getJobGroup()), SysJob::getJobGroup, job.getJobGroup())
+                .eq(StringUtils.isNotBlank(job.getStatus()), SysJob::getStatus, job.getStatus())
+                .like(StringUtils.isNotBlank(job.getInvokeTarget()), SysJob::getInvokeTarget, job.getInvokeTarget());
+        PageDomain pageDomain = TableSupport.getPageDomain();
+        Page<SysJob> sysJobPage = new Page<>(pageDomain.getPageNum(), pageDomain.getPageSize());
+        Page<SysJob> page = this.page(sysJobPage, wrapper);
+        return new PageResult<SysJob>(page);
     }
 
     /**
@@ -75,7 +94,7 @@ public class SysJobServiceImpl implements ISysJobService
      * @param job 调度信息
      */
     @Override
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     public int pauseJob(SysJob job) throws SchedulerException
     {
         Long jobId = job.getJobId();
@@ -95,7 +114,7 @@ public class SysJobServiceImpl implements ISysJobService
      * @param job 调度信息
      */
     @Override
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     public int resumeJob(SysJob job) throws SchedulerException
     {
         Long jobId = job.getJobId();
@@ -115,7 +134,7 @@ public class SysJobServiceImpl implements ISysJobService
      * @param job 调度信息
      */
     @Override
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     public int deleteJob(SysJob job) throws SchedulerException
     {
         Long jobId = job.getJobId();
@@ -135,7 +154,7 @@ public class SysJobServiceImpl implements ISysJobService
      * @return 结果
      */
     @Override
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     public void deleteJobByIds(Long[] jobIds) throws SchedulerException
     {
         for (Long jobId : jobIds)
@@ -151,7 +170,7 @@ public class SysJobServiceImpl implements ISysJobService
      * @param job 调度信息
      */
     @Override
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     public int changeStatus(SysJob job) throws SchedulerException
     {
         int rows = 0;
@@ -173,16 +192,23 @@ public class SysJobServiceImpl implements ISysJobService
      * @param job 调度信息
      */
     @Override
-    @Transactional
-    public void run(SysJob job) throws SchedulerException
+    @Transactional(rollbackFor = Exception.class)
+    public boolean run(SysJob job) throws SchedulerException
     {
+        boolean result = false;
         Long jobId = job.getJobId();
         String jobGroup = job.getJobGroup();
         SysJob properties = selectJobById(job.getJobId());
         // 参数
         JobDataMap dataMap = new JobDataMap();
         dataMap.put(ScheduleConstants.TASK_PROPERTIES, properties);
-        scheduler.triggerJob(ScheduleUtils.getJobKey(jobId, jobGroup), dataMap);
+        JobKey jobKey = ScheduleUtils.getJobKey(jobId, jobGroup);
+        if (scheduler.checkExists(jobKey))
+        {
+            result = true;
+            scheduler.triggerJob(jobKey, dataMap);
+        }
+        return result;
     }
 
     /**
@@ -191,7 +217,7 @@ public class SysJobServiceImpl implements ISysJobService
      * @param job 调度信息 调度信息
      */
     @Override
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     public int insertJob(SysJob job) throws SchedulerException, TaskException
     {
         job.setStatus(ScheduleConstants.Status.PAUSE.getValue());
@@ -209,7 +235,7 @@ public class SysJobServiceImpl implements ISysJobService
      * @param job 调度信息
      */
     @Override
-    @Transactional
+    @Transactional(rollbackFor = Exception.class)
     public int updateJob(SysJob job) throws SchedulerException, TaskException
     {
         SysJob properties = selectJobById(job.getJobId());

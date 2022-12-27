@@ -1,9 +1,9 @@
 package com.wdyVBlog.system.domain;
 
-import org.apache.commons.lang3.builder.ToStringBuilder;
-import org.apache.commons.lang3.builder.ToStringStyle;
 import com.wdyVBlog.common.annotation.Excel;
 import com.wdyVBlog.common.core.domain.BaseEntity;
+import org.apache.commons.lang3.builder.ToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  * 流程任务关联单对象 sys_task_form

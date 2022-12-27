@@ -1,6 +1,8 @@
 package com.wdyVBlog.system.mapper;
 
 import java.util.List;
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Param;
 import com.wdyVBlog.common.core.domain.entity.SysMenu;
 
@@ -9,7 +11,7 @@ import com.wdyVBlog.common.core.domain.entity.SysMenu;
  *
  * @author wdy
  */
-public interface SysMenuMapper
+public interface SysMenuMapper extends BaseMapper<SysMenu>
 {
     /**
      * 查询系统菜单列表
@@ -33,6 +35,14 @@ public interface SysMenuMapper
      * @return 菜单列表
      */
     public List<SysMenu> selectMenuListByUserId(SysMenu menu);
+
+    /**
+     * 根据角色ID查询权限
+     * 
+     * @param roleId 角色ID
+     * @return 权限列表
+     */
+    public List<String> selectMenuPermsByRoleId(Long roleId);
 
     /**
      * 根据用户ID查询权限
@@ -64,7 +74,7 @@ public interface SysMenuMapper
      * @param menuCheckStrictly 菜单树选择项是否关联显示
      * @return 选中菜单列表
      */
-    public List<Integer> selectMenuListByRoleId(@Param("roleId") Long roleId, @Param("menuCheckStrictly") boolean menuCheckStrictly);
+    public List<Long> selectMenuListByRoleId(@Param("roleId") Long roleId, @Param("menuCheckStrictly") boolean menuCheckStrictly);
 
     /**
      * 根据菜单ID查询信息

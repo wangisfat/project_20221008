@@ -1,25 +1,27 @@
 package com.wdyVBlog.flowable.service.impl;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.github.pagehelper.PageHelper;
-import com.github.pagehelper.PageInfo;
-import com.wdyVBlog.flowable.common.constant.ProcessConstants;
+import com.wdyVBlog.common.core.page.PageDomain;
+import com.wdyVBlog.common.core.page.TableSupport;
+import com.wdyVBlog.common.utils.PageResult;
+import com.wdyVBlog.system.domain.SysForm;
+import com.wdyVBlog.system.dto.FlowProcDefDto;
+
 import com.wdyVBlog.common.core.domain.AjaxResult;
 import com.wdyVBlog.common.core.domain.entity.SysUser;
-import com.wdyVBlog.flowable.common.enums.FlowComment;
 import com.wdyVBlog.common.utils.SecurityUtils;
-import com.wdyVBlog.system.domain.FlowProcDefDto;
+import com.wdyVBlog.flowable.common.constant.ProcessConstants;
+import com.wdyVBlog.flowable.common.enums.FlowComment;
 import com.wdyVBlog.flowable.factory.FlowServiceFactory;
 import com.wdyVBlog.flowable.service.IFlowDefinitionService;
 import com.wdyVBlog.flowable.service.ISysDeployFormService;
-import com.wdyVBlog.system.domain.SysForm;
+
 import com.wdyVBlog.system.mapper.FlowDeployMapper;
 import com.wdyVBlog.system.service.ISysDeptService;
 import com.wdyVBlog.system.service.ISysPostService;
 import com.wdyVBlog.system.service.ISysUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
-import org.apache.commons.lang3.StringUtils;
 import org.flowable.bpmn.model.BpmnModel;
 import org.flowable.engine.repository.Deployment;
 import org.flowable.engine.repository.ProcessDefinition;
@@ -27,14 +29,16 @@ import org.flowable.engine.repository.ProcessDefinitionQuery;
 import org.flowable.engine.runtime.ProcessInstance;
 import org.flowable.image.impl.DefaultProcessDiagramGenerator;
 import org.flowable.task.api.Task;
-import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
-import java.util.*;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 
 /**
  * 流程定义
@@ -80,8 +84,8 @@ public class FlowDefinitionServiceImpl extends FlowServiceFactory implements IFl
      * @return 流程定义分页列表数据
      */
     @Override
-    public Page<FlowProcDefDto> list(String name, Integer pageNum, Integer pageSize) {
-        Page<FlowProcDefDto> page = new Page<>();
+    public PageResult<SysUser> list(String name, Integer pageNum, Integer pageSize) {
+//        Page<FlowProcDefDto> page = new Page<>();
 //        // 流程定义列表数据查询
 //        final ProcessDefinitionQuery processDefinitionQuery = repositoryService.createProcessDefinitionQuery();
 //        if (StringUtils.isNotEmpty(name)) {
@@ -106,19 +110,23 @@ public class FlowDefinitionServiceImpl extends FlowServiceFactory implements IFl
 //            reProcDef.setDeploymentTime(deployment.getDeploymentTime());
 //            dataList.add(reProcDef);
 //        }
-        PageHelper.startPage(pageNum, pageSize);
-        final List<FlowProcDefDto> dataList = flowDeployMapper.selectDeployList(name);
+//        PageHelper.startPage(pageNum, pageSize);
+        PageDomain pageDomain = TableSupport.getPageDomain();
+        Page<FlowProcDefDto> dtoPage = new Page<>(pageDomain.getPageNum(),pageDomain.getPageSize());
+        Page<FlowProcDefDto> dataList = flowDeployMapper.selectDeployList(dtoPage,name);
+        List<FlowProcDefDto> records = dataList.getRecords();
         // 加载挂表单
-        for (FlowProcDefDto procDef : dataList) {
+        for (FlowProcDefDto procDef : records) {
             SysForm sysForm = sysDeployFormService.selectSysDeployFormByDeployId(procDef.getDeploymentId());
             if (Objects.nonNull(sysForm)) {
                 procDef.setFormName(sysForm.getFormName());
                 procDef.setFormId(sysForm.getFormId());
             }
         }
-        page.setTotal(new PageInfo(dataList).getTotal());
-        page.setRecords(dataList);
-        return page;
+        dataList.setRecords(records);
+
+        PageResult<SysUser> sysUserPageResult = new PageResult<>(dataList);
+        return sysUserPageResult;
     }
 
 

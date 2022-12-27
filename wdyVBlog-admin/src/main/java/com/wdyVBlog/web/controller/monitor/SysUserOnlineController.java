@@ -5,7 +5,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
-import com.wdyVBlog.common.core.redis.CommonCache;
+import com.wdyVBlog.common.core.ehcache.EhcacheUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -14,11 +14,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.wdyVBlog.common.annotation.Log;
-import com.wdyVBlog.common.constant.Constants;
+import com.wdyVBlog.common.constant.CacheConstants;
 import com.wdyVBlog.common.core.controller.BaseController;
 import com.wdyVBlog.common.core.domain.AjaxResult;
 import com.wdyVBlog.common.core.domain.model.LoginUser;
-import com.wdyVBlog.common.core.page.TableDataInfo;
 import com.wdyVBlog.common.enums.BusinessType;
 import com.wdyVBlog.common.utils.StringUtils;
 import com.wdyVBlog.system.domain.SysUserOnline;
@@ -36,18 +35,20 @@ public class SysUserOnlineController extends BaseController
     @Autowired
     private ISysUserOnlineService userOnlineService;
 
-    @Autowired
-    private CommonCache redisCache;
+//    @Autowired
+//    private RedisCache redisCache;
 
     @PreAuthorize("@ss.hasPermi('monitor:online:list')")
     @GetMapping("/list")
-    public TableDataInfo list(String ipaddr, String userName)
+    public List<SysUserOnline> list(String ipaddr, String userName)
     {
-        Collection<String> keys = redisCache.keys(Constants.LOGIN_TOKEN_KEY + "*");
+//        Collection<String> keys = redisCache.keys(CacheConstants.LOGIN_TOKEN_KEY + "*");
+        Collection<String> keys = EhcacheUtil.keys(CacheConstants.LOGIN_TOKEN_KEY + "*");
         List<SysUserOnline> userOnlineList = new ArrayList<SysUserOnline>();
         for (String key : keys)
         {
-            LoginUser user = (LoginUser) redisCache.getCacheObject(key);
+//            LoginUser user = redisCache.getCacheObject(key);
+            LoginUser user = (LoginUser) EhcacheUtil.getCacheObject(key);
             if (StringUtils.isNotEmpty(ipaddr) && StringUtils.isNotEmpty(userName))
             {
                 if (StringUtils.equals(ipaddr, user.getIpaddr()) && StringUtils.equals(userName, user.getUsername()))
@@ -76,7 +77,7 @@ public class SysUserOnlineController extends BaseController
         }
         Collections.reverse(userOnlineList);
         userOnlineList.removeAll(Collections.singleton(null));
-        return getDataTable(userOnlineList);
+        return userOnlineList;
     }
 
     /**
@@ -87,7 +88,8 @@ public class SysUserOnlineController extends BaseController
     @DeleteMapping("/{tokenId}")
     public AjaxResult forceLogout(@PathVariable String tokenId)
     {
-        redisCache.deleteObject(Constants.LOGIN_TOKEN_KEY + tokenId);
+//        redisCache.deleteObject(CacheConstants.LOGIN_TOKEN_KEY + tokenId);
+        EhcacheUtil.deleteObject(CacheConstants.LOGIN_TOKEN_KEY + tokenId);
         return AjaxResult.success();
     }
 }

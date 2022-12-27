@@ -1,4 +1,4 @@
-//package com.wdyVBlog.flowable.config;
+ package com.wdyVBlog.flowable.config;//package com.文件id(.flowable.config;
 //
 //import com.sun.prism.paint.Color;
 //import org.flowable.bpmn.model.AssociationDirection;

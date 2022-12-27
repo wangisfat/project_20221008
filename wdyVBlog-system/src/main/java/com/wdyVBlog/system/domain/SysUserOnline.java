@@ -1,5 +1,8 @@
 package com.wdyVBlog.system.domain;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+
 /**
  * 当前在线会话
  * 
@@ -8,6 +11,7 @@ package com.wdyVBlog.system.domain;
 public class SysUserOnline
 {
     /** 会话编号 */
+    @TableId(type = IdType.AUTO)
     private String tokenId;
 
     /** 部门名称 */

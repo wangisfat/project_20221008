@@ -1,16 +1,18 @@
 package com.wdyVBlog.system.mapper;
 
 import java.util.List;
-import org.apache.ibatis.annotations.Mapper;
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.wdyVBlog.common.core.domain.entity.SysDictType;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * 字典表 数据层
  * 
  * @author wdy
  */
-@Mapper
-public interface SysDictTypeMapper
+public interface SysDictTypeMapper extends BaseMapper<SysDictType>
 {
     /**
      * 根据条件分页查询字典类型
@@ -82,4 +84,6 @@ public interface SysDictTypeMapper
      * @return 结果
      */
     public SysDictType checkDictTypeUnique(String dictType);
+
+    Page<SysDictType> selectDictTypePage(Page<SysDictType> sysRolePage, @Param("queryData") SysDictType dictType);
 }

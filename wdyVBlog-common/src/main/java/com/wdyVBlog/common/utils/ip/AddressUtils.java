@@ -2,8 +2,9 @@ package com.wdyVBlog.common.utils.ip;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import com.alibaba.fastjson.JSONObject;
-import com.wdyVBlog.common.config.WdyVBlogConfig;
+import com.alibaba.fastjson2.JSON;
+import com.alibaba.fastjson2.JSONObject;
+import com.wdyVBlog.common.config.ProjectConfig;
 import com.wdyVBlog.common.constant.Constants;
 import com.wdyVBlog.common.utils.StringUtils;
 import com.wdyVBlog.common.utils.http.HttpUtils;
@@ -25,13 +26,12 @@ public class AddressUtils
 
     public static String getRealAddressByIP(String ip)
     {
-        String address = UNKNOWN;
         // 内网不查询
         if (IpUtils.internalIp(ip))
         {
             return "内网IP";
         }
-        if (WdyVBlogConfig.isAddressEnabled())
+        if (ProjectConfig.isAddressEnabled())
         {
             try
             {
@@ -41,7 +41,7 @@ public class AddressUtils
                     log.error("获取地理位置异常 {}", ip);
                     return UNKNOWN;
                 }
-                JSONObject obj = JSONObject.parseObject(rspStr);
+                JSONObject obj = JSON.parseObject(rspStr);
                 String region = obj.getString("pro");
                 String city = obj.getString("city");
                 return String.format("%s %s", region, city);
@@ -51,6 +51,6 @@ public class AddressUtils
                 log.error("获取地理位置异常 {}", ip);
             }
         }
-        return address;
+        return UNKNOWN;
     }
 }

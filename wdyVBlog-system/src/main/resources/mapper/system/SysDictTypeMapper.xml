@@ -59,8 +59,29 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		<include refid="selectDictTypeVo"/>
 		where dict_type = #{dictType} limit 1
 	</select>
-	
-	<delete id="deleteDictTypeById" parameterType="Long">
+
+    <select id="selectDictTypePage" resultType="com.wdyVBlog.common.core.domain.entity.SysDictType">
+		<include refid="selectDictTypeVo"/>
+		<where>
+			<if test="queryData.dictName != null and queryData.dictName != ''">
+				AND dict_name like concat('%', #{queryData.dictName}, '%')
+			</if>
+			<if test="queryData.status != null and queryData.status != ''">
+				AND status = #{queryData.status}
+			</if>
+			<if test="queryData.dictType != null and queryData.dictType != ''">
+				AND dict_type like concat('%', #{queryData.dictType}, '%')
+			</if>
+			<if test="queryData.params.beginTime != null and queryData.params.beginTime != ''"><!-- 开始时间检索 -->
+				and date_format(create_time,'%y%m%d') &gt;= date_format(#{queryData.params.beginTime},'%y%m%d')
+			</if>
+			<if test="queryData.params.endTime != null and queryData.params.endTime != ''"><!-- 结束时间检索 -->
+				and date_format(create_time,'%y%m%d') &lt;= date_format(#{queryData.params.endTime},'%y%m%d')
+			</if>
+		</where>
+	</select>
+
+    <delete id="deleteDictTypeById" parameterType="Long">
  		delete from sys_dict_type where dict_id = #{dictId}
  	</delete>
  	

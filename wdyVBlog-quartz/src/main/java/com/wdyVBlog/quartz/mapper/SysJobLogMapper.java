@@ -1,14 +1,18 @@
 package com.wdyVBlog.quartz.mapper;
 
 import java.util.List;
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.wdyVBlog.quartz.domain.SysJobLog;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * 调度任务日志信息 数据层
  * 
  * @author wdy
  */
-public interface SysJobLogMapper
+public interface SysJobLogMapper extends BaseMapper<SysJobLog>
 {
     /**
      * 获取quartz调度器日志的计划任务
@@ -61,4 +65,6 @@ public interface SysJobLogMapper
      * 清空任务日志
      */
     public void cleanJobLog();
+
+    Page<SysJobLog> selectJobLogPage(Page<SysJobLog> sysRolePage,@Param("queryData")  SysJobLog jobLog);
 }

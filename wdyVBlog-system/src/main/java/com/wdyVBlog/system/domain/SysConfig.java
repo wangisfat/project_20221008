@@ -2,6 +2,9 @@ package com.wdyVBlog.system.domain;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
+
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 import com.wdyVBlog.common.annotation.Excel;
@@ -19,6 +22,7 @@ public class SysConfig extends BaseEntity
 
     /** 参数主键 */
     @Excel(name = "参数主键", cellType = ColumnType.NUMERIC)
+    @TableId(type = IdType.AUTO)
     private Long configId;
 
     /** 参数名称 */

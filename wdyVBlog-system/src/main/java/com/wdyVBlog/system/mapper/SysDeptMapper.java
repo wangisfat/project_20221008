@@ -1,6 +1,8 @@
 package com.wdyVBlog.system.mapper;
 
 import java.util.List;
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Param;
 import com.wdyVBlog.common.core.domain.entity.SysDept;
 
@@ -9,7 +11,7 @@ import com.wdyVBlog.common.core.domain.entity.SysDept;
  * 
  * @author wdy
  */
-public interface SysDeptMapper
+public interface SysDeptMapper extends BaseMapper<SysDept>
 {
     /**
      * 查询部门管理数据
@@ -26,7 +28,7 @@ public interface SysDeptMapper
      * @param deptCheckStrictly 部门树选择项是否关联显示
      * @return 选中部门列表
      */
-    public List<Integer> selectDeptListByRoleId(@Param("roleId") Long roleId, @Param("deptCheckStrictly") boolean deptCheckStrictly);
+    public List<Long> selectDeptListByRoleId(@Param("roleId") Long roleId, @Param("deptCheckStrictly") boolean deptCheckStrictly);
 
     /**
      * 根据部门ID查询信息
@@ -94,11 +96,11 @@ public interface SysDeptMapper
     public int updateDept(SysDept dept);
 
     /**
-     * 修改所在部门的父级部门状态
+     * 修改所在部门正常状态
      * 
-     * @param dept 部门
+     * @param deptIds 部门ID组
      */
-    public void updateDeptStatus(SysDept dept);
+    public void updateDeptStatusNormal(Long[] deptIds);
 
     /**
      * 修改子元素关系

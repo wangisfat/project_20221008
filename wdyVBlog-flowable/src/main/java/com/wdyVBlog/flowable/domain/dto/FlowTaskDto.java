@@ -1,7 +1,6 @@
 package com.wdyVBlog.flowable.domain.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.wdyVBlog.common.core.domain.entity.SysUser;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
@@ -9,8 +8,6 @@ import lombok.Setter;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
-import java.util.Map;
 
 /**
  * <p>工作流任务<p>

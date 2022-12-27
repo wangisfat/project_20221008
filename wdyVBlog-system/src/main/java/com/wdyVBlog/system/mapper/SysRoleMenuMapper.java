@@ -1,6 +1,8 @@
 package com.wdyVBlog.system.mapper;
 
 import java.util.List;
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.wdyVBlog.system.domain.SysRoleMenu;
 
 /**
@@ -8,7 +10,7 @@ import com.wdyVBlog.system.domain.SysRoleMenu;
  * 
  * @author wdy
  */
-public interface SysRoleMenuMapper
+public interface SysRoleMenuMapper extends BaseMapper<SysRoleMenu>
 {
     /**
      * 查询菜单使用数量

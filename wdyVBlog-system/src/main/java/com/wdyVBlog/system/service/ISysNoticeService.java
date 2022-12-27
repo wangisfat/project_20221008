@@ -1,6 +1,9 @@
 package com.wdyVBlog.system.service;
 
 import java.util.List;
+
+import com.baomidou.mybatisplus.extension.service.IService;
+import com.wdyVBlog.common.utils.PageResult;
 import com.wdyVBlog.system.domain.SysNotice;
 
 /**
@@ -8,7 +11,7 @@ import com.wdyVBlog.system.domain.SysNotice;
  * 
  * @author wdy
  */
-public interface ISysNoticeService
+public interface ISysNoticeService extends IService<SysNotice>
 {
     /**
      * 查询公告信息
@@ -57,4 +60,6 @@ public interface ISysNoticeService
      * @return 结果
      */
     public int deleteNoticeByIds(Long[] noticeIds);
+
+    PageResult<SysNotice> selectNoticePage(SysNotice notice);
 }

@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="073aacaf-babf-4bb8-86c4-2815c1db79bb" name="Changes" comment="项目初始化">
+    <list default="true" id="073aacaf-babf-4bb8-86c4-2815c1db79bb" name="Changes" comment="项目去除若依化">
+      <change afterPath="$PROJECT_DIR$/wdyVBlog.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
@@ -12,11 +13,15 @@
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql/system.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/system.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/src/main/java/com/wdyVBlog/RuoYiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-admin/src/main/java/com/wdyVBlog/WdyVBlogApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/src/main/java/com/wdyVBlog/RuoYiServletInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-admin/src/main/java/com/wdyVBlog/WdyVBlogServletInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ry.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/quartz.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/quartz.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/system.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-admin/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/src/main/java/com/wdyVBlog/WdyVBlogApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/src/main/java/com/wdyVBlog/WdyVBlogServletInitializer.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/src/main/java/com/wdyVBlog/web/controller/common/CaptchaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-admin/src/main/java/com/wdyVBlog/web/controller/common/CaptchaController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/src/main/java/com/wdyVBlog/web/controller/common/CommonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-admin/src/main/java/com/wdyVBlog/web/controller/common/CommonController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/src/main/java/com/wdyVBlog/web/controller/monitor/CacheController.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-admin/src/main/java/com/wdyVBlog/web/controller/monitor/CacheController.java" afterDir="false" />
@@ -41,54 +46,23 @@
       <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/src/main/resources/application-druid.yml" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-admin/src/main/resources/application-druid.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-admin/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/src/main/resources/banner.txt" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-admin/src/main/resources/banner.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/src/main/resources/i18n/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-admin/src/main/resources/i18n/messages.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-admin/src/main/resources/logback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/src/main/resources/spy.properties" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-admin/src/main/resources/spy.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/target/classes/application-druid.yml" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-admin/target/classes/application-druid.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-admin/target/classes/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/target/classes/banner.txt" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-admin/target/classes/banner.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/target/classes/com/ruoyi/RuoYiApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/target/classes/com/ruoyi/RuoYiServletInitializer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/target/classes/com/ruoyi/web/controller/common/CaptchaController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/target/classes/com/ruoyi/web/controller/common/CommonController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/target/classes/com/ruoyi/web/controller/monitor/CacheController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/target/classes/com/ruoyi/web/controller/monitor/ServerController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/target/classes/com/ruoyi/web/controller/monitor/SysLogininforController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/target/classes/com/ruoyi/web/controller/monitor/SysOperlogController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/target/classes/com/ruoyi/web/controller/monitor/SysUserOnlineController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/target/classes/com/ruoyi/web/controller/system/SysConfigController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/target/classes/com/ruoyi/web/controller/system/SysDeptController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/target/classes/com/ruoyi/web/controller/system/SysDictDataController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/target/classes/com/ruoyi/web/controller/system/SysDictTypeController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/target/classes/com/ruoyi/web/controller/system/SysLoginController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/target/classes/com/ruoyi/web/controller/system/SysMenuController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/target/classes/com/ruoyi/web/controller/system/SysNoticeController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/target/classes/com/ruoyi/web/controller/system/SysPostController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/target/classes/com/ruoyi/web/controller/system/SysProfileController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/target/classes/com/ruoyi/web/controller/system/SysRoleController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/target/classes/com/ruoyi/web/controller/system/SysUserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/target/classes/com/ruoyi/web/controller/tool/SwaggerController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/target/classes/com/ruoyi/web/controller/tool/TestController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/target/classes/com/ruoyi/web/controller/tool/UserEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/target/classes/com/ruoyi/web/core/config/SwaggerConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/target/classes/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-admin/target/classes/logback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/target/classes/spy.properties" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-admin/target/classes/spy.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/src/main/resources/mybatis/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-admin/src/main/resources/mybatis/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/src/main/resources/spy.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/annotation/DataScope.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/annotation/DataScope.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/annotation/DataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/annotation/DataSource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/annotation/Excel.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/annotation/Excel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/annotation/Excels.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/annotation/Excels.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/annotation/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/annotation/Log.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/annotation/RepeatSubmit.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/annotation/RepeatSubmit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/config/RuoYiConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/config/WdyVBlogConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/config/WdyVBlogConfig.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/constant/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/constant/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/constant/GenConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/constant/GenConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/constant/HttpStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/constant/HttpStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/constant/ScheduleConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/constant/ScheduleConstants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/constant/UserConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/constant/UserConstants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/core/controller/BaseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/core/controller/BaseController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/core/domain/AjaxResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/core/domain/AjaxResult.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/core/domain/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/core/domain/BaseEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/core/domain/TreeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/core/domain/TreeEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/core/domain/TreeSelect.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/core/domain/TreeSelect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/core/domain/entity/SysDept.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/core/domain/entity/SysDept.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/core/domain/entity/SysDictData.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/core/domain/entity/SysDictData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/core/domain/entity/SysDictType.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/core/domain/entity/SysDictType.java" afterDir="false" />
@@ -98,32 +72,15 @@
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/core/domain/model/LoginBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/core/domain/model/LoginBody.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/core/domain/model/LoginUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/core/domain/model/LoginUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/core/page/PageDomain.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/core/page/PageDomain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/core/page/TableDataInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/core/page/TableDataInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/core/page/TableSupport.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/core/page/TableSupport.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/core/redis/CommonCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/core/redis/CommonCache.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/core/redis/CommonCache.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/core/redis/RedisCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/core/redis/RedisCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/core/text/CharsetKit.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/core/text/CharsetKit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/core/text/Convert.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/core/text/Convert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/core/text/StrFormatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/core/text/StrFormatter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/enums/BusinessStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/enums/BusinessStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/enums/BusinessType.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/enums/BusinessType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/enums/DataSourceType.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/enums/DataSourceType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/enums/HttpMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/enums/HttpMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/enums/OperatorType.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/enums/OperatorType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/enums/UserStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/enums/UserStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/exception/BaseException.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/exception/BaseException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/exception/CustomException.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/exception/CustomException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/exception/DemoModeException.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/exception/DemoModeException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/exception/UtilException.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/exception/UtilException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/exception/BaseException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/exception/CustomException.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/exception/file/FileException.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/exception/file/FileException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/exception/file/FileNameLengthLimitExceededException.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/exception/file/FileNameLengthLimitExceededException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/exception/file/FileSizeLimitExceededException.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/exception/file/FileSizeLimitExceededException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/exception/file/InvalidExtensionException.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/exception/file/InvalidExtensionException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/exception/job/TaskException.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/exception/job/TaskException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/exception/user/CaptchaException.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/exception/user/CaptchaException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/exception/user/CaptchaExpireException.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/exception/user/CaptchaExpireException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/exception/user/UserException.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/exception/user/UserException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/exception/user/UserPasswordNotMatchException.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/exception/user/UserPasswordNotMatchException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/filter/RepeatableFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/filter/RepeatableFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/filter/RepeatedlyRequestWrapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/filter/RepeatedlyRequestWrapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/filter/XssFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/filter/XssFilter.java" afterDir="false" />
@@ -132,15 +89,11 @@
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/DateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/DateUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/DictUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/DictUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/ExceptionUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/ExceptionUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/LogUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/LogUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/MessageUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/MessageUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/SecurityUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/SecurityUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/ServletUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/ServletUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/StringUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/StringUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/Threads.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/Threads.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/VerifyCodeUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/VerifyCodeUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/bean/BeanUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/bean/BeanUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/file/FileTypeUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/file/FileTypeUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/VerifyCodeUtils.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/file/FileUploadUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/file/FileUploadUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/file/FileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/file/FileUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/file/ImageUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/file/ImageUtils.java" afterDir="false" />
@@ -152,286 +105,130 @@
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/ip/AddressUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/ip/AddressUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/ip/IpUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/ip/IpUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/poi/ExcelUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/poi/ExcelUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/reflect/ReflectUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/reflect/ReflectUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/sign/Base64.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/sign/Base64.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/sign/Md5Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/sign/Md5Utils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/spring/SpringUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/spring/SpringUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/sql/SqlUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/sql/SqlUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/uuid/IdUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/uuid/IdUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/uuid/UUID.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-common/src/main/java/com/wdyVBlog/common/utils/uuid/UUID.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/annotation/DataScope.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/annotation/DataSource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/annotation/Excel$Align.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/annotation/Excel$ColumnType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/annotation/Excel$Type.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/annotation/Excel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/annotation/Excels.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/annotation/Log.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/annotation/RepeatSubmit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/config/RuoYiConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/constant/Constants.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/constant/GenConstants.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/constant/HttpStatus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/constant/ScheduleConstants$Status.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/constant/ScheduleConstants.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/constant/UserConstants.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/core/controller/BaseController$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/core/controller/BaseController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/core/domain/AjaxResult.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/core/domain/BaseEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/core/domain/TreeEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/core/domain/TreeSelect.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/core/domain/entity/SysDept.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/core/domain/entity/SysDictData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/core/domain/entity/SysDictType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/core/domain/entity/SysMenu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/core/domain/entity/SysRole.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/core/domain/entity/SysUser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/core/domain/model/LoginBody.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/core/domain/model/LoginUser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/core/page/PageDomain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/core/page/TableDataInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/core/page/TableSupport.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/core/redis/CommonCache.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/core/text/CharsetKit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/core/text/Convert.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/core/text/StrFormatter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/enums/BusinessStatus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/enums/BusinessType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/enums/DataSourceType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/enums/HttpMethod.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/enums/OperatorType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/enums/UserStatus.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/exception/BaseException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/exception/CustomException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/exception/DemoModeException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/exception/UtilException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/exception/file/FileException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/exception/file/FileNameLengthLimitExceededException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/exception/file/FileSizeLimitExceededException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/exception/file/InvalidExtensionException$InvalidFlashExtensionException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/exception/file/InvalidExtensionException$InvalidImageExtensionException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/exception/file/InvalidExtensionException$InvalidMediaExtensionException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/exception/file/InvalidExtensionException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/exception/job/TaskException$Code.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/exception/job/TaskException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/exception/user/CaptchaException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/exception/user/CaptchaExpireException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/exception/user/UserException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/exception/user/UserPasswordNotMatchException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/filter/RepeatableFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/filter/RepeatedlyRequestWrapper$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/filter/RepeatedlyRequestWrapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/filter/XssFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/filter/XssHttpServletRequestWrapper$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/filter/XssHttpServletRequestWrapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/utils/Arith.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/utils/DateUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/utils/DictUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/utils/ExceptionUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/utils/LogUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/utils/MessageUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/utils/SecurityUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/utils/ServletUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/utils/StringUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/utils/Threads.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/utils/VerifyCodeUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/utils/bean/BeanUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/utils/file/FileTypeUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/utils/file/FileUploadUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/utils/file/FileUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/utils/file/ImageUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/utils/file/MimeTypeUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/utils/html/EscapeUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/utils/html/HTMLFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/utils/http/HttpHelper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/utils/http/HttpUtils$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/utils/http/HttpUtils$TrustAnyHostnameVerifier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/utils/http/HttpUtils$TrustAnyTrustManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/utils/http/HttpUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/utils/ip/AddressUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/utils/ip/IpUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/utils/poi/ExcelUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/utils/reflect/ReflectUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/utils/sign/Base64.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/utils/sign/Md5Utils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/utils/spring/SpringUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/utils/sql/SqlUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/utils/uuid/IdUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/utils/uuid/UUID$Holder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-common/target/classes/com/ruoyi/common/utils/uuid/UUID.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-flowable/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-flowable/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-flowable/src/main/java/com/wdyVBlog/flowable/config/MyDefaultProcessDiagramCanvas.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-flowable/src/main/java/com/wdyVBlog/flowable/config/MyDefaultProcessDiagramCanvas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-flowable/src/main/java/com/wdyVBlog/flowable/controller/FlowDefinitionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-flowable/src/main/java/com/wdyVBlog/flowable/controller/FlowDefinitionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-flowable/src/main/java/com/wdyVBlog/flowable/controller/FlowTaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-flowable/src/main/java/com/wdyVBlog/flowable/controller/FlowTaskController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-flowable/src/main/java/com/wdyVBlog/flowable/controller/SysFormController.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-flowable/src/main/java/com/wdyVBlog/flowable/controller/SysFormController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-flowable/src/main/java/com/wdyVBlog/flowable/domain/dto/FlowTaskDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-flowable/src/main/java/com/wdyVBlog/flowable/domain/dto/FlowTaskDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-flowable/src/main/java/com/wdyVBlog/flowable/flow/CustomProcessDiagramGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-flowable/src/main/java/com/wdyVBlog/flowable/flow/CustomProcessDiagramGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-flowable/src/main/java/com/wdyVBlog/flowable/flow/FindNextNodeUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-flowable/src/main/java/com/wdyVBlog/flowable/flow/FindNextNodeUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-flowable/src/main/java/com/wdyVBlog/flowable/flow/FlowableUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-flowable/src/main/java/com/wdyVBlog/flowable/flow/FlowableUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-flowable/src/main/java/com/wdyVBlog/flowable/listener/UserTaskListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-flowable/src/main/java/com/wdyVBlog/flowable/listener/UserTaskListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-flowable/src/main/java/com/wdyVBlog/flowable/service/IFlowDefinitionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-flowable/src/main/java/com/wdyVBlog/flowable/service/IFlowDefinitionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-flowable/src/main/java/com/wdyVBlog/flowable/service/IFlowTaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-flowable/src/main/java/com/wdyVBlog/flowable/service/IFlowTaskService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-flowable/src/main/java/com/wdyVBlog/flowable/service/ISysDeployFormService.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-flowable/src/main/java/com/wdyVBlog/flowable/service/ISysDeployFormService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-flowable/src/main/java/com/wdyVBlog/flowable/service/ISysFormService.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-flowable/src/main/java/com/wdyVBlog/flowable/service/ISysFormService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-flowable/src/main/java/com/wdyVBlog/flowable/service/ISysTaskFormService.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-flowable/src/main/java/com/wdyVBlog/flowable/service/ISysTaskFormService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-flowable/src/main/java/com/wdyVBlog/flowable/service/impl/FlowDefinitionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-flowable/src/main/java/com/wdyVBlog/flowable/service/impl/FlowDefinitionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-flowable/src/main/java/com/wdyVBlog/flowable/service/impl/FlowTaskServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-flowable/src/main/java/com/wdyVBlog/flowable/service/impl/FlowTaskServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-flowable/src/main/java/com/wdyVBlog/flowable/service/impl/SysDeployFormServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-flowable/src/main/java/com/wdyVBlog/flowable/service/impl/SysDeployFormServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-flowable/src/main/java/com/wdyVBlog/flowable/service/impl/SysFormServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-flowable/src/main/java/com/wdyVBlog/flowable/service/impl/SysFormServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-flowable/src/main/java/com/wdyVBlog/flowable/service/impl/SysTaskFormServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-flowable/src/main/java/com/wdyVBlog/flowable/service/impl/SysTaskFormServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-flowable/src/main/java/com/wdyVBlog/flowable/survey/SurveyAnswerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-flowable/src/main/java/com/wdyVBlog/flowable/survey/SurveyOptionsController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-flowable/src/main/java/com/wdyVBlog/flowable/survey/SurveyPaperController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-flowable/src/main/java/com/wdyVBlog/flowable/survey/SurveyQuestionController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-framework/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/aspectj/DataScopeAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/aspectj/DataScopeAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/aspectj/DataSourceAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/aspectj/DataSourceAspect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/aspectj/LogAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/aspectj/LogAspect.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/config/ApplicationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/config/ApplicationConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/config/CaptchaConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/config/CaptchaConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/config/DruidConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/config/DruidConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/config/FastJson2JsonRedisSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/config/FastJson2JsonRedisSerializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/config/FilterConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/config/FilterConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/config/KaptchaTextCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/config/KaptchaTextCreator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/config/MyBatisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/config/MyBatisConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/config/P6spySqlFormatConfig.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/config/RedisConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/config/ResourcesConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/config/ResourcesConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/config/ServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/config/ServerConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/config/ThreadPoolConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/config/ThreadPoolConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/config/properties/DruidProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/config/properties/DruidProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/datasource/DynamicDataSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/datasource/DynamicDataSource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/datasource/DynamicDataSourceContextHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/datasource/DynamicDataSourceContextHolder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/interceptor/RepeatSubmitInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/interceptor/RepeatSubmitInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/interceptor/impl/SameUrlDataInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/interceptor/impl/SameUrlDataInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/manager/AsyncManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/manager/AsyncManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/manager/ShutdownManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/manager/ShutdownManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/manager/factory/AsyncFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/manager/factory/AsyncFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/security/filter/JwtAuthenticationTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/security/filter/JwtAuthenticationTokenFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/security/handle/AuthenticationEntryPointImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/security/handle/AuthenticationEntryPointImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/security/handle/LogoutSuccessHandlerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/security/handle/LogoutSuccessHandlerImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/web/domain/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/web/domain/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/web/domain/server/Cpu.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/web/domain/server/Cpu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/web/domain/server/Jvm.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/web/domain/server/Jvm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/web/domain/server/Mem.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/web/domain/server/Mem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/web/domain/server/Sys.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/web/domain/server/Sys.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/web/domain/server/SysFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/web/domain/server/SysFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/web/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/web/exception/GlobalExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/web/service/PermissionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/web/service/PermissionService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/web/service/SysLoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/web/service/SysLoginService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/web/service/SysPermissionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/web/service/SysPermissionService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/web/service/TokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/web/service/TokenService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/web/service/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/web/service/UserDetailsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/target/classes/com/ruoyi/framework/aspectj/DataScopeAspect.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/target/classes/com/ruoyi/framework/aspectj/DataSourceAspect.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/target/classes/com/ruoyi/framework/aspectj/LogAspect.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/target/classes/com/ruoyi/framework/config/ApplicationConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/target/classes/com/ruoyi/framework/config/CaptchaConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/target/classes/com/ruoyi/framework/config/DruidConfig$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/target/classes/com/ruoyi/framework/config/DruidConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/target/classes/com/ruoyi/framework/config/FastJson2JsonRedisSerializer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/target/classes/com/ruoyi/framework/config/FilterConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/target/classes/com/ruoyi/framework/config/KaptchaTextCreator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/target/classes/com/ruoyi/framework/config/MyBatisConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/target/classes/com/ruoyi/framework/config/P6spySqlFormatConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/target/classes/com/ruoyi/framework/config/ResourcesConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/target/classes/com/ruoyi/framework/config/SecurityConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/target/classes/com/ruoyi/framework/config/ServerConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/target/classes/com/ruoyi/framework/config/ThreadPoolConfig$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/target/classes/com/ruoyi/framework/config/ThreadPoolConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/target/classes/com/ruoyi/framework/config/properties/DruidProperties.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/target/classes/com/ruoyi/framework/datasource/DynamicDataSource.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/target/classes/com/ruoyi/framework/datasource/DynamicDataSourceContextHolder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/target/classes/com/ruoyi/framework/interceptor/RepeatSubmitInterceptor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/target/classes/com/ruoyi/framework/interceptor/impl/SameUrlDataInterceptor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/target/classes/com/ruoyi/framework/manager/AsyncManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/target/classes/com/ruoyi/framework/manager/ShutdownManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/target/classes/com/ruoyi/framework/manager/factory/AsyncFactory$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/target/classes/com/ruoyi/framework/manager/factory/AsyncFactory$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/target/classes/com/ruoyi/framework/manager/factory/AsyncFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/target/classes/com/ruoyi/framework/security/filter/JwtAuthenticationTokenFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/target/classes/com/ruoyi/framework/security/handle/AuthenticationEntryPointImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/target/classes/com/ruoyi/framework/security/handle/LogoutSuccessHandlerImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/target/classes/com/ruoyi/framework/web/domain/Server.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/target/classes/com/ruoyi/framework/web/domain/server/Cpu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/target/classes/com/ruoyi/framework/web/domain/server/Jvm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/target/classes/com/ruoyi/framework/web/domain/server/Mem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/target/classes/com/ruoyi/framework/web/domain/server/Sys.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/target/classes/com/ruoyi/framework/web/domain/server/SysFile.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/target/classes/com/ruoyi/framework/web/exception/GlobalExceptionHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/target/classes/com/ruoyi/framework/web/service/PermissionService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/target/classes/com/ruoyi/framework/web/service/SysLoginService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/target/classes/com/ruoyi/framework/web/service/SysPermissionService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/target/classes/com/ruoyi/framework/web/service/TokenService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/target/classes/com/ruoyi/framework/web/service/UserDetailsServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-generator/src/main/java/com/wdyVBlog/generator/config/GenConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-generator/src/main/java/com/wdyVBlog/generator/config/GenConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-generator/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-generator/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-generator/src/main/java/com/wdyVBlog/generator/controller/GenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-generator/src/main/java/com/wdyVBlog/generator/controller/GenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-generator/src/main/java/com/wdyVBlog/generator/domain/GenTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-generator/src/main/java/com/wdyVBlog/generator/domain/GenTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-generator/src/main/java/com/wdyVBlog/generator/domain/GenTableColumn.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-generator/src/main/java/com/wdyVBlog/generator/domain/GenTableColumn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-generator/src/main/java/com/wdyVBlog/generator/mapper/GenTableColumnMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-generator/src/main/java/com/wdyVBlog/generator/mapper/GenTableColumnMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-generator/src/main/java/com/wdyVBlog/generator/mapper/GenTableMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-generator/src/main/java/com/wdyVBlog/generator/mapper/GenTableMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-generator/src/main/java/com/wdyVBlog/generator/service/GenTableColumnServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-generator/src/main/java/com/wdyVBlog/generator/service/GenTableColumnServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-generator/src/main/java/com/wdyVBlog/generator/service/GenTableServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-generator/src/main/java/com/wdyVBlog/generator/service/GenTableServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-generator/src/main/java/com/wdyVBlog/generator/service/IGenTableColumnService.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-generator/src/main/java/com/wdyVBlog/generator/service/IGenTableColumnService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-generator/src/main/java/com/wdyVBlog/generator/service/IGenTableService.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-generator/src/main/java/com/wdyVBlog/generator/service/IGenTableService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-generator/src/main/java/com/wdyVBlog/generator/util/GenUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-generator/src/main/java/com/wdyVBlog/generator/util/GenUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-generator/src/main/java/com/wdyVBlog/generator/util/VelocityInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-generator/src/main/java/com/wdyVBlog/generator/util/VelocityInitializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-generator/src/main/java/com/wdyVBlog/generator/util/VelocityUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-generator/src/main/java/com/wdyVBlog/generator/util/VelocityUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-generator/src/main/resources/generator.yml" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-generator/src/main/resources/generator.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-generator/target/classes/com/ruoyi/generator/config/GenConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-generator/target/classes/com/ruoyi/generator/controller/GenController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-generator/target/classes/com/ruoyi/generator/domain/GenTable.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-generator/target/classes/com/ruoyi/generator/domain/GenTableColumn.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-generator/target/classes/com/ruoyi/generator/mapper/GenTableColumnMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-generator/target/classes/com/ruoyi/generator/mapper/GenTableMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-generator/target/classes/com/ruoyi/generator/service/GenTableColumnServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-generator/target/classes/com/ruoyi/generator/service/GenTableServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-generator/target/classes/com/ruoyi/generator/service/IGenTableColumnService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-generator/target/classes/com/ruoyi/generator/service/IGenTableService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-generator/target/classes/com/ruoyi/generator/util/GenUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-generator/target/classes/com/ruoyi/generator/util/VelocityInitializer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-generator/target/classes/com/ruoyi/generator/util/VelocityUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-generator/target/classes/generator.yml" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-generator/target/classes/generator.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-generator/src/main/resources/mapper/generator/GenTableColumnMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-generator/src/main/resources/mapper/generator/GenTableColumnMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-generator/src/main/resources/mapper/generator/GenTableMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-generator/src/main/resources/mapper/generator/GenTableMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-generator/src/main/resources/vm/java/controller.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-generator/src/main/resources/vm/java/controller.java.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-generator/src/main/resources/vm/java/domain.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-generator/src/main/resources/vm/java/domain.java.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-generator/src/main/resources/vm/java/mapper.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-generator/src/main/resources/vm/java/mapper.java.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-generator/src/main/resources/vm/java/service.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-generator/src/main/resources/vm/java/service.java.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-generator/src/main/resources/vm/java/serviceImpl.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-generator/src/main/resources/vm/java/serviceImpl.java.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-generator/src/main/resources/vm/java/sub-domain.java.vm" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-generator/src/main/resources/vm/java/sub-domain.java.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-generator/src/main/resources/vm/js/api.js.vm" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-generator/src/main/resources/vm/js/api.js.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-generator/src/main/resources/vm/vue/index-tree.vue.vm" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-generator/src/main/resources/vm/vue/index-tree.vue.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-generator/src/main/resources/vm/vue/index.vue.vm" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-generator/src/main/resources/vm/vue/index.vue.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-generator/src/main/resources/vm/xml/mapper.xml.vm" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-generator/src/main/resources/vm/xml/mapper.xml.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-quartz/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-quartz/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-quartz/src/main/java/com/wdyVBlog/quartz/config/ScheduleConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-quartz/src/main/java/com/wdyVBlog/quartz/config/ScheduleConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-quartz/src/main/java/com/wdyVBlog/quartz/controller/SysJobController.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-quartz/src/main/java/com/wdyVBlog/quartz/controller/SysJobController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-quartz/src/main/java/com/wdyVBlog/quartz/controller/SysJobLogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-quartz/src/main/java/com/wdyVBlog/quartz/controller/SysJobLogController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-quartz/src/main/java/com/wdyVBlog/quartz/domain/SysJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-quartz/src/main/java/com/wdyVBlog/quartz/domain/SysJob.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-quartz/src/main/java/com/wdyVBlog/quartz/domain/SysJobLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-quartz/src/main/java/com/wdyVBlog/quartz/domain/SysJobLog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-quartz/src/main/java/com/wdyVBlog/quartz/mapper/SysJobLogMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-quartz/src/main/java/com/wdyVBlog/quartz/mapper/SysJobLogMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-quartz/src/main/java/com/wdyVBlog/quartz/mapper/SysJobMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-quartz/src/main/java/com/wdyVBlog/quartz/mapper/SysJobMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-quartz/src/main/java/com/wdyVBlog/quartz/service/ISysJobLogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-quartz/src/main/java/com/wdyVBlog/quartz/service/ISysJobLogService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-quartz/src/main/java/com/wdyVBlog/quartz/service/ISysJobService.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-quartz/src/main/java/com/wdyVBlog/quartz/service/ISysJobService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-quartz/src/main/java/com/wdyVBlog/quartz/service/impl/SysJobLogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-quartz/src/main/java/com/wdyVBlog/quartz/service/impl/SysJobLogServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-quartz/src/main/java/com/wdyVBlog/quartz/service/impl/SysJobServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-quartz/src/main/java/com/wdyVBlog/quartz/service/impl/SysJobServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-quartz/src/main/java/com/wdyVBlog/quartz/task/RyTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-quartz/src/main/java/com/wdyVBlog/quartz/task/RyTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-quartz/src/main/java/com/wdyVBlog/quartz/util/AbstractQuartzJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-quartz/src/main/java/com/wdyVBlog/quartz/util/AbstractQuartzJob.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-quartz/src/main/java/com/wdyVBlog/quartz/util/CronUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-quartz/src/main/java/com/wdyVBlog/quartz/util/CronUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-quartz/src/main/java/com/wdyVBlog/quartz/util/JobInvokeUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-quartz/src/main/java/com/wdyVBlog/quartz/util/JobInvokeUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-quartz/src/main/java/com/wdyVBlog/quartz/util/QuartzDisallowConcurrentExecution.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-quartz/src/main/java/com/wdyVBlog/quartz/util/QuartzDisallowConcurrentExecution.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-quartz/src/main/java/com/wdyVBlog/quartz/util/QuartzJobExecution.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-quartz/src/main/java/com/wdyVBlog/quartz/util/QuartzJobExecution.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-quartz/src/main/java/com/wdyVBlog/quartz/util/ScheduleUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-quartz/src/main/java/com/wdyVBlog/quartz/util/ScheduleUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-quartz/target/classes/com/ruoyi/quartz/config/ScheduleConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-quartz/target/classes/com/ruoyi/quartz/controller/SysJobController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-quartz/target/classes/com/ruoyi/quartz/controller/SysJobLogController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-quartz/target/classes/com/ruoyi/quartz/domain/SysJob.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-quartz/target/classes/com/ruoyi/quartz/domain/SysJobLog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-quartz/target/classes/com/ruoyi/quartz/mapper/SysJobLogMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-quartz/target/classes/com/ruoyi/quartz/mapper/SysJobMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-quartz/target/classes/com/ruoyi/quartz/service/ISysJobLogService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-quartz/target/classes/com/ruoyi/quartz/service/ISysJobService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-quartz/target/classes/com/ruoyi/quartz/service/impl/SysJobLogServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-quartz/target/classes/com/ruoyi/quartz/service/impl/SysJobServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-quartz/target/classes/com/ruoyi/quartz/task/RyTask.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-quartz/target/classes/com/ruoyi/quartz/util/AbstractQuartzJob.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-quartz/target/classes/com/ruoyi/quartz/util/CronUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-quartz/target/classes/com/ruoyi/quartz/util/JobInvokeUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-quartz/target/classes/com/ruoyi/quartz/util/QuartzDisallowConcurrentExecution.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-quartz/target/classes/com/ruoyi/quartz/util/QuartzJobExecution.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-quartz/target/classes/com/ruoyi/quartz/util/ScheduleUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-quartz/src/main/resources/mapper/quartz/SysJobLogMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-quartz/src/main/resources/mapper/quartz/SysJobLogMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/domain/FlowProcDefDto.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/domain/SysConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/domain/SysConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/domain/SysDeployForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/domain/SysDeployForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/domain/SysForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/domain/SysForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/domain/SysLogininfor.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/domain/SysLogininfor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/domain/SysNotice.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/domain/SysNotice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/domain/SysOperLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/domain/SysOperLog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/domain/SysPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/domain/SysPost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/domain/SysRoleDept.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/domain/SysRoleDept.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/domain/SysRoleMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/domain/SysRoleMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/domain/SysTaskForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/domain/SysTaskForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/domain/SysUserOnline.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/domain/SysUserOnline.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/domain/SysUserPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/domain/SysUserPost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/domain/SysUserRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/domain/SysUserRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/domain/survey/SurveyAnswer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/domain/survey/SurveyOptions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/domain/survey/SurveyPaper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/domain/survey/SurveyQuestion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/domain/survey/dto/SurveyAnswerDto.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/domain/vo/MetaVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/domain/vo/MetaVo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/domain/vo/RouterVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/domain/vo/RouterVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/mapper/FlowDeployMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/mapper/FlowDeployMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/mapper/SysConfigMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/mapper/SysConfigMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/mapper/SysDeptMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/mapper/SysDeptMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/mapper/SysDictDataMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/mapper/SysDictDataMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/mapper/SysDictTypeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/mapper/SysDictTypeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/mapper/SysFormMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/mapper/SysFormMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/mapper/SysLogininforMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/mapper/SysLogininforMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/mapper/SysMenuMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/mapper/SysMenuMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/mapper/SysNoticeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/mapper/SysNoticeMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/mapper/SysOperLogMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/mapper/SysOperLogMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/mapper/SysPostMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/mapper/SysPostMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/mapper/SysRoleDeptMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/mapper/SysRoleDeptMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/mapper/SysRoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/mapper/SysRoleMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/mapper/SysRoleMenuMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/mapper/SysRoleMenuMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/mapper/SysUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/mapper/SysUserMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/mapper/SysUserPostMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/mapper/SysUserPostMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/mapper/SysUserRoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/mapper/SysUserRoleMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/mapper/survey/SurveyAnswerMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/mapper/survey/SurveyOptionsMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/mapper/survey/SurveyPaperMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/mapper/survey/SurveyQuestionMapper.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/service/ISysConfigService.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/service/ISysConfigService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/service/ISysDeptService.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/service/ISysDeptService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/service/ISysDictDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/service/ISysDictDataService.java" afterDir="false" />
@@ -442,7 +239,6 @@
       <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/service/ISysOperLogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/service/ISysOperLogService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/service/ISysPostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/service/ISysPostService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/service/ISysRoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/service/ISysRoleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/service/ISysUserOnlineService.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/service/ISysUserOnlineService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/service/ISysUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/service/ISysUserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/service/impl/SysConfigServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/service/impl/SysConfigServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/service/impl/SysDeptServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/service/impl/SysDeptServiceImpl.java" afterDir="false" />
@@ -454,96 +250,481 @@
       <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/service/impl/SysOperLogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/service/impl/SysOperLogServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/service/impl/SysPostServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/service/impl/SysPostServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/service/impl/SysRoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/service/impl/SysRoleServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/service/impl/SysUserOnlineServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/service/impl/SysUserOnlineServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/service/impl/SysUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/service/impl/SysUserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/domain/FlowProcDefDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/domain/SysConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/domain/SysDeployForm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/domain/SysForm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/domain/SysLogininfor.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/domain/SysNotice.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/domain/SysOperLog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/domain/SysPost.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/domain/SysRoleDept.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/domain/SysRoleMenu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/domain/SysTaskForm.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/domain/SysUserOnline.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/domain/SysUserPost.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/domain/SysUserRole.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/domain/survey/SurveyAnswer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/domain/survey/SurveyOptions.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/domain/survey/SurveyPaper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/domain/survey/SurveyQuestion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/domain/survey/dto/SurveyAnswerDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/domain/vo/MetaVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/domain/vo/RouterVo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/mapper/FlowDeployMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/mapper/SysConfigMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/mapper/SysDeployFormMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/mapper/SysDeptMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/mapper/SysDictDataMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/mapper/SysDictTypeMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/mapper/SysFormMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/mapper/SysLogininforMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/mapper/SysMenuMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/mapper/SysNoticeMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/mapper/SysOperLogMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/mapper/SysPostMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/mapper/SysRoleDeptMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/mapper/SysRoleMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/mapper/SysRoleMenuMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/mapper/SysTaskFormMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/mapper/SysUserMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/mapper/SysUserPostMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/mapper/SysUserRoleMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/mapper/survey/SurveyAnswerMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/mapper/survey/SurveyOptionsMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/mapper/survey/SurveyPaperMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/mapper/survey/SurveyQuestionMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/service/ISysConfigService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/service/ISysDeptService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/service/ISysDictDataService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/service/ISysDictTypeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/service/ISysLogininforService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/service/ISysMenuService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/service/ISysNoticeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/service/ISysOperLogService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/service/ISysPostService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/service/ISysRoleService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/service/ISysUserOnlineService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/service/ISysUserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/service/impl/SysConfigServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/service/impl/SysDeptServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/service/impl/SysDictDataServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/service/impl/SysDictTypeServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/service/impl/SysLogininforServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/service/impl/SysMenuServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/service/impl/SysNoticeServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/service/impl/SysOperLogServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/service/impl/SysPostServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/service/impl/SysRoleServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/service/impl/SysUserOnlineServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/service/impl/SysUserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/service/survey/ISurveyAnswerService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/service/survey/ISurveyOptionsService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/service/survey/ISurveyPaperService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/service/survey/ISurveyQuestionService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/service/survey/impl/SurveyAnswerServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/service/survey/impl/SurveyOptionsServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/service/survey/impl/SurveyPaperServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/target/classes/com/ruoyi/system/service/survey/impl/SurveyQuestionServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-ui/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-ui/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/api/survey/paper.js" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-ui/src/api/survey/paper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/api/system/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-ui/src/api/system/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/styles/ruoyi.scss" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/styles/ruoyi.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/RuoYi/Doc/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-ui/src/components/RuoYi/Doc/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/directive/permission/hasPermi.js" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-ui/src/directive/permission/hasPermi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-ui/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/utils/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-ui/src/utils/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/utils/ruoyi.js" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-ui/src/utils/wdy.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/monitor/job/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-ui/src/views/monitor/job/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-ui/vue.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/service/survey/ISurveyAnswerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/service/survey/ISurveyOptionsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/service/survey/ISurveyPaperService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/service/survey/ISurveyQuestionService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/service/survey/impl/SurveyAnswerServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/service/survey/impl/SurveyOptionsServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/service/survey/impl/SurveyPaperServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/java/com/wdyVBlog/system/service/survey/impl/SurveyQuestionServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/resources/mapper/FlowDeployMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/resources/mapper/SysTaskFormMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/resources/mapper/survey/SurveyAnswerMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/resources/mapper/survey/SurveyOptionsMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/resources/mapper/survey/SurveyPaperMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/resources/mapper/survey/SurveyQuestionMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/resources/mapper/system/SysDeptMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/resources/mapper/system/SysDeptMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/resources/mapper/system/SysDictTypeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/resources/mapper/system/SysDictTypeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/resources/mapper/system/SysFormMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/resources/mapper/system/SysFormMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/resources/mapper/system/SysMenuMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/resources/mapper/system/SysMenuMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/resources/mapper/system/SysOperLogMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/resources/mapper/system/SysOperLogMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/resources/mapper/system/SysPostMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/resources/mapper/system/SysPostMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/resources/mapper/system/SysRoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/resources/mapper/system/SysRoleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-system/src/main/resources/mapper/system/SysUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-system/src/main/resources/mapper/system/SysUserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/.env.development" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/.env.production" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/.env.staging" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/.eslintignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/.eslintrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/babel.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/bin/build.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/bin/package.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/bin/run-web.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/build/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/base/browser/ui/codicons/codicon/codicon.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/base/worker/workerMain.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/abap/abap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/apex/apex.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/azcli/azcli.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/bat/bat.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/cameligo/cameligo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/clojure/clojure.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/coffee/coffee.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/cpp/cpp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/csharp/csharp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/csp/csp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/css/css.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/dart/dart.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/dockerfile/dockerfile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/ecl/ecl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/fsharp/fsharp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/go/go.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/graphql/graphql.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/handlebars/handlebars.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/hcl/hcl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/html/html.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/ini/ini.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/java/java.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/javascript/javascript.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/julia/julia.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/kotlin/kotlin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/less/less.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/lexon/lexon.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/lua/lua.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/m3/m3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/markdown/markdown.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/mips/mips.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/msdax/msdax.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/mysql/mysql.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/objective-c/objective-c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/pascal/pascal.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/pascaligo/pascaligo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/perl/perl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/pgsql/pgsql.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/php/php.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/postiats/postiats.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/powerquery/powerquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/powershell/powershell.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/pug/pug.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/python/python.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/r/r.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/razor/razor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/redis/redis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/redshift/redshift.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/restructuredtext/restructuredtext.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/ruby/ruby.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/rust/rust.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/sb/sb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/scala/scala.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/scheme/scheme.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/scss/scss.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/shell/shell.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/solidity/solidity.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/sophia/sophia.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/sql/sql.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/st/st.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/swift/swift.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/systemverilog/systemverilog.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/tcl/tcl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/twig/twig.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/typescript/typescript.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/vb/vb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/xml/xml.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/basic-languages/yaml/yaml.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/editor/editor.main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/editor/editor.main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/editor/editor.main.nls.de.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/editor/editor.main.nls.es.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/editor/editor.main.nls.fr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/editor/editor.main.nls.it.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/editor/editor.main.nls.ja.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/editor/editor.main.nls.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/editor/editor.main.nls.ko.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/editor/editor.main.nls.ru.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/editor/editor.main.nls.zh-cn.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/editor/editor.main.nls.zh-tw.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/language/css/cssMode.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/language/css/cssWorker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/language/html/htmlMode.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/language/html/htmlWorker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/language/json/jsonMode.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/language/json/jsonWorker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/language/typescript/tsMode.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/language/typescript/tsWorker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/libs/monaco-editor/vs/loader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/App.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/api/flowable/definition.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/api/flowable/finished.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/api/flowable/form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/api/flowable/process.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/api/flowable/todo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/api/login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/api/menu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/api/monitor/cache.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/api/monitor/job.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/api/monitor/jobLog.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/api/monitor/logininfor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/api/monitor/online.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/api/monitor/operlog.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/api/monitor/server.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/api/survey/answer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/api/survey/options.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/api/survey/paper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/api/survey/question.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/api/system/config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/api/system/dept.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/api/system/dict/data.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/api/system/dict/type.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/api/system/menu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/api/system/notice.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/api/system/post.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/api/system/role.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/api/system/user.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/api/tool/gen.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/401_images/401.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/404_images/404.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/404_images/404_cloud.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/404.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/bug.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/build.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/button.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/cascader.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/chart.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/checkbox.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/clipboard.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/code.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/color.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/component.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/dashboard.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/date-range.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/date.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/dict.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/documentation.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/download.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/drag.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/druid.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/edit.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/education.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/email.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/example.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/excel.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/exit-fullscreen.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/eye-open.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/eye.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/form.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/fullscreen.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/github.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/guide.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/icon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/input.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/international.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/job.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/language.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/link.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/list.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/lock.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/log.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/logininfor.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/message.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/money.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/monitor.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/nested.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/number.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/online.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/password.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/pdf.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/people.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/peoples.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/phone.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/post.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/qq.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/question.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/radio.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/rate.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/redis.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/row.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/search.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/select.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/server.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/shopping.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/size.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/skill.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/slider.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/star.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/swagger.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/switch.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/system.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/tab.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/table.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/textarea.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/theme.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/time-range.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/time.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/tool.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/tree-table.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/tree.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/upload.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/user.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/validCode.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/wechat.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svg/zip.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/icons/svgo.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/images/dark.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/images/light.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/images/login-background.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/images/profile.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/logo/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/styles/btn.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/styles/element-ui.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/styles/element-variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/styles/index.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/styles/mixin.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/styles/ruoyi.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/styles/sidebar.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/styles/transition.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/assets/styles/variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/BpmnViewer/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/BpmnViewer/src/BpmnViewer.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/Breadcrumb/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/Editor/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/FileUpload/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/Hamburger/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/HeaderSearch/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/IconSelect/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/IconSelect/requireIcons.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/ImageUpload/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/Pagination/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/PanThumb/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/ParentView/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/Process/BpmData.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/Process/PropertyPanel.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/Process/common/customTranslate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/Process/common/mixinExecutionListener.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/Process/common/mixinPanel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/Process/common/mixinXcrud.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/Process/common/parseElement.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/Process/components/custom/customContextPad.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/Process/components/nodePanel/gateway.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/Process/components/nodePanel/process.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/Process/components/nodePanel/property/executionListener.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/Process/components/nodePanel/property/listenerParam.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/Process/components/nodePanel/property/multiInstance.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/Process/components/nodePanel/property/signal.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/Process/components/nodePanel/property/taskListener.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/Process/components/nodePanel/sequenceFlow.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/Process/components/nodePanel/startEnd.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/Process/components/nodePanel/task.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/Process/flowable/flowable.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/Process/flowable/init.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/Process/flowable/showConfig.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/Process/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/Process/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/Process/lang/zh.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/RightPanel/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/RightToolbar/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/RuoYi/Doc/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/RuoYi/Git/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/Screenfull/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/SizeSelect/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/SvgIcon/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/ThemePicker/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/customBpmn/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/parser/Parser.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/parser/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/parser/example/Index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/parser/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/parser/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/render/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/render/render.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/render/slots/el-button.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/render/slots/el-checkbox-group.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/render/slots/el-input.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/render/slots/el-radio-group.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/render/slots/el-select.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/render/slots/el-upload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/tinymce/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/tinymce/config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/tinymce/example/Index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/tinymce/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/tinymce/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/tinymce/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/components/tinymce/zh_CN.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/directive/permission/hasPermi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/directive/permission/hasRole.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/directive/permission/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/icons/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/icons/svg/button.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/icons/svg/cascader.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/icons/svg/checkbox.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/icons/svg/color.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/icons/svg/component.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/icons/svg/date-range.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/icons/svg/date.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/icons/svg/input.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/icons/svg/number.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/icons/svg/password.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/icons/svg/radio.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/icons/svg/rate.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/icons/svg/rich-text.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/icons/svg/row.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/icons/svg/select.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/icons/svg/slider.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/icons/svg/switch.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/icons/svg/table.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/icons/svg/textarea.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/icons/svg/time-range.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/icons/svg/time.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/icons/svg/upload.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/layout/components/AppMain.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/layout/components/Navbar.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/layout/components/Settings/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/layout/components/Sidebar/FixiOSBug.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/layout/components/Sidebar/Item.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/layout/components/Sidebar/Link.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/layout/components/Sidebar/Logo.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/layout/components/Sidebar/SidebarItem.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/layout/components/Sidebar/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/layout/components/TagsView/ScrollPane.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/layout/components/TagsView/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/layout/components/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/layout/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/layout/mixin/ResizeHandler.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/permission.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/router/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/settings.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/store/getters.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/store/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/store/modules/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/store/modules/permission.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/store/modules/settings.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/store/modules/tagsView.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/store/modules/user.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/styles/home.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/styles/index.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/styles/mixin.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/utils/auth.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/utils/db.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/utils/errorCode.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/utils/generator/config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/utils/generator/css.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/utils/generator/drawingDefalut.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/utils/generator/html.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/utils/generator/icon.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/utils/generator/js.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/utils/generator/render.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/utils/generator/ruleTrigger.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/utils/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/utils/jsencrypt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/utils/loadBeautifier.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/utils/loadMonaco.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/utils/loadScript.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/utils/loadTinymce.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/utils/permission.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/utils/pluginsConfig.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/utils/request.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/utils/scroll-to.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/utils/validate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/utils/wdy.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/utils/zipdownload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/components/icons/element-icons.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/components/icons/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/components/icons/svg-icons.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/dashboard/BarChart.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/dashboard/LineChart.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/dashboard/PanelGroup.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/dashboard/PieChart.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/dashboard/RaddarChart.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/dashboard/mixins/resize.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/error/401.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/error/404.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/flowable/definition/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/flowable/definition/model.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/flowable/task/finished/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/flowable/task/form/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/flowable/task/process/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/flowable/task/record/flow.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/flowable/task/record/flowview.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/flowable/task/record/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/flowable/task/todo/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/index_v1.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/login.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/monitor/cache/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/monitor/druid/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/monitor/job/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/monitor/job/log.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/monitor/logininfor/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/monitor/online/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/monitor/operlog/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/monitor/server/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/redirect.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/survey/answer/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/survey/options/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/survey/paper/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/survey/question/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/system/config/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/system/dept/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/system/dict/data.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/system/dict/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/system/menu/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/system/notice/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/system/post/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/system/role/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/system/user/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/system/user/profile/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/system/user/profile/resetPwd.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/system/user/profile/userAvatar.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/system/user/profile/userInfo.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/tool/build/App.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/tool/build/CodeTypeDialog.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/tool/build/DraggableItem.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/tool/build/FormDrawer.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/tool/build/IconsDialog.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/tool/build/JsonDrawer.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/tool/build/ResourceDialog.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/tool/build/RightPanel.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/tool/build/TreeNodeDialog.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/tool/build/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/tool/build/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/tool/gen/basicInfoForm.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/tool/gen/editTable.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/tool/gen/genInfoForm.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/tool/gen/importTable.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/tool/gen/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/tool/preview/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/src/views/tool/swagger/index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-ui/vue.config.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -588,7 +769,7 @@
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "MavenSettings",
     "show.run.dashboard.notification": "false",
-    "spring.configuration.checksum": "422b3c91ccb287c58b4ae892a3250c12",
+    "spring.configuration.checksum": "2ab45b2244d7ef91222ad05255d91584",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -596,10 +777,10 @@
     <option name="notificationShown" value="true" />
   </component>
   <component name="RunManager">
-    <configuration name="WdyVBlogApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="MyApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="ACTIVE_PROFILES" />
       <module name="wdyVBlog-admin" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wdyVBlog.WdyVBlogApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wdyVBlog.MyApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -617,6 +798,7 @@
       <workItem from="1671788556564" duration="307000" />
       <workItem from="1672038650730" duration="755000" />
       <workItem from="1672039431444" duration="4218000" />
+      <workItem from="1672131185991" duration="2433000" />
     </task>
     <task id="LOCAL-00001" summary="项目初始化">
       <created>1672040339745</created>

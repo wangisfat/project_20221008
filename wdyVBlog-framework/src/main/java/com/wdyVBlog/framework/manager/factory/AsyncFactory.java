@@ -6,6 +6,7 @@ import org.slf4j.LoggerFactory;
 import com.wdyVBlog.common.constant.Constants;
 import com.wdyVBlog.common.utils.LogUtils;
 import com.wdyVBlog.common.utils.ServletUtils;
+import com.wdyVBlog.common.utils.StringUtils;
 import com.wdyVBlog.common.utils.ip.AddressUtils;
 import com.wdyVBlog.common.utils.ip.IpUtils;
 import com.wdyVBlog.common.utils.spring.SpringUtils;
@@ -65,7 +66,7 @@ public class AsyncFactory
                 logininfor.setOs(os);
                 logininfor.setMsg(message);
                 // 日志状态
-                if (Constants.LOGIN_SUCCESS.equals(status) || Constants.LOGOUT.equals(status))
+                if (StringUtils.equalsAny(status, Constants.LOGIN_SUCCESS, Constants.LOGOUT, Constants.REGISTER))
                 {
                     logininfor.setStatus(Constants.SUCCESS);
                 }

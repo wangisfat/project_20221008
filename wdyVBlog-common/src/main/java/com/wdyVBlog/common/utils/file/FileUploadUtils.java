@@ -2,16 +2,18 @@ package com.wdyVBlog.common.utils.file;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Paths;
+import java.util.Objects;
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.web.multipart.MultipartFile;
-import com.wdyVBlog.common.config.WdyVBlogConfig;
+import com.wdyVBlog.common.config.ProjectConfig;
 import com.wdyVBlog.common.constant.Constants;
 import com.wdyVBlog.common.exception.file.FileNameLengthLimitExceededException;
 import com.wdyVBlog.common.exception.file.FileSizeLimitExceededException;
 import com.wdyVBlog.common.exception.file.InvalidExtensionException;
 import com.wdyVBlog.common.utils.DateUtils;
 import com.wdyVBlog.common.utils.StringUtils;
-import com.wdyVBlog.common.utils.uuid.IdUtils;
+import com.wdyVBlog.common.utils.uuid.Seq;
 
 /**
  * 文件上传工具类
@@ -33,7 +35,7 @@ public class FileUploadUtils
     /**
      * 默认上传的地址
      */
-    private static String defaultBaseDir = WdyVBlogConfig.getProfile();
+    private static String defaultBaseDir = ProjectConfig.getProfile();
 
     public static void setDefaultBaseDir(String defaultBaseDir)
     {
@@ -100,7 +102,7 @@ public class FileUploadUtils
             throws FileSizeLimitExceededException, IOException, FileNameLengthLimitExceededException,
             InvalidExtensionException
     {
-        int fileNamelength = file.getOriginalFilename().length();
+        int fileNamelength = Objects.requireNonNull(file.getOriginalFilename()).length();
         if (fileNamelength > FileUploadUtils.DEFAULT_FILE_NAME_LENGTH)
         {
             throw new FileNameLengthLimitExceededException(FileUploadUtils.DEFAULT_FILE_NAME_LENGTH);
@@ -110,10 +112,9 @@ public class FileUploadUtils
 
         String fileName = extractFilename(file);
 
-        File desc = getAbsoluteFile(baseDir, fileName);
-        file.transferTo(desc);
-        String pathFileName = getPathFileName(baseDir, fileName);
-        return pathFileName;
+        String absPath = getAbsoluteFile(baseDir, fileName).getAbsolutePath();
+        file.transferTo(Paths.get(absPath));
+        return getPathFileName(baseDir, fileName);
     }
 
     /**
@@ -121,33 +122,29 @@ public class FileUploadUtils
      */
     public static final String extractFilename(MultipartFile file)
     {
-        String fileName = file.getOriginalFilename();
-        String extension = getExtension(file);
-        fileName = DateUtils.datePath() + "/" + IdUtils.fastUUID() + "." + extension;
-        return fileName;
+        return StringUtils.format("{}/{}_{}.{}", DateUtils.datePath(),
+                FilenameUtils.getBaseName(file.getOriginalFilename()), Seq.getId(Seq.uploadSeqType), getExtension(file));
     }
 
-    private static final File getAbsoluteFile(String uploadDir, String fileName) throws IOException
+    public static final File getAbsoluteFile(String uploadDir, String fileName) throws IOException
     {
         File desc = new File(uploadDir + File.separator + fileName);
 
-        if (!desc.getParentFile().exists())
-        {
-            desc.getParentFile().mkdirs();
-        }
         if (!desc.exists())
         {
-            desc.createNewFile();
+            if (!desc.getParentFile().exists())
+            {
+                desc.getParentFile().mkdirs();
+            }
         }
         return desc;
     }
 
-    private static final String getPathFileName(String uploadDir, String fileName) throws IOException
+    public static final String getPathFileName(String uploadDir, String fileName) throws IOException
     {
-        int dirLastIndex = WdyVBlogConfig.getProfile().length() + 1;
+        int dirLastIndex = ProjectConfig.getProfile().length() + 1;
         String currentDir = StringUtils.substring(uploadDir, dirLastIndex);
-        String pathFileName = Constants.RESOURCE_PREFIX + "/" + currentDir + "/" + fileName;
-        return pathFileName;
+        return Constants.RESOURCE_PREFIX + "/" + currentDir + "/" + fileName;
     }
 
     /**
@@ -162,7 +159,7 @@ public class FileUploadUtils
             throws FileSizeLimitExceededException, InvalidExtensionException
     {
         long size = file.getSize();
-        if (DEFAULT_MAX_SIZE != -1 && size > DEFAULT_MAX_SIZE)
+        if (size > DEFAULT_MAX_SIZE)
         {
             throw new FileSizeLimitExceededException(DEFAULT_MAX_SIZE / 1024 / 1024);
         }
@@ -186,12 +183,16 @@ public class FileUploadUtils
                 throw new InvalidExtensionException.InvalidMediaExtensionException(allowedExtension, extension,
                         fileName);
             }
+            else if (allowedExtension == MimeTypeUtils.VIDEO_EXTENSION)
+            {
+                throw new InvalidExtensionException.InvalidVideoExtensionException(allowedExtension, extension,
+                        fileName);
+            }
             else
             {
                 throw new InvalidExtensionException(allowedExtension, extension, fileName);
             }
         }
-
     }
 
     /**
@@ -224,7 +225,7 @@ public class FileUploadUtils
         String extension = FilenameUtils.getExtension(file.getOriginalFilename());
         if (StringUtils.isEmpty(extension))
         {
-            extension = MimeTypeUtils.getExtension(file.getContentType());
+            extension = MimeTypeUtils.getExtension(Objects.requireNonNull(file.getContentType()));
         }
         return extension;
     }

@@ -1,27 +1,18 @@
 package com.wdyVBlog.flowable.controller;
 
-import java.util.List;
-
-import com.wdyVBlog.flowable.service.ISysDeployFormService;
-import com.wdyVBlog.system.domain.SysDeployForm;
-import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 import com.wdyVBlog.common.annotation.Log;
 import com.wdyVBlog.common.core.controller.BaseController;
 import com.wdyVBlog.common.core.domain.AjaxResult;
 import com.wdyVBlog.common.enums.BusinessType;
-import com.wdyVBlog.system.domain.SysForm;
-import com.wdyVBlog.flowable.service.ISysFormService;
+import com.wdyVBlog.common.utils.PageResult;
 import com.wdyVBlog.common.utils.poi.ExcelUtil;
-import com.wdyVBlog.common.core.page.TableDataInfo;
+import com.wdyVBlog.flowable.service.ISysDeployFormService;
+import com.wdyVBlog.flowable.service.ISysFormService;
+import com.wdyVBlog.system.domain.SysDeployForm;
+import com.wdyVBlog.system.domain.SysForm;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * 流程表单Controller
@@ -43,10 +34,9 @@ public class SysFormController extends BaseController {
      */
     @PreAuthorize("@ss.hasPermi('flowable:form:list')")
     @GetMapping("/list")
-    public TableDataInfo list(SysForm sysForm) {
-        startPage();
-        List<SysForm> list = SysFormService.selectSysFormList(sysForm);
-        return getDataTable(list);
+    public PageResult<SysForm> list(SysForm sysForm) {
+        PageResult<SysForm> list = SysFormService.selectSysFormList(sysForm);
+        return list;
     }
 
     /**
@@ -56,9 +46,9 @@ public class SysFormController extends BaseController {
     @Log(title = "流程表单", businessType = BusinessType.EXPORT)
     @GetMapping("/export")
     public AjaxResult export(SysForm sysForm) {
-        List<SysForm> list = SysFormService.selectSysFormList(sysForm);
+        PageResult<SysForm> list = SysFormService.selectSysFormList(sysForm);
         ExcelUtil<SysForm> util = new ExcelUtil<SysForm>(SysForm.class);
-        return util.exportExcel(list, "form");
+        return util.exportExcel(list.getRecords(), "form");
     }
 
     /**

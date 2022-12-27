@@ -1,6 +1,8 @@
 package com.wdyVBlog.system.mapper;
 
 import java.util.List;
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.wdyVBlog.system.domain.SysConfig;
 
 /**
@@ -8,7 +10,7 @@ import com.wdyVBlog.system.domain.SysConfig;
  * 
  * @author wdy
  */
-public interface SysConfigMapper
+public interface SysConfigMapper  extends BaseMapper<SysConfig>
 {
     /**
      * 查询参数配置信息

@@ -2,9 +2,13 @@ package com.wdyVBlog.system.domain;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
+
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 import com.wdyVBlog.common.core.domain.BaseEntity;
+import com.wdyVBlog.common.xss.Xss;
 
 /**
  * 通知公告表 sys_notice
@@ -16,6 +20,7 @@ public class SysNotice extends BaseEntity
     private static final long serialVersionUID = 1L;
 
     /** 公告ID */
+    @TableId(type = IdType.AUTO)
     private Long noticeId;
 
     /** 公告标题 */
@@ -45,6 +50,7 @@ public class SysNotice extends BaseEntity
         this.noticeTitle = noticeTitle;
     }
 
+    @Xss(message = "公告标题不能包含脚本字符")
     @NotBlank(message = "公告标题不能为空")
     @Size(min = 0, max = 50, message = "公告标题不能超过50个字符")
     public String getNoticeTitle()

@@ -1,16 +1,18 @@
 package com.wdyVBlog.flowable.service.impl;
 
 
-import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson2.JSONObject;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.wdyVBlog.common.core.page.PageDomain;
+import com.wdyVBlog.common.core.page.TableSupport;
+import com.wdyVBlog.common.exception.ServiceException;
 import com.google.common.collect.Lists;
-import com.wdyVBlog.flowable.common.constant.ProcessConstants;
 import com.wdyVBlog.common.core.domain.AjaxResult;
 import com.wdyVBlog.common.core.domain.entity.SysRole;
 import com.wdyVBlog.common.core.domain.entity.SysUser;
-import com.wdyVBlog.flowable.common.enums.FlowComment;
-import com.wdyVBlog.common.exception.CustomException;
 import com.wdyVBlog.common.utils.SecurityUtils;
+import com.wdyVBlog.flowable.common.constant.ProcessConstants;
+import com.wdyVBlog.flowable.common.enums.FlowComment;
 import com.wdyVBlog.flowable.domain.dto.FlowCommentDto;
 import com.wdyVBlog.flowable.domain.dto.FlowNextDto;
 import com.wdyVBlog.flowable.domain.dto.FlowTaskDto;
@@ -32,15 +34,12 @@ import org.flowable.bpmn.model.Process;
 import org.flowable.bpmn.model.*;
 import org.flowable.common.engine.api.FlowableException;
 import org.flowable.common.engine.api.FlowableObjectNotFoundException;
-import org.flowable.common.engine.api.query.QueryProperty;
 import org.flowable.common.engine.impl.identity.Authentication;
 import org.flowable.engine.ProcessEngineConfiguration;
 import org.flowable.engine.history.HistoricActivityInstance;
 import org.flowable.engine.history.HistoricProcessInstance;
 import org.flowable.engine.history.HistoricProcessInstanceQuery;
-import org.flowable.engine.impl.ActivityInstanceQueryProperty;
 import org.flowable.engine.repository.ProcessDefinition;
-import org.flowable.engine.runtime.ActivityInstance;
 import org.flowable.engine.runtime.Execution;
 import org.flowable.engine.runtime.ProcessInstance;
 import org.flowable.engine.task.Comment;
@@ -112,7 +111,7 @@ public class FlowTaskServiceImpl extends FlowServiceFactory implements IFlowTask
     @Override
     public void taskReject(FlowTaskVo flowTaskVo) {
         if (taskService.createTaskQuery().taskId(flowTaskVo.getTaskId()).singleResult().isSuspended()) {
-            throw new CustomException("任务处于挂起状态!");
+            throw new ServiceException("任务处于挂起状态!");
         }
         // 当前任务 task
         Task task = taskService.createTaskQuery().taskId(flowTaskVo.getTaskId()).singleResult();
@@ -139,7 +138,7 @@ public class FlowTaskServiceImpl extends FlowServiceFactory implements IFlowTask
         // 深度优先算法思想：延边迭代深入
         List<UserTask> parentUserTaskList = FlowableUtils.iteratorFindParentUserTasks(source, null, null);
         if (parentUserTaskList == null || parentUserTaskList.size() == 0) {
-            throw new CustomException("当前节点为初始任务节点，不能驳回");
+            throw new ServiceException("当前节点为初始任务节点，不能驳回");
         }
         // 获取活动 ID 即节点 Key
         List<String> parentUserTaskKeyList = new ArrayList<>();
@@ -192,7 +191,7 @@ public class FlowTaskServiceImpl extends FlowServiceFactory implements IFlowTask
 
         // 规定：并行网关之前节点必须需存在唯一用户任务节点，如果出现多个任务节点，则并行网关节点默认为结束节点，原因为不考虑多对多情况
         if (targetIds.size() > 1 && currentIds.size() > 1) {
-            throw new CustomException("任务出现多对多情况，无法撤回");
+            throw new ServiceException("任务出现多对多情况，无法撤回");
         }
 
         // 循环获取那些需要被撤回的节点的ID，用来设置驳回原因
@@ -221,9 +220,9 @@ public class FlowTaskServiceImpl extends FlowServiceFactory implements IFlowTask
                         .moveActivityIdsToSingleActivityId(currentIds, targetIds.get(0)).changeState();
             }
         } catch (FlowableObjectNotFoundException e) {
-            throw new CustomException("未找到流程实例，流程可能已发生变化");
+            throw new ServiceException("未找到流程实例，流程可能已发生变化");
         } catch (FlowableException e) {
-            throw new CustomException("无法取消或开始活动");
+            throw new ServiceException("无法取消或开始活动");
         }
 
     }
@@ -237,7 +236,7 @@ public class FlowTaskServiceImpl extends FlowServiceFactory implements IFlowTask
     @Override
     public void taskReturn(FlowTaskVo flowTaskVo) {
         if (taskService.createTaskQuery().taskId(flowTaskVo.getTaskId()).singleResult().isSuspended()) {
-            throw new CustomException("任务处于挂起状态");
+            throw new ServiceException("任务处于挂起状态");
         }
         // 当前任务 task
         Task task = taskService.createTaskQuery().taskId(flowTaskVo.getTaskId()).singleResult();
@@ -269,7 +268,7 @@ public class FlowTaskServiceImpl extends FlowServiceFactory implements IFlowTask
         // 否则目标节点相对于当前节点，属于串行
         Boolean isSequential = FlowableUtils.iteratorCheckSequentialReferTarget(source, flowTaskVo.getTargetKey(), null, null);
         if (!isSequential) {
-            throw new CustomException("当前节点相对于目标节点，不属于串行关系，无法回退");
+            throw new ServiceException("当前节点相对于目标节点，不属于串行关系，无法回退");
         }
 
 
@@ -299,9 +298,9 @@ public class FlowTaskServiceImpl extends FlowServiceFactory implements IFlowTask
                     .processInstanceId(task.getProcessInstanceId())
                     .moveActivityIdsToSingleActivityId(currentIds, flowTaskVo.getTargetKey()).changeState();
         } catch (FlowableObjectNotFoundException e) {
-            throw new CustomException("未找到流程实例，流程可能已发生变化");
+            throw new ServiceException("未找到流程实例，流程可能已发生变化");
         } catch (FlowableException e) {
-            throw new CustomException("无法取消或开始活动");
+            throw new ServiceException("无法取消或开始活动");
         }
     }
 
@@ -444,6 +443,7 @@ public class FlowTaskServiceImpl extends FlowServiceFactory implements IFlowTask
             flowTask.setProcDefVersion(pd.getVersion());
             flowTask.setCategory(pd.getCategory());
             flowTask.setProcDefVersion(pd.getVersion());
+            flowTask.setExecutionId(hisIns.getId());
             // 当前所处流程 todo: 本地启动放开以下注释
 //            List<Task> taskList = taskService.createTaskQuery().processInstanceId(hisIns.getId()).list();
 //            if (CollectionUtils.isNotEmpty(taskList)) {
@@ -468,7 +468,7 @@ public class FlowTaskServiceImpl extends FlowServiceFactory implements IFlowTask
     public AjaxResult stopProcess(FlowTaskVo flowTaskVo) {
         List<Task> task = taskService.createTaskQuery().processInstanceId(flowTaskVo.getInstanceId()).list();
         if (CollectionUtils.isEmpty(task)) {
-            throw new CustomException("流程未启动或已执行完成，取消申请失败");
+            throw new ServiceException("流程未启动或已执行完成，取消申请失败");
         }
         // 获取当前需撤回的流程实例
         ProcessInstance processInstance =
@@ -509,7 +509,7 @@ public class FlowTaskServiceImpl extends FlowServiceFactory implements IFlowTask
     public AjaxResult revokeProcess(FlowTaskVo flowTaskVo) {
         Task task = taskService.createTaskQuery().processInstanceId(flowTaskVo.getInstanceId()).singleResult();
         if (task == null) {
-            throw new CustomException("流程未启动或已执行完成，无法撤回");
+            throw new ServiceException("流程未启动或已执行完成，无法撤回");
         }
 
         SysUser loginUser = SecurityUtils.getLoginUser().getUser();
@@ -528,7 +528,7 @@ public class FlowTaskServiceImpl extends FlowServiceFactory implements IFlowTask
             }
         }
         if (null == myTaskId) {
-            throw new CustomException("该任务非当前用户提交，无法撤回");
+            throw new ServiceException("该任务非当前用户提交，无法撤回");
         }
 
         String processDefinitionId = myTask.getProcessDefinitionId();
@@ -561,12 +561,10 @@ public class FlowTaskServiceImpl extends FlowServiceFactory implements IFlowTask
     /**
      * 代办任务列表
      *
-     * @param pageNum  当前页码
-     * @param pageSize 每页条数
      * @return
      */
     @Override
-    public AjaxResult todoList(Integer pageNum, Integer pageSize) {
+    public AjaxResult todoList() {
         Page<FlowTaskDto> page = new Page<>();
         Long userId = SecurityUtils.getLoginUser().getUser().getUserId();
         TaskQuery taskQuery = taskService.createTaskQuery()
@@ -575,7 +573,8 @@ public class FlowTaskServiceImpl extends FlowServiceFactory implements IFlowTask
                 .taskAssignee(userId.toString())
                 .orderByTaskCreateTime().desc();
         page.setTotal(taskQuery.count());
-        List<Task> taskList = taskQuery.listPage(pageSize * (pageNum - 1), pageSize);
+        PageDomain pageDomain = TableSupport.getPageDomain();
+        List<Task> taskList = taskQuery.listPage(pageDomain.getPageSize() * (pageDomain.getPageNum() - 1), pageDomain.getPageSize());
         List<FlowTaskDto> flowList = new ArrayList<>();
         for (Task task : taskList) {
             FlowTaskDto flowTask = new FlowTaskDto();
@@ -898,7 +897,7 @@ public class FlowTaskServiceImpl extends FlowServiceFactory implements IFlowTask
                     MultiInstanceLoopCharacteristics multiInstance = userTask.getLoopCharacteristics();
                     // 会签节点
                     if (Objects.nonNull(multiInstance)) {
-                        List<SysUser> list = sysUserService.selectUserList(new SysUser());
+                        List<SysUser> list = sysUserService.selectAllUserList(new SysUser());
 
                         flowNextDto.setVars(ProcessConstants.PROCESS_MULTI_INSTANCE_USER);
                         flowNextDto.setType(ProcessConstants.PROCESS_MULTI_INSTANCE);
@@ -913,7 +912,7 @@ public class FlowTaskServiceImpl extends FlowServiceFactory implements IFlowTask
                         if (ProcessConstants.DATA_TYPE.equals(dataType)) {
                             // 指定单个人员
                             if (ProcessConstants.USER_TYPE_ASSIGNEE.equals(userType)) {
-                                List<SysUser> list = sysUserService.selectUserList(new SysUser());
+                                List<SysUser> list = sysUserService.selectAllUserList(new SysUser());
 
                                 flowNextDto.setVars(ProcessConstants.PROCESS_APPROVAL);
                                 flowNextDto.setType(ProcessConstants.USER_TYPE_ASSIGNEE);
@@ -921,7 +920,7 @@ public class FlowTaskServiceImpl extends FlowServiceFactory implements IFlowTask
                             }
                             // 候选人员(多个)
                             if (ProcessConstants.USER_TYPE_USERS.equals(userType)) {
-                                List<SysUser> list = sysUserService.selectUserList(new SysUser());
+                                List<SysUser> list = sysUserService.selectAllUserList(new SysUser());
 
                                 flowNextDto.setVars(ProcessConstants.PROCESS_APPROVAL);
                                 flowNextDto.setType(ProcessConstants.USER_TYPE_USERS);

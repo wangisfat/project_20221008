@@ -1,6 +1,6 @@
 package com.wdyVBlog.common.exception.user;
 
-import com.wdyVBlog.common.exception.BaseException;
+import com.wdyVBlog.common.exception.base.BaseException;
 
 /**
  * 用户信息异常类

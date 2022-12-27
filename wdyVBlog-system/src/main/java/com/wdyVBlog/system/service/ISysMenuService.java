@@ -2,6 +2,8 @@ package com.wdyVBlog.system.service;
 
 import java.util.List;
 import java.util.Set;
+
+import com.baomidou.mybatisplus.extension.service.IService;
 import com.wdyVBlog.common.core.domain.TreeSelect;
 import com.wdyVBlog.common.core.domain.entity.SysMenu;
 import com.wdyVBlog.system.domain.vo.RouterVo;
@@ -11,7 +13,7 @@ import com.wdyVBlog.system.domain.vo.RouterVo;
  * 
  * @author wdy
  */
-public interface ISysMenuService
+public interface ISysMenuService extends IService<SysMenu>
 {
     /**
      * 根据用户查询系统菜单列表
@@ -39,6 +41,14 @@ public interface ISysMenuService
     public Set<String> selectMenuPermsByUserId(Long userId);
 
     /**
+     * 根据角色ID查询权限
+     * 
+     * @param roleId 角色ID
+     * @return 权限列表
+     */
+    public Set<String> selectMenuPermsByRoleId(Long roleId);
+
+    /**
      * 根据用户ID查询菜单树信息
      * 
      * @param userId 用户ID
@@ -52,7 +62,7 @@ public interface ISysMenuService
      * @param roleId 角色ID
      * @return 选中菜单列表
      */
-    public List<Integer> selectMenuListByRoleId(Long roleId);
+    public List<Long> selectMenuListByRoleId(Long roleId);
 
     /**
      * 构建前端路由所需要的菜单

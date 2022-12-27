@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/wangisfat.iml" filepath="$PROJECT_DIR$/wangisfat.iml" />
       <module fileurl="file://$PROJECT_DIR$/wdy-common/wdy-common.iml" filepath="$PROJECT_DIR$/wdy-common/wdy-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/wdyVBlog-flowable/wdy-flowable.iml" filepath="$PROJECT_DIR$/wdyVBlog-flowable/wdy-flowable.iml" />
       <module fileurl="file://$PROJECT_DIR$/wdy-framework/wdy-framework.iml" filepath="$PROJECT_DIR$/wdy-framework/wdy-framework.iml" />
@@ -11,10 +12,11 @@
       <module fileurl="file://$PROJECT_DIR$/wdyVBlog.iml" filepath="$PROJECT_DIR$/wdyVBlog.iml" />
       <module fileurl="file://$PROJECT_DIR$/wdyVBlog-admin/wdyVBlog-admin.iml" filepath="$PROJECT_DIR$/wdyVBlog-admin/wdyVBlog-admin.iml" />
       <module fileurl="file://$PROJECT_DIR$/wdyVBlog-common/wdyVBlog-common.iml" filepath="$PROJECT_DIR$/wdyVBlog-common/wdyVBlog-common.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ruoyi-flowable/wdyVBlog-flowable.iml" filepath="$PROJECT_DIR$/ruoyi-flowable/wdyVBlog-flowable.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wdyVBlog-flowable/wdyVBlog-flowable.iml" filepath="$PROJECT_DIR$/wdyVBlog-flowable/wdyVBlog-flowable.iml" />
       <module fileurl="file://$PROJECT_DIR$/wdyVBlog-framework/wdyVBlog-framework.iml" filepath="$PROJECT_DIR$/wdyVBlog-framework/wdyVBlog-framework.iml" />
       <module fileurl="file://$PROJECT_DIR$/wdyVBlog-generator/wdyVBlog-generator.iml" filepath="$PROJECT_DIR$/wdyVBlog-generator/wdyVBlog-generator.iml" />
       <module fileurl="file://$PROJECT_DIR$/wdyVBlog-quartz/wdyVBlog-quartz.iml" filepath="$PROJECT_DIR$/wdyVBlog-quartz/wdyVBlog-quartz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wdyVBlog-report/wdyVBlog-report.iml" filepath="$PROJECT_DIR$/wdyVBlog-report/wdyVBlog-report.iml" />
       <module fileurl="file://$PROJECT_DIR$/wdyVBlog-system/wdyVBlog-system.iml" filepath="$PROJECT_DIR$/wdyVBlog-system/wdyVBlog-system.iml" />
     </modules>
   </component>

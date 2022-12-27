@@ -1,8 +1,8 @@
 package com.wdyVBlog.system.mapper;
 
-import com.wdyVBlog.system.domain.FlowProcDefDto;
-
-import java.util.List;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.wdyVBlog.system.dto.FlowProcDefDto;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * 流程定义查询
@@ -18,5 +18,5 @@ public interface FlowDeployMapper {
      * @param name
      * @return
      */
-    List<FlowProcDefDto> selectDeployList(String name);
+    Page<FlowProcDefDto> selectDeployList(Page<FlowProcDefDto> dtoPage,@Param("name") String name);
 }

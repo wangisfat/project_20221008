@@ -1,7 +1,6 @@
 package com.wdyVBlog.common.utils.file;
 
 import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.net.URL;
@@ -10,7 +9,7 @@ import java.util.Arrays;
 import org.apache.poi.util.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import com.wdyVBlog.common.config.WdyVBlogConfig;
+import com.wdyVBlog.common.config.ProjectConfig;
 import com.wdyVBlog.common.constant.Constants;
 import com.wdyVBlog.common.utils.StringUtils;
 
@@ -59,13 +58,12 @@ public class ImageUtils
     /**
      * 读取文件为字节数据
      * 
-     * @param key 地址
+     * @param url 地址
      * @return 字节数据
      */
     public static byte[] readFile(String url)
     {
         InputStream in = null;
-        ByteArrayOutputStream baos = null;
         try
         {
             if (url.startsWith("http"))
@@ -81,7 +79,7 @@ public class ImageUtils
             else
             {
                 // 本机地址
-                String localPath = WdyVBlogConfig.getProfile();
+                String localPath = ProjectConfig.getProfile();
                 String downloadPath = localPath + StringUtils.substringAfter(url, Constants.RESOURCE_PREFIX);
                 in = new FileInputStream(downloadPath);
             }
@@ -94,7 +92,7 @@ public class ImageUtils
         }
         finally
         {
-            IOUtils.closeQuietly(baos);
+            IOUtils.closeQuietly(in);
         }
     }
 }

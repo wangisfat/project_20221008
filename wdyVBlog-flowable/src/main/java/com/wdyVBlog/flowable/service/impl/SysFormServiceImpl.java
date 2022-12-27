@@ -1,12 +1,16 @@
 package com.wdyVBlog.flowable.service.impl;
 
-import java.util.List;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.wdyVBlog.common.core.page.PageDomain;
+import com.wdyVBlog.common.core.page.TableSupport;
 import com.wdyVBlog.common.utils.DateUtils;
+import com.wdyVBlog.common.utils.PageResult;
+import com.wdyVBlog.flowable.service.ISysFormService;
+import com.wdyVBlog.system.domain.SysForm;
+import com.wdyVBlog.system.mapper.SysFormMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.wdyVBlog.system.mapper.SysFormMapper;
-import com.wdyVBlog.system.domain.SysForm;
-import com.wdyVBlog.flowable.service.ISysFormService;
 
 /**
  * 流程表单Service业务层处理
@@ -15,7 +19,7 @@ import com.wdyVBlog.flowable.service.ISysFormService;
  * @date 2021-04-03
  */
 @Service
-public class SysFormServiceImpl implements ISysFormService 
+public class SysFormServiceImpl extends ServiceImpl<SysFormMapper,SysForm> implements ISysFormService
 {
     @Autowired
     private SysFormMapper sysFormMapper;
@@ -39,9 +43,12 @@ public class SysFormServiceImpl implements ISysFormService
      * @return 流程表单
      */
     @Override
-    public List<SysForm> selectSysFormList(SysForm sysForm)
+    public PageResult<SysForm> selectSysFormList(SysForm sysForm)
     {
-        return sysFormMapper.selectSysFormList(sysForm);
+        PageDomain pageDomain = TableSupport.getPageDomain();
+        Page<SysForm> sysFormPage = new Page<>(pageDomain.getPageNum(),pageDomain.getPageSize());
+        Page<SysForm> sysForms = sysFormMapper.selectSysFormList(sysFormPage, sysForm);
+        return new PageResult<SysForm>(sysForms);
     }
 
     /**

@@ -1,6 +1,8 @@
 package com.wdyVBlog.system.mapper;
 
 import java.util.List;
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Param;
 import com.wdyVBlog.common.core.domain.entity.SysDictData;
 
@@ -9,7 +11,7 @@ import com.wdyVBlog.common.core.domain.entity.SysDictData;
  * 
  * @author wdy
  */
-public interface SysDictDataMapper
+public interface SysDictDataMapper extends BaseMapper<SysDictData>
 {
     /**
      * 根据条件分页查询字典数据

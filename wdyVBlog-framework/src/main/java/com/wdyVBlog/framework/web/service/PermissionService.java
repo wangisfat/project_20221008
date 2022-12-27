@@ -1,16 +1,16 @@
 package com.wdyVBlog.framework.web.service;
 
 import java.util.Set;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 import com.wdyVBlog.common.core.domain.entity.SysRole;
 import com.wdyVBlog.common.core.domain.model.LoginUser;
-import com.wdyVBlog.common.utils.ServletUtils;
+import com.wdyVBlog.common.utils.SecurityUtils;
 import com.wdyVBlog.common.utils.StringUtils;
+import com.wdyVBlog.framework.security.context.PermissionContextHolder;
 
 /**
- * \\自定义权限实现，ss取自SpringSecurity首字母
+ * 自定义权限实现，ss取自SpringSecurity首字母
  * 
  * @author wdy
  */
@@ -27,9 +27,6 @@ public class PermissionService
 
     private static final String PERMISSION_DELIMETER = ",";
 
-    @Autowired
-    private TokenService tokenService;
-
     /**
      * 验证用户是否具备某权限
      * 
@@ -42,11 +39,12 @@ public class PermissionService
         {
             return false;
         }
-        LoginUser loginUser = tokenService.getLoginUser(ServletUtils.getRequest());
+        LoginUser loginUser = SecurityUtils.getLoginUser();
         if (StringUtils.isNull(loginUser) || CollectionUtils.isEmpty(loginUser.getPermissions()))
         {
             return false;
         }
+        PermissionContextHolder.setContext(permission);
         return hasPermissions(loginUser.getPermissions(), permission);
     }
 
@@ -73,11 +71,12 @@ public class PermissionService
         {
             return false;
         }
-        LoginUser loginUser = tokenService.getLoginUser(ServletUtils.getRequest());
+        LoginUser loginUser = SecurityUtils.getLoginUser();
         if (StringUtils.isNull(loginUser) || CollectionUtils.isEmpty(loginUser.getPermissions()))
         {
             return false;
         }
+        PermissionContextHolder.setContext(permissions);
         Set<String> authorities = loginUser.getPermissions();
         for (String permission : permissions.split(PERMISSION_DELIMETER))
         {
@@ -101,7 +100,7 @@ public class PermissionService
         {
             return false;
         }
-        LoginUser loginUser = tokenService.getLoginUser(ServletUtils.getRequest());
+        LoginUser loginUser = SecurityUtils.getLoginUser();
         if (StringUtils.isNull(loginUser) || CollectionUtils.isEmpty(loginUser.getUser().getRoles()))
         {
             return false;
@@ -140,7 +139,7 @@ public class PermissionService
         {
             return false;
         }
-        LoginUser loginUser = tokenService.getLoginUser(ServletUtils.getRequest());
+        LoginUser loginUser = SecurityUtils.getLoginUser();
         if (StringUtils.isNull(loginUser) || CollectionUtils.isEmpty(loginUser.getUser().getRoles()))
         {
             return false;

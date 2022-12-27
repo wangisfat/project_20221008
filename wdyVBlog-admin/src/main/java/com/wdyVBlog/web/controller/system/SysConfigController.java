@@ -1,6 +1,9 @@
 package com.wdyVBlog.web.controller.system;
 
 import java.util.List;
+import javax.servlet.http.HttpServletResponse;
+
+import com.wdyVBlog.common.utils.PageResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
@@ -13,13 +16,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.wdyVBlog.common.annotation.Log;
-import com.wdyVBlog.common.annotation.RepeatSubmit;
 import com.wdyVBlog.common.constant.UserConstants;
 import com.wdyVBlog.common.core.controller.BaseController;
 import com.wdyVBlog.common.core.domain.AjaxResult;
-import com.wdyVBlog.common.core.page.TableDataInfo;
 import com.wdyVBlog.common.enums.BusinessType;
-import com.wdyVBlog.common.utils.SecurityUtils;
 import com.wdyVBlog.common.utils.poi.ExcelUtil;
 import com.wdyVBlog.system.domain.SysConfig;
 import com.wdyVBlog.system.service.ISysConfigService;
@@ -41,21 +41,19 @@ public class SysConfigController extends BaseController
      */
     @PreAuthorize("@ss.hasPermi('system:config:list')")
     @GetMapping("/list")
-    public TableDataInfo list(SysConfig config)
+    public PageResult<SysConfig> list(SysConfig config)
     {
-        startPage();
-        List<SysConfig> list = configService.selectConfigList(config);
-        return getDataTable(list);
+        return configService.selectConfigPage(config);
     }
 
     @Log(title = "参数管理", businessType = BusinessType.EXPORT)
     @PreAuthorize("@ss.hasPermi('system:config:export')")
-    @GetMapping("/export")
-    public AjaxResult export(SysConfig config)
+    @PostMapping("/export")
+    public void export(HttpServletResponse response, SysConfig config)
     {
         List<SysConfig> list = configService.selectConfigList(config);
         ExcelUtil<SysConfig> util = new ExcelUtil<SysConfig>(SysConfig.class);
-        return util.exportExcel(list, "参数数据");
+        util.exportExcel(response, list, "参数数据");
     }
 
     /**
@@ -83,14 +81,13 @@ public class SysConfigController extends BaseController
     @PreAuthorize("@ss.hasPermi('system:config:add')")
     @Log(title = "参数管理", businessType = BusinessType.INSERT)
     @PostMapping
-    @RepeatSubmit
     public AjaxResult add(@Validated @RequestBody SysConfig config)
     {
         if (UserConstants.NOT_UNIQUE.equals(configService.checkConfigKeyUnique(config)))
         {
             return AjaxResult.error("新增参数'" + config.getConfigName() + "'失败，参数键名已存在");
         }
-        config.setCreateBy(SecurityUtils.getUsername());
+        config.setCreateBy(getUsername());
         return toAjax(configService.insertConfig(config));
     }
 
@@ -106,7 +103,7 @@ public class SysConfigController extends BaseController
         {
             return AjaxResult.error("修改参数'" + config.getConfigName() + "'失败，参数键名已存在");
         }
-        config.setUpdateBy(SecurityUtils.getUsername());
+        config.setUpdateBy(getUsername());
         return toAjax(configService.updateConfig(config));
     }
 
@@ -118,18 +115,19 @@ public class SysConfigController extends BaseController
     @DeleteMapping("/{configIds}")
     public AjaxResult remove(@PathVariable Long[] configIds)
     {
-        return toAjax(configService.deleteConfigByIds(configIds));
+        configService.deleteConfigByIds(configIds);
+        return success();
     }
 
     /**
-     * 清空缓存
+     * 刷新参数缓存
      */
     @PreAuthorize("@ss.hasPermi('system:config:remove')")
     @Log(title = "参数管理", businessType = BusinessType.CLEAN)
-    @DeleteMapping("/clearCache")
-    public AjaxResult clearCache()
+    @DeleteMapping("/refreshCache")
+    public AjaxResult refreshCache()
     {
-        configService.clearCache();
+        configService.resetConfigCache();
         return AjaxResult.success();
     }
 }

@@ -281,9 +281,9 @@ public class CustomProcessDiagramGenerator extends DefaultProcessDiagramGenerato
 
     @Override
     protected void drawActivity(DefaultProcessDiagramCanvas processDiagramCanvas, BpmnModel bpmnModel,
-                                FlowNode flowNode, java.util.List<String> highLightedActivities, java.util.List<String> highLightedFlows, double scaleFactor, Boolean drawSequenceFlowNameWithNoLabelDI) {
+                                FlowNode flowNode, List<String> highLightedActivities, List<String> highLightedFlows, double scaleFactor, Boolean drawSequenceFlowNameWithNoLabelDI) {
 
-        DefaultProcessDiagramGenerator.ActivityDrawInstruction drawInstruction = activityDrawInstructions.get(flowNode.getClass());
+        ActivityDrawInstruction drawInstruction = activityDrawInstructions.get(flowNode.getClass());
         if (drawInstruction != null) {
 
             drawInstruction.draw(processDiagramCanvas, bpmnModel, flowNode);
@@ -354,7 +354,7 @@ public class CustomProcessDiagramGenerator extends DefaultProcessDiagramGenerato
             String targetRef = sequenceFlow.getTargetRef();
             FlowElement sourceElement = bpmnModel.getFlowElement(sourceRef);
             FlowElement targetElement = bpmnModel.getFlowElement(targetRef);
-            java.util.List<GraphicInfo> graphicInfoList = bpmnModel.getFlowLocationGraphicInfo(sequenceFlow.getId());
+            List<GraphicInfo> graphicInfoList = bpmnModel.getFlowLocationGraphicInfo(sequenceFlow.getId());
             if (graphicInfoList != null && graphicInfoList.size() > 0) {
                 graphicInfoList = connectionPerfectionizer(processDiagramCanvas, bpmnModel, sourceElement, targetElement, graphicInfoList);
                 int xPoints[] = new int[graphicInfoList.size()];

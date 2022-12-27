@@ -1,6 +1,6 @@
 package com.wdyVBlog.web.controller.system;
 
-import java.util.List;
+import com.wdyVBlog.common.utils.PageResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
@@ -15,9 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.wdyVBlog.common.annotation.Log;
 import com.wdyVBlog.common.core.controller.BaseController;
 import com.wdyVBlog.common.core.domain.AjaxResult;
-import com.wdyVBlog.common.core.page.TableDataInfo;
 import com.wdyVBlog.common.enums.BusinessType;
-import com.wdyVBlog.common.utils.SecurityUtils;
 import com.wdyVBlog.system.domain.SysNotice;
 import com.wdyVBlog.system.service.ISysNoticeService;
 
@@ -38,11 +36,9 @@ public class SysNoticeController extends BaseController
      */
     @PreAuthorize("@ss.hasPermi('system:notice:list')")
     @GetMapping("/list")
-    public TableDataInfo list(SysNotice notice)
+    public PageResult<SysNotice> list(SysNotice notice)
     {
-        startPage();
-        List<SysNotice> list = noticeService.selectNoticeList(notice);
-        return getDataTable(list);
+        return noticeService.selectNoticePage(notice);
     }
 
     /**
@@ -63,7 +59,7 @@ public class SysNoticeController extends BaseController
     @PostMapping
     public AjaxResult add(@Validated @RequestBody SysNotice notice)
     {
-        notice.setCreateBy(SecurityUtils.getUsername());
+        notice.setCreateBy(getUsername());
         return toAjax(noticeService.insertNotice(notice));
     }
 
@@ -75,7 +71,7 @@ public class SysNoticeController extends BaseController
     @PutMapping
     public AjaxResult edit(@Validated @RequestBody SysNotice notice)
     {
-        notice.setUpdateBy(SecurityUtils.getUsername());
+        notice.setUpdateBy(getUsername());
         return toAjax(noticeService.updateNotice(notice));
     }
 

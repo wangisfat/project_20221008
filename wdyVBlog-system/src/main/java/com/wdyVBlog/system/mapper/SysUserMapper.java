@@ -1,6 +1,9 @@
 package com.wdyVBlog.system.mapper;
 
 import java.util.List;
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.apache.ibatis.annotations.Param;
 import com.wdyVBlog.common.core.domain.entity.SysUser;
 
@@ -9,7 +12,7 @@ import com.wdyVBlog.common.core.domain.entity.SysUser;
  * 
  * @author wdy
  */
-public interface SysUserMapper
+public interface SysUserMapper extends BaseMapper<SysUser>
 {
     /**
      * 根据条件分页查询用户列表
@@ -18,6 +21,22 @@ public interface SysUserMapper
      * @return 用户信息集合信息
      */
     public List<SysUser> selectUserList(SysUser sysUser);
+
+    /**
+     * 根据条件分页查询已配用户角色列表
+     * 
+     * @param user 用户信息
+     * @return 用户信息集合信息
+     */
+    public List<SysUser> selectAllocatedList(SysUser user);
+
+    /**
+     * 根据条件分页查询未分配用户角色列表
+     * 
+     * @param user 用户信息
+     * @return 用户信息集合信息
+     */
+    public List<SysUser> selectUnallocatedList(SysUser user);
 
     /**
      * 通过用户名查询用户
@@ -91,7 +110,7 @@ public interface SysUserMapper
      * @param userName 用户名称
      * @return 结果
      */
-    public int checkUserNameUnique(String userName);
+    public SysUser checkUserNameUnique(String userName);
 
     /**
      * 校验手机号码是否唯一
@@ -108,4 +127,10 @@ public interface SysUserMapper
      * @return 结果
      */
     public SysUser checkEmailUnique(String email);
+
+    Page<SysUser> selectAllocatedPage(Page<SysUser> page,@Param("queryData") SysUser user);
+
+    Page<SysUser> selectUnallocatedPage(Page<SysUser> page,@Param("queryData")  SysUser user);
+
+    Page<SysUser> selectUserPage(Page<SysUser> sysUserPage,@Param("queryData") SysUser user);
 }

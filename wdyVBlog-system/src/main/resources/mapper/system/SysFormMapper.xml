@@ -22,8 +22,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     <select id="selectSysFormList" parameterType="SysForm" resultMap="SysFormResult">
         <include refid="selectSysFormVo"/>
         <where>  
-            <if test="formName != null  and formName != ''"> and form_name like concat('%', #{formName}, '%')</if>
-            <if test="formContent != null  and formContent != ''"> and form_content = #{formContent}</if>
+            <if test="queryData.formName != null  and queryData.formName != ''"> and form_name like concat('%', #{queryData.formName}, '%')</if>
+            <if test="queryData.formContent != null  and queryData.formContent != ''"> and form_content = #{queryData.formContent}</if>
         </where>
         order by create_time desc
     </select>

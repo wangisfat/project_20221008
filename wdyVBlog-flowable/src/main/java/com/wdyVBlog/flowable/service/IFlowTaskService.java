@@ -104,11 +104,9 @@ public interface IFlowTaskService {
     /**
      * 代办任务列表
      *
-     * @param pageNum  当前页码
-     * @param pageSize 每页条数
      * @return
      */
-    AjaxResult todoList(Integer pageNum, Integer pageSize);
+    AjaxResult todoList();
 
 
     /**

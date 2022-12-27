@@ -59,12 +59,12 @@ public class GenController extends BaseController
      * 修改代码生成业务
      */
     @PreAuthorize("@ss.hasPermi('tool:gen:query')")
-    @GetMapping(value = "/{talbleId}")
-    public AjaxResult getInfo(@PathVariable Long talbleId)
+    @GetMapping(value = "/{tableId}")
+    public AjaxResult getInfo(@PathVariable Long tableId)
     {
-        GenTable table = genTableService.selectGenTableById(talbleId);
+        GenTable table = genTableService.selectGenTableById(tableId);
         List<GenTable> tables = genTableService.selectGenTableAll();
-        List<GenTableColumn> list = genTableColumnService.selectGenTableColumnListByTableId(talbleId);
+        List<GenTableColumn> list = genTableColumnService.selectGenTableColumnListByTableId(tableId);
         Map<String, Object> map = new HashMap<String, Object>();
         map.put("info", table);
         map.put("rows", list);
@@ -88,7 +88,7 @@ public class GenController extends BaseController
      * 查询数据表字段列表
      */
     @PreAuthorize("@ss.hasPermi('tool:gen:list')")
-    @GetMapping(value = "/column/{talbleId}")
+    @GetMapping(value = "/column/{tableId}")
     public TableDataInfo columnList(Long tableId)
     {
         TableDataInfo dataInfo = new TableDataInfo();
@@ -101,7 +101,7 @@ public class GenController extends BaseController
     /**
      * 导入表结构（保存）
      */
-    @PreAuthorize("@ss.hasPermi('tool:gen:list')")
+    @PreAuthorize("@ss.hasPermi('tool:gen:import')")
     @Log(title = "代码生成", businessType = BusinessType.IMPORT)
     @PostMapping("/importTable")
     public AjaxResult importTableSave(String tables)
@@ -206,7 +206,7 @@ public class GenController extends BaseController
         response.reset();
         response.addHeader("Access-Control-Allow-Origin", "*");
         response.addHeader("Access-Control-Expose-Headers", "Content-Disposition");
-        response.setHeader("Content-Disposition", "attachment; filename=\"wdyVBlog.zip\"");
+        response.setHeader("Content-Disposition", "attachment; filename=\"ruoyi.zip\"");
         response.addHeader("Content-Length", "" + data.length);
         response.setContentType("application/octet-stream; charset=UTF-8");
         IOUtils.write(data, response.getOutputStream());

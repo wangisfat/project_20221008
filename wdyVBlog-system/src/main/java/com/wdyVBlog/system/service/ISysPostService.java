@@ -1,6 +1,9 @@
 package com.wdyVBlog.system.service;
 
 import java.util.List;
+
+import com.baomidou.mybatisplus.extension.service.IService;
+import com.wdyVBlog.common.utils.PageResult;
 import com.wdyVBlog.system.domain.SysPost;
 
 /**
@@ -8,7 +11,7 @@ import com.wdyVBlog.system.domain.SysPost;
  * 
  * @author wdy
  */
-public interface ISysPostService
+public interface ISysPostService extends IService<SysPost>
 {
     /**
      * 查询岗位信息集合
@@ -39,7 +42,7 @@ public interface ISysPostService
      * @param userId 用户ID
      * @return 选中岗位ID列表
      */
-    public List<Integer> selectPostListByUserId(Long userId);
+    public List<Long> selectPostListByUserId(Long userId);
 
     /**
      * 校验岗位名称
@@ -78,7 +81,6 @@ public interface ISysPostService
      * 
      * @param postIds 需要删除的岗位ID
      * @return 结果
-     * @throws Exception 异常
      */
     public int deletePostByIds(Long[] postIds);
 
@@ -97,4 +99,6 @@ public interface ISysPostService
      * @return 结果
      */
     public int updatePost(SysPost post);
+
+    PageResult<SysPost> selectPostPage(SysPost post);
 }

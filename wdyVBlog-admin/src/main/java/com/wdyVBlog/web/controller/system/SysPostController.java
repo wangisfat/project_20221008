@@ -1,6 +1,9 @@
 package com.wdyVBlog.web.controller.system;
 
 import java.util.List;
+import javax.servlet.http.HttpServletResponse;
+
+import com.wdyVBlog.common.utils.PageResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
@@ -16,9 +19,7 @@ import com.wdyVBlog.common.annotation.Log;
 import com.wdyVBlog.common.constant.UserConstants;
 import com.wdyVBlog.common.core.controller.BaseController;
 import com.wdyVBlog.common.core.domain.AjaxResult;
-import com.wdyVBlog.common.core.page.TableDataInfo;
 import com.wdyVBlog.common.enums.BusinessType;
-import com.wdyVBlog.common.utils.SecurityUtils;
 import com.wdyVBlog.common.utils.poi.ExcelUtil;
 import com.wdyVBlog.system.domain.SysPost;
 import com.wdyVBlog.system.service.ISysPostService;
@@ -40,21 +41,19 @@ public class SysPostController extends BaseController
      */
     @PreAuthorize("@ss.hasPermi('system:post:list')")
     @GetMapping("/list")
-    public TableDataInfo list(SysPost post)
+    public PageResult<SysPost> list(SysPost post)
     {
-        startPage();
-        List<SysPost> list = postService.selectPostList(post);
-        return getDataTable(list);
+        return postService.selectPostPage(post);
     }
     
     @Log(title = "岗位管理", businessType = BusinessType.EXPORT)
     @PreAuthorize("@ss.hasPermi('system:post:export')")
-    @GetMapping("/export")
-    public AjaxResult export(SysPost post)
+    @PostMapping("/export")
+    public void export(HttpServletResponse response, SysPost post)
     {
         List<SysPost> list = postService.selectPostList(post);
         ExcelUtil<SysPost> util = new ExcelUtil<SysPost>(SysPost.class);
-        return util.exportExcel(list, "岗位数据");
+        util.exportExcel(response, list, "岗位数据");
     }
 
     /**
@@ -83,7 +82,7 @@ public class SysPostController extends BaseController
         {
             return AjaxResult.error("新增岗位'" + post.getPostName() + "'失败，岗位编码已存在");
         }
-        post.setCreateBy(SecurityUtils.getUsername());
+        post.setCreateBy(getUsername());
         return toAjax(postService.insertPost(post));
     }
 
@@ -103,7 +102,7 @@ public class SysPostController extends BaseController
         {
             return AjaxResult.error("修改岗位'" + post.getPostName() + "'失败，岗位编码已存在");
         }
-        post.setUpdateBy(SecurityUtils.getUsername());
+        post.setUpdateBy(getUsername());
         return toAjax(postService.updatePost(post));
     }
 

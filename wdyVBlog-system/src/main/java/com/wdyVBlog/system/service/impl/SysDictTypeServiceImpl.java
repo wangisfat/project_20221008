@@ -1,14 +1,23 @@
 package com.wdyVBlog.system.service.impl;
 
+import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 import javax.annotation.PostConstruct;
+
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.wdyVBlog.common.core.page.PageDomain;
+import com.wdyVBlog.common.core.page.TableSupport;
+import com.wdyVBlog.common.utils.PageResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import com.wdyVBlog.common.constant.UserConstants;
 import com.wdyVBlog.common.core.domain.entity.SysDictData;
 import com.wdyVBlog.common.core.domain.entity.SysDictType;
-import com.wdyVBlog.common.exception.CustomException;
+import com.wdyVBlog.common.exception.ServiceException;
 import com.wdyVBlog.common.utils.DictUtils;
 import com.wdyVBlog.common.utils.StringUtils;
 import com.wdyVBlog.system.mapper.SysDictDataMapper;
@@ -21,10 +30,8 @@ import com.wdyVBlog.system.service.ISysDictTypeService;
  * @author wdy
  */
 @Service
-public class SysDictTypeServiceImpl implements ISysDictTypeService
+public class SysDictTypeServiceImpl extends ServiceImpl<SysDictTypeMapper,SysDictType> implements ISysDictTypeService
 {
-    @Autowired
-    private SysDictTypeMapper dictTypeMapper;
 
     @Autowired
     private SysDictDataMapper dictDataMapper;
@@ -35,12 +42,7 @@ public class SysDictTypeServiceImpl implements ISysDictTypeService
     @PostConstruct
     public void init()
     {
-        List<SysDictType> dictTypeList = dictTypeMapper.selectDictTypeAll();
-        for (SysDictType dictType : dictTypeList)
-        {
-            List<SysDictData> dictDatas = dictDataMapper.selectDictDataByType(dictType.getDictType());
-            DictUtils.setDictCache(dictType.getDictType(), dictDatas);
-        }
+        loadingDictCache();
     }
 
     /**
@@ -50,9 +52,12 @@ public class SysDictTypeServiceImpl implements ISysDictTypeService
      * @return 字典类型集合信息
      */
     @Override
-    public List<SysDictType> selectDictTypeList(SysDictType dictType)
+    public PageResult<SysDictType> selectDictTypeList(SysDictType dictType)
     {
-        return dictTypeMapper.selectDictTypeList(dictType);
+        PageDomain pageDomain = TableSupport.buildPageRequest();
+        Page<SysDictType> sysRolePage = new Page<>(pageDomain.getPageNum(),pageDomain.getPageSize());
+        Page<SysDictType> page = this.baseMapper.selectDictTypePage(sysRolePage,dictType);
+        return new PageResult<SysDictType>(page);
     }
 
     /**
@@ -63,7 +68,7 @@ public class SysDictTypeServiceImpl implements ISysDictTypeService
     @Override
     public List<SysDictType> selectDictTypeAll()
     {
-        return dictTypeMapper.selectDictTypeAll();
+        return this.baseMapper.selectDictTypeAll();
     }
 
     /**
@@ -98,7 +103,7 @@ public class SysDictTypeServiceImpl implements ISysDictTypeService
     @Override
     public SysDictType selectDictTypeById(Long dictId)
     {
-        return dictTypeMapper.selectDictTypeById(dictId);
+        return this.baseMapper.selectDictTypeById(dictId);
     }
 
     /**
@@ -110,56 +115,76 @@ public class SysDictTypeServiceImpl implements ISysDictTypeService
     @Override
     public SysDictType selectDictTypeByType(String dictType)
     {
-        return dictTypeMapper.selectDictTypeByType(dictType);
+        return this.baseMapper.selectDictTypeByType(dictType);
     }
 
     /**
      * 批量删除字典类型信息
      * 
      * @param dictIds 需要删除的字典ID
-     * @return 结果
      */
     @Override
-    public int deleteDictTypeByIds(Long[] dictIds)
+    public void deleteDictTypeByIds(Long[] dictIds)
     {
         for (Long dictId : dictIds)
         {
             SysDictType dictType = selectDictTypeById(dictId);
             if (dictDataMapper.countDictDataByType(dictType.getDictType()) > 0)
             {
-                throw new CustomException(String.format("%1$s已分配,不能删除", dictType.getDictName()));
+                throw new ServiceException(String.format("%1$s已分配,不能删除", dictType.getDictName()));
             }
+            this.baseMapper.deleteDictTypeById(dictId);
+            DictUtils.removeDictCache(dictType.getDictType());
         }
-        int count = dictTypeMapper.deleteDictTypeByIds(dictIds);
-        if (count > 0)
-        {
-            DictUtils.clearDictCache();
-        }
-        return count;
     }
 
     /**
-     * 清空缓存数据
+     * 加载字典缓存数据
      */
     @Override
-    public void clearCache()
+    public void loadingDictCache()
+    {
+        SysDictData dictData = new SysDictData();
+        dictData.setStatus("0");
+        Map<String, List<SysDictData>> dictDataMap = dictDataMapper.selectDictDataList(dictData).stream().collect(Collectors.groupingBy(SysDictData::getDictType));
+        for (Map.Entry<String, List<SysDictData>> entry : dictDataMap.entrySet())
+        {
+            DictUtils.setDictCache(entry.getKey(), entry.getValue().stream().sorted(Comparator.comparing(SysDictData::getDictSort)).collect(Collectors.toList()));
+        }
+    }
+
+    /**
+     * 清空字典缓存数据
+     */
+    @Override
+    public void clearDictCache()
     {
         DictUtils.clearDictCache();
     }
 
     /**
+     * 重置字典缓存数据
+     */
+    @Override
+    public void resetDictCache()
+    {
+        clearDictCache();
+        loadingDictCache();
+    }
+
+    /**
      * 新增保存字典类型信息
      * 
-     * @param dictType 字典类型信息
+     * @param dict 字典类型信息
      * @return 结果
      */
     @Override
-    public int insertDictType(SysDictType dictType)
+    public int insertDictType(SysDictType dict)
     {
-        int row = dictTypeMapper.insertDictType(dictType);
+        int row = this.baseMapper.insertDictType(dict);
         if (row > 0)
         {
-            DictUtils.clearDictCache();
+            DictUtils.setDictCache(dict.getDictType(), null);
         }
         return row;
     }
@@ -167,19 +192,20 @@ public class SysDictTypeServiceImpl implements ISysDictTypeService
     /**
      * 修改保存字典类型信息
      * 
-     * @param dictType 字典类型信息
+     * @param dict 字典类型信息
      * @return 结果
      */
     @Override
     @Transactional
-    public int updateDictType(SysDictType dictType)
+    public int updateDictType(SysDictType dict)
     {
-        SysDictType oldDict = dictTypeMapper.selectDictTypeById(dictType.getDictId());
-        dictDataMapper.updateDictDataType(oldDict.getDictType(), dictType.getDictType());
-        int row = dictTypeMapper.updateDictType(dictType);
+        SysDictType oldDict = this.baseMapper.selectDictTypeById(dict.getDictId());
+        dictDataMapper.updateDictDataType(oldDict.getDictType(), dict.getDictType());
+        int row = this.baseMapper.updateDictType(dict);
         if (row > 0)
         {
-            DictUtils.clearDictCache();
+            List<SysDictData> dictDatas = dictDataMapper.selectDictDataByType(dict.getDictType());
+            DictUtils.setDictCache(dict.getDictType(), dictDatas);
         }
         return row;
     }
@@ -194,7 +220,7 @@ public class SysDictTypeServiceImpl implements ISysDictTypeService
     public String checkDictTypeUnique(SysDictType dict)
     {
         Long dictId = StringUtils.isNull(dict.getDictId()) ? -1L : dict.getDictId();
-        SysDictType dictType = dictTypeMapper.checkDictTypeUnique(dict.getDictType());
+        SysDictType dictType = this.baseMapper.checkDictTypeUnique(dict.getDictType());
         if (StringUtils.isNotNull(dictType) && dictType.getDictId().longValue() != dictId.longValue())
         {
             return UserConstants.NOT_UNIQUE;

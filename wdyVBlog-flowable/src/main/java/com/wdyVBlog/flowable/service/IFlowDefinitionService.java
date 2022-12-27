@@ -1,8 +1,8 @@
 package com.wdyVBlog.flowable.service;
 
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.wdyVBlog.common.core.domain.AjaxResult;
-import com.wdyVBlog.system.domain.FlowProcDefDto;
+import com.wdyVBlog.common.core.domain.entity.SysUser;
+import com.wdyVBlog.common.utils.PageResult;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -24,7 +24,7 @@ public interface IFlowDefinitionService {
      * @param pageSize 每页条数
      * @return 流程定义分页列表数据
      */
-    Page<FlowProcDefDto> list(String name,Integer pageNum, Integer pageSize);
+    PageResult<SysUser> list(String name, Integer pageNum, Integer pageSize);
 
     /**
      * 导入流程文件

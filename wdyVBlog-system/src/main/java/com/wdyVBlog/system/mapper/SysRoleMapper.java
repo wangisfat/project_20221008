@@ -1,14 +1,18 @@
 package com.wdyVBlog.system.mapper;
 
 import java.util.List;
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.wdyVBlog.common.core.domain.entity.SysRole;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * 角色表 数据层
  * 
  * @author wdy
  */
-public interface SysRoleMapper
+public interface SysRoleMapper extends BaseMapper<SysRole>
 {
     /**
      * 根据条件分页查询角色数据
@@ -39,7 +43,7 @@ public interface SysRoleMapper
      * @param userId 用户ID
      * @return 选中角色ID列表
      */
-    public List<Integer> selectRoleListByUserId(Long userId);
+    public List<Long> selectRoleListByUserId(Long userId);
 
     /**
      * 通过角色ID查询角色
@@ -104,4 +108,6 @@ public interface SysRoleMapper
      * @return 结果
      */
     public int deleteRoleByIds(Long[] roleIds);
+
+    Page<SysRole> selectRolePage(Page<SysRole> sysRolePage,@Param("queryData") SysRole role);
 }

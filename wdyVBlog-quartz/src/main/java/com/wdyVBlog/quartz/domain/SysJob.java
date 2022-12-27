@@ -1,6 +1,5 @@
 package com.wdyVBlog.quartz.domain;
 
-import java.io.Serializable;
 import java.util.Date;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
@@ -19,7 +18,7 @@ import com.wdyVBlog.quartz.util.CronUtils;
  * 
  * @author wdy
  */
-public class SysJob extends BaseEntity implements Serializable
+public class SysJob extends BaseEntity
 {
     private static final long serialVersionUID = 1L;
 

@@ -1,14 +1,17 @@
 package com.wdyVBlog.system.service;
 
 import java.util.List;
+
+import com.baomidou.mybatisplus.extension.service.IService;
 import com.wdyVBlog.common.core.domain.entity.SysDictData;
+import com.wdyVBlog.common.utils.PageResult;
 
 /**
  * 字典 业务层
  * 
  * @author wdy
  */
-public interface ISysDictDataService
+public interface ISysDictDataService extends IService<SysDictData>
 {
     /**
      * 根据条件分页查询字典数据
@@ -39,9 +42,8 @@ public interface ISysDictDataService
      * 批量删除字典数据信息
      * 
      * @param dictCodes 需要删除的字典数据ID
-     * @return 结果
      */
-    public int deleteDictDataByIds(Long[] dictCodes);
+    public void deleteDictDataByIds(Long[] dictCodes);
 
     /**
      * 新增保存字典数据信息
@@ -58,4 +60,6 @@ public interface ISysDictDataService
      * @return 结果
      */
     public int updateDictData(SysDictData dictData);
+
+    PageResult<SysDictData> selectDictDataPage(SysDictData dictData);
 }

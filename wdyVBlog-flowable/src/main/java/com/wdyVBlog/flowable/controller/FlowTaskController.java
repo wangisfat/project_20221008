@@ -54,9 +54,8 @@ public class FlowTaskController {
 
     @ApiOperation(value = "获取待办列表", response = FlowTaskDto.class)
     @GetMapping(value = "/todoList")
-    public AjaxResult todoList(@ApiParam(value = "当前页码", required = true) @RequestParam Integer pageNum,
-                               @ApiParam(value = "每页条数", required = true) @RequestParam Integer pageSize) {
-        return flowTaskService.todoList(pageNum, pageSize);
+    public AjaxResult todoList() {
+        return flowTaskService.todoList();
     }
 
     @ApiOperation(value = "获取已办任务", response = FlowTaskDto.class)

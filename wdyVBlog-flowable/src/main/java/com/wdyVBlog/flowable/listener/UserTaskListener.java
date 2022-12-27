@@ -2,7 +2,6 @@ package com.wdyVBlog.flowable.listener;
 
 import org.flowable.engine.delegate.TaskListener;
 import org.flowable.task.service.delegate.DelegateTask;
-import org.springframework.stereotype.Component;
 
 /**
  * @author Xuan xuan

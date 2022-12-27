@@ -1,6 +1,8 @@
 package com.wdyVBlog.quartz.mapper;
 
 import java.util.List;
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.wdyVBlog.quartz.domain.SysJob;
 
 /**
@@ -8,7 +10,7 @@ import com.wdyVBlog.quartz.domain.SysJob;
  * 
  * @author wdy
  */
-public interface SysJobMapper
+public interface SysJobMapper extends BaseMapper<SysJob>
 {
     /**
      * 查询调度任务日志集合

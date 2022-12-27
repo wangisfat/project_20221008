@@ -1,6 +1,9 @@
 package com.wdyVBlog.web.controller.system;
 
 import java.util.List;
+import javax.servlet.http.HttpServletResponse;
+
+import com.wdyVBlog.common.utils.PageResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
@@ -17,9 +20,7 @@ import com.wdyVBlog.common.constant.UserConstants;
 import com.wdyVBlog.common.core.controller.BaseController;
 import com.wdyVBlog.common.core.domain.AjaxResult;
 import com.wdyVBlog.common.core.domain.entity.SysDictType;
-import com.wdyVBlog.common.core.page.TableDataInfo;
 import com.wdyVBlog.common.enums.BusinessType;
-import com.wdyVBlog.common.utils.SecurityUtils;
 import com.wdyVBlog.common.utils.poi.ExcelUtil;
 import com.wdyVBlog.system.service.ISysDictTypeService;
 
@@ -37,21 +38,19 @@ public class SysDictTypeController extends BaseController
 
     @PreAuthorize("@ss.hasPermi('system:dict:list')")
     @GetMapping("/list")
-    public TableDataInfo list(SysDictType dictType)
+    public PageResult<SysDictType> list(SysDictType dictType)
     {
-        startPage();
-        List<SysDictType> list = dictTypeService.selectDictTypeList(dictType);
-        return getDataTable(list);
+        return dictTypeService.selectDictTypeList(dictType);
     }
 
     @Log(title = "字典类型", businessType = BusinessType.EXPORT)
     @PreAuthorize("@ss.hasPermi('system:dict:export')")
-    @GetMapping("/export")
-    public AjaxResult export(SysDictType dictType)
+    @PostMapping("/export")
+    public void export(HttpServletResponse response, SysDictType dictType)
     {
-        List<SysDictType> list = dictTypeService.selectDictTypeList(dictType);
+        PageResult<SysDictType>  list = dictTypeService.selectDictTypeList(dictType);
         ExcelUtil<SysDictType> util = new ExcelUtil<SysDictType>(SysDictType.class);
-        return util.exportExcel(list, "字典类型");
+        util.exportExcel(response, list.getRecords(), "字典类型");
     }
 
     /**
@@ -76,7 +75,7 @@ public class SysDictTypeController extends BaseController
         {
             return AjaxResult.error("新增字典'" + dict.getDictName() + "'失败，字典类型已存在");
         }
-        dict.setCreateBy(SecurityUtils.getUsername());
+        dict.setCreateBy(getUsername());
         return toAjax(dictTypeService.insertDictType(dict));
     }
 
@@ -92,7 +91,7 @@ public class SysDictTypeController extends BaseController
         {
             return AjaxResult.error("修改字典'" + dict.getDictName() + "'失败，字典类型已存在");
         }
-        dict.setUpdateBy(SecurityUtils.getUsername());
+        dict.setUpdateBy(getUsername());
         return toAjax(dictTypeService.updateDictType(dict));
     }
 
@@ -104,18 +103,19 @@ public class SysDictTypeController extends BaseController
     @DeleteMapping("/{dictIds}")
     public AjaxResult remove(@PathVariable Long[] dictIds)
     {
-        return toAjax(dictTypeService.deleteDictTypeByIds(dictIds));
+        dictTypeService.deleteDictTypeByIds(dictIds);
+        return success();
     }
 
     /**
-     * 清空缓存
+     * 刷新字典缓存
      */
     @PreAuthorize("@ss.hasPermi('system:dict:remove')")
     @Log(title = "字典类型", businessType = BusinessType.CLEAN)
-    @DeleteMapping("/clearCache")
-    public AjaxResult clearCache()
+    @DeleteMapping("/refreshCache")
+    public AjaxResult refreshCache()
     {
-        dictTypeService.clearCache();
+        dictTypeService.resetDictCache();
         return AjaxResult.success();
     }
 

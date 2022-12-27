@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -13,6 +14,7 @@
         <module name="wdy-common" />
         <module name="wdy-quartz" />
         <module name="wdy-flowable" />
+        <module name="wdyVBlog-report" />
         <module name="wdy-system" />
         <module name="wdyVBlog-framework" />
         <module name="wdyVBlog-flowable" />
@@ -23,6 +25,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="project_20221008" target="1.8" />
+      <module name="wangisfat" target="1.8" />
       <module name="wdy-admin" target="1.8" />
       <module name="wdy-common" target="1.8" />
       <module name="wdy-flowable" target="1.5" />
@@ -37,6 +40,7 @@
       <module name="wdyVBlog-framework" target="1.8" />
       <module name="wdyVBlog-generator" target="1.8" />
       <module name="wdyVBlog-quartz" target="1.8" />
+      <module name="wdyVBlog-report" target="1.8" />
       <module name="wdyVBlog-system" target="1.8" />
     </bytecodeTargetLevel>
   </component>

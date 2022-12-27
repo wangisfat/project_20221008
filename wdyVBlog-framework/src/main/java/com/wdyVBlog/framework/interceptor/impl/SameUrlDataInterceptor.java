@@ -1,20 +1,19 @@
 package com.wdyVBlog.framework.interceptor.impl;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.concurrent.TimeUnit;
-import javax.servlet.http.HttpServletRequest;
-
-import com.wdyVBlog.common.core.redis.CommonCache;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
-import com.alibaba.fastjson.JSONObject;
-import com.wdyVBlog.common.constant.Constants;
+import com.alibaba.fastjson2.JSON;
+import com.wdyVBlog.common.annotation.RepeatSubmit;
+import com.wdyVBlog.common.constant.CacheConstants;
+import com.wdyVBlog.common.core.ehcache.EhcacheUtil;
 import com.wdyVBlog.common.filter.RepeatedlyRequestWrapper;
 import com.wdyVBlog.common.utils.StringUtils;
 import com.wdyVBlog.common.utils.http.HttpHelper;
 import com.wdyVBlog.framework.interceptor.RepeatSubmitInterceptor;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * 判断请求url和数据是否和上一次相同，
@@ -33,24 +32,12 @@ public class SameUrlDataInterceptor extends RepeatSubmitInterceptor
     @Value("${token.header}")
     private String header;
 
-    @Autowired
-    private CommonCache redisCache;
-
-    /**
-     * 间隔时间，单位:秒 默认10秒
-     * 
-     * 两次相同参数的请求，如果间隔时间大于该参数，系统不会认定为重复提交的数据
-     */
-    private int intervalTime = 10;
-
-    public void setIntervalTime(int intervalTime)
-    {
-        this.intervalTime = intervalTime;
-    }
+//    @Autowired
+//    private RedisCache redisCache;
 
     @SuppressWarnings("unchecked")
     @Override
-    public boolean isRepeatSubmit(HttpServletRequest request)
+    public boolean isRepeatSubmit(HttpServletRequest request, RepeatSubmit annotation)
     {
         String nowParams = "";
         if (request instanceof RepeatedlyRequestWrapper)
@@ -62,7 +49,7 @@ public class SameUrlDataInterceptor extends RepeatSubmitInterceptor
         // body参数为空，获取Parameter的数据
         if (StringUtils.isEmpty(nowParams))
         {
-            nowParams = JSONObject.toJSONString(request.getParameterMap());
+            nowParams = JSON.toJSONString(request.getParameterMap());
         }
         Map<String, Object> nowDataMap = new HashMap<String, Object>();
         nowDataMap.put(REPEAT_PARAMS, nowParams);
@@ -72,23 +59,22 @@ public class SameUrlDataInterceptor extends RepeatSubmitInterceptor
         String url = request.getRequestURI();
 
         // 唯一值（没有消息头则使用请求地址）
-        String submitKey = request.getHeader(header);
-        if (StringUtils.isEmpty(submitKey))
-        {
-            submitKey = url;
-        }
+        String submitKey = StringUtils.trimToEmpty(request.getHeader(header));
 
-        // 唯一标识（指定key + 消息头）
-        String cache_repeat_key = Constants.REPEAT_SUBMIT_KEY + submitKey;
+        // 唯一标识（指定key + url + 消息头）
+        String cacheRepeatKey = CacheConstants.REPEAT_SUBMIT_KEY + url + submitKey;
 
-        Object sessionObj = redisCache.getCacheObject(cache_repeat_key);
+//        Object sessionObj = redisCache.getCacheObject(cacheRepeatKey);
+
+        Object sessionObj = EhcacheUtil.getCacheObject(cacheRepeatKey);
+
         if (sessionObj != null)
         {
             Map<String, Object> sessionMap = (Map<String, Object>) sessionObj;
             if (sessionMap.containsKey(url))
             {
                 Map<String, Object> preDataMap = (Map<String, Object>) sessionMap.get(url);
-                if (compareParams(nowDataMap, preDataMap) && compareTime(nowDataMap, preDataMap))
+                if (compareParams(nowDataMap, preDataMap) && compareTime(nowDataMap, preDataMap, annotation.interval()))
                 {
                     return true;
                 }
@@ -96,8 +82,8 @@ public class SameUrlDataInterceptor extends RepeatSubmitInterceptor
         }
         Map<String, Object> cacheMap = new HashMap<String, Object>();
         cacheMap.put(url, nowDataMap);
-//        redisCache.setCacheObject(cache_repeat_key, cacheMap, intervalTime, TimeUnit.SECONDS.ordinal());
-        redisCache.setCacheObject(cache_repeat_key, cacheMap, 6200);
+//        redisCache.setCacheObject(cacheRepeatKey, cacheMap, annotation.interval(), TimeUnit.MILLISECONDS);
+        EhcacheUtil.setCacheObject(cacheRepeatKey, cacheMap, annotation.interval()/1000);
         return false;
     }
 
@@ -114,11 +100,11 @@ public class SameUrlDataInterceptor extends RepeatSubmitInterceptor
     /**
      * 判断两次间隔时间
      */
-    private boolean compareTime(Map<String, Object> nowMap, Map<String, Object> preMap)
+    private boolean compareTime(Map<String, Object> nowMap, Map<String, Object> preMap, int interval)
     {
         long time1 = (Long) nowMap.get(REPEAT_TIME);
         long time2 = (Long) preMap.get(REPEAT_TIME);
-        if ((time1 - time2) < (this.intervalTime * 1000))
+        if ((time1 - time2) < interval)
         {
             return true;
         }

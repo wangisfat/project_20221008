@@ -4,7 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
+import com.baomidou.mybatisplus.annotation.TableField;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 import com.wdyVBlog.common.core.domain.BaseEntity;
@@ -31,7 +34,7 @@ public class SysDept extends BaseEntity
     private String deptName;
 
     /** 显示顺序 */
-    private String orderNum;
+    private Integer orderNum;
 
     /** 负责人 */
     private String leader;
@@ -48,10 +51,9 @@ public class SysDept extends BaseEntity
     /** 删除标志（0代表存在 2代表删除） */
     private String delFlag;
 
-    /** 父部门名称 */
-    private String parentName;
     
     /** 子部门 */
+    @TableField(exist = false)
     private List<SysDept> children = new ArrayList<SysDept>();
 
     public Long getDeptId()
@@ -96,13 +98,13 @@ public class SysDept extends BaseEntity
         this.deptName = deptName;
     }
 
-    @NotBlank(message = "显示顺序不能为空")
-    public String getOrderNum()
+    @NotNull(message = "显示顺序不能为空")
+    public Integer getOrderNum()
     {
         return orderNum;
     }
 
-    public void setOrderNum(String orderNum)
+    public void setOrderNum(Integer orderNum)
     {
         this.orderNum = orderNum;
     }
@@ -158,16 +160,6 @@ public class SysDept extends BaseEntity
     public void setDelFlag(String delFlag)
     {
         this.delFlag = delFlag;
-    }
-
-    public String getParentName()
-    {
-        return parentName;
-    }
-
-    public void setParentName(String parentName)
-    {
-        this.parentName = parentName;
     }
 
     public List<SysDept> getChildren()

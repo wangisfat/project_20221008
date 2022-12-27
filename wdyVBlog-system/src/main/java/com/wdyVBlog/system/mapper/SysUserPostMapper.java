@@ -1,6 +1,8 @@
 package com.wdyVBlog.system.mapper;
 
 import java.util.List;
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.wdyVBlog.system.domain.SysUserPost;
 
 /**
@@ -8,7 +10,7 @@ import com.wdyVBlog.system.domain.SysUserPost;
  * 
  * @author wdy
  */
-public interface SysUserPostMapper
+public interface SysUserPostMapper extends BaseMapper<SysUserPost>
 {
     /**
      * 通过用户ID删除用户和岗位关联

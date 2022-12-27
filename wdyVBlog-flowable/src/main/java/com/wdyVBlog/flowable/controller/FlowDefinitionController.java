@@ -1,11 +1,13 @@
 package com.wdyVBlog.flowable.controller;
 
+
 import com.wdyVBlog.common.core.domain.AjaxResult;
 import com.wdyVBlog.common.core.domain.entity.SysRole;
 import com.wdyVBlog.common.core.domain.entity.SysUser;
-import com.wdyVBlog.system.domain.FlowProcDefDto;
+import com.wdyVBlog.common.utils.PageResult;
 import com.wdyVBlog.flowable.domain.dto.FlowSaveXmlVo;
 import com.wdyVBlog.flowable.service.IFlowDefinitionService;
+import com.wdyVBlog.system.dto.FlowProcDefDto;
 import com.wdyVBlog.system.service.ISysRoleService;
 import com.wdyVBlog.system.service.ISysUserService;
 import io.swagger.annotations.Api;
@@ -54,10 +56,10 @@ public class FlowDefinitionController {
 
     @GetMapping(value = "/list")
     @ApiOperation(value = "流程定义列表", response = FlowProcDefDto.class)
-    public AjaxResult list(@ApiParam(value = "当前页码", required = true) @RequestParam Integer pageNum,
-                           @ApiParam(value = "每页条数", required = true) @RequestParam Integer pageSize,
-                           @ApiParam(value = "流程名称", required = false) @RequestParam(required = false) String name) {
-        return AjaxResult.success(flowDefinitionService.list(name,pageNum, pageSize));
+    public PageResult<SysUser> list(@ApiParam(value = "当前页码", required = true) @RequestParam Integer pageNum,
+                                    @ApiParam(value = "每页条数", required = true) @RequestParam Integer pageSize,
+                                    @ApiParam(value = "流程名称", required = false) @RequestParam(required = false) String name) {
+        return flowDefinitionService.list(name, pageNum, pageSize);
     }
 
 
@@ -178,7 +180,7 @@ public class FlowDefinitionController {
     @ApiOperation(value = "指定流程办理人员列表")
     @GetMapping("/userList")
     public AjaxResult userList(SysUser user) {
-        List<SysUser> list = userService.selectUserList(user);
+        List<SysUser> list = userService.selectAllUserList(user);
         return AjaxResult.success(list);
     }
 

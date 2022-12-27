@@ -2,10 +2,12 @@ package com.wdyVBlog.common.utils;
 
 import java.util.Collection;
 import java.util.List;
-import com.wdyVBlog.common.constant.Constants;
+
+import com.wdyVBlog.common.constant.CacheConstants;
 import com.wdyVBlog.common.core.domain.entity.SysDictData;
-import com.wdyVBlog.common.core.redis.CommonCache;
-import com.wdyVBlog.common.utils.spring.SpringUtils;
+import com.wdyVBlog.common.core.ehcache.EhcacheUtil;
+//import com.wdyVBlog.common.core.redis.RedisCache;
+import org.apache.commons.lang3.ObjectUtils;
 
 /**
  * 字典工具类
@@ -27,8 +29,8 @@ public class DictUtils
      */
     public static void setDictCache(String key, List<SysDictData> dictDatas)
     {
-//        SpringUtils.getBean(CommonCache.class).setCacheObject(getCacheKey(key), dictDatas);
-        CommonCache.setCacheObject(getCacheKey(key), dictDatas);
+        EhcacheUtil.setCacheObject(getCacheKey(key), dictDatas);
+//        SpringUtils.getBean(RedisCache.class).setCacheObject(getCacheKey(key), dictDatas);
     }
 
     /**
@@ -39,12 +41,15 @@ public class DictUtils
      */
     public static List<SysDictData> getDictCache(String key)
     {
-        Object cacheObj = SpringUtils.getBean(CommonCache.class).getCacheObject(getCacheKey(key));
-        if (StringUtils.isNotNull(cacheObj))
-        {
-            List<SysDictData> dictDatas = StringUtils.cast(cacheObj);
-            return dictDatas;
+//        JSONArray arrayCache = SpringUtils.getBean(RedisCache.class).getCacheObject(getCacheKey(key));
+        Object cacheObject = EhcacheUtil.getCacheObject(getCacheKey(key));
+        if (ObjectUtils.isNotEmpty(cacheObject)) {
+            return (List<SysDictData>) cacheObject;
         }
+//        if (StringUtils.isNotNull(arrayCache))
+//        {
+//            return arrayCache.toList(SysDictData.class);
+//        }
         return null;
     }
 
@@ -85,27 +90,30 @@ public class DictUtils
         StringBuilder propertyString = new StringBuilder();
         List<SysDictData> datas = getDictCache(dictType);
 
-        if (StringUtils.containsAny(separator, dictValue) && StringUtils.isNotEmpty(datas))
+        if (StringUtils.isNotNull(datas))
         {
-            for (SysDictData dict : datas)
+            if (StringUtils.containsAny(separator, dictValue))
             {
-                for (String value : dictValue.split(separator))
+                for (SysDictData dict : datas)
                 {
-                    if (value.equals(dict.getDictValue()))
+                    for (String value : dictValue.split(separator))
                     {
-                        propertyString.append(dict.getDictLabel() + separator);
-                        break;
+                        if (value.equals(dict.getDictValue()))
+                        {
+                            propertyString.append(dict.getDictLabel()).append(separator);
+                            break;
+                        }
                     }
                 }
             }
-        }
-        else
-        {
-            for (SysDictData dict : datas)
+            else
             {
-                if (dictValue.equals(dict.getDictValue()))
+                for (SysDictData dict : datas)
                 {
-                    return dict.getDictLabel();
+                    if (dictValue.equals(dict.getDictValue()))
+                    {
+                        return dict.getDictLabel();
+                    }
                 }
             }
         }
@@ -133,7 +141,7 @@ public class DictUtils
                 {
                     if (label.equals(dict.getDictLabel()))
                     {
-                        propertyString.append(dict.getDictValue() + separator);
+                        propertyString.append(dict.getDictValue()).append(separator);
                         break;
                     }
                 }
@@ -153,12 +161,25 @@ public class DictUtils
     }
 
     /**
+     * 删除指定字典缓存
+     * 
+     * @param key 字典键
+     */
+    public static void removeDictCache(String key)
+    {
+//        SpringUtils.getBean(RedisCache.class).deleteObject(getCacheKey(key));
+        EhcacheUtil.deleteObject(getCacheKey(key));
+    }
+
+    /**
      * 清空字典缓存
      */
     public static void clearDictCache()
     {
-        Collection<String> keys = SpringUtils.getBean(CommonCache.class).keys(Constants.SYS_DICT_KEY + "*");
-        SpringUtils.getBean(CommonCache.class).deleteObject(keys);
+//        Collection<String> keys = SpringUtils.getBean(RedisCache.class).keys(CacheConstants.SYS_DICT_KEY + "*");
+//        SpringUtils.getBean(RedisCache.class).deleteObject(keys);
+        Collection<String> keys = EhcacheUtil.keys(CacheConstants.SYS_DICT_KEY + "*");
+        EhcacheUtil.deleteObject(keys);
     }
 
     /**
@@ -169,6 +190,6 @@ public class DictUtils
      */
     public static String getCacheKey(String configKey)
     {
-        return Constants.SYS_DICT_KEY + configKey;
+        return CacheConstants.SYS_DICT_KEY + configKey;
     }
 }

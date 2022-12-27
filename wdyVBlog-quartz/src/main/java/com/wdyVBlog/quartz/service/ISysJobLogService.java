@@ -1,6 +1,7 @@
 package com.wdyVBlog.quartz.service;
 
-import java.util.List;
+import com.baomidou.mybatisplus.extension.service.IService;
+import com.wdyVBlog.common.utils.PageResult;
 import com.wdyVBlog.quartz.domain.SysJobLog;
 
 /**
@@ -8,7 +9,7 @@ import com.wdyVBlog.quartz.domain.SysJobLog;
  * 
  * @author wdy
  */
-public interface ISysJobLogService
+public interface ISysJobLogService extends IService<SysJobLog>
 {
     /**
      * 获取quartz调度器日志的计划任务
@@ -16,7 +17,7 @@ public interface ISysJobLogService
      * @param jobLog 调度日志信息
      * @return 调度任务日志集合
      */
-    public List<SysJobLog> selectJobLogList(SysJobLog jobLog);
+    public PageResult<SysJobLog> selectJobLogList(SysJobLog jobLog);
 
     /**
      * 通过调度任务日志ID查询调度信息

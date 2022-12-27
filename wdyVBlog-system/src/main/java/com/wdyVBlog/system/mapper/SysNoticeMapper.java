@@ -1,6 +1,8 @@
 package com.wdyVBlog.system.mapper;
 
 import java.util.List;
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.wdyVBlog.system.domain.SysNotice;
 
 /**
@@ -8,7 +10,7 @@ import com.wdyVBlog.system.domain.SysNotice;
  * 
  * @author wdy
  */
-public interface SysNoticeMapper
+public interface SysNoticeMapper extends BaseMapper<SysNotice>
 {
     /**
      * 查询公告信息

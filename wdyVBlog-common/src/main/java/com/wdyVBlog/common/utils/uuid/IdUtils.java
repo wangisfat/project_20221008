@@ -1,7 +1,5 @@
 package com.wdyVBlog.common.utils.uuid;
 
-import com.wdyVBlog.common.utils.uuid.UUID;
-
 /**
  * ID生成器工具类
  * 

@@ -1,8 +1,9 @@
 package com.wdyVBlog.system.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.wdyVBlog.system.domain.SysForm;
-
-import java.util.List;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * 流程表单Mapper接口
@@ -10,7 +11,7 @@ import java.util.List;
  * @author XuanXuan Xuan
  * @date 2021-03-30
  */
-public interface SysFormMapper 
+public interface SysFormMapper extends BaseMapper<SysForm>
 {
     /**
      * 查询流程表单
@@ -26,7 +27,7 @@ public interface SysFormMapper
      * @param sysForm 流程表单
      * @return 流程表单集合
      */
-    public List<SysForm> selectSysFormList(SysForm sysForm);
+    public Page<SysForm> selectSysFormList(Page<SysForm> sysFormPage,@Param("queryData") SysForm sysForm);
 
     /**
      * 新增流程表单

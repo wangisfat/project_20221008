@@ -1,6 +1,6 @@
 package com.wdyVBlog.common.exception.file;
 
-import com.wdyVBlog.common.exception.BaseException;
+import com.wdyVBlog.common.exception.base.BaseException;
 
 /**
  * 文件信息异常类

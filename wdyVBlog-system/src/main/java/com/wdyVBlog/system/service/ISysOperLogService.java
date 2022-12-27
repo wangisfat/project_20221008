@@ -1,6 +1,9 @@
 package com.wdyVBlog.system.service;
 
 import java.util.List;
+
+import com.baomidou.mybatisplus.extension.service.IService;
+import com.wdyVBlog.common.utils.PageResult;
 import com.wdyVBlog.system.domain.SysOperLog;
 
 /**
@@ -8,7 +11,7 @@ import com.wdyVBlog.system.domain.SysOperLog;
  * 
  * @author wdy
  */
-public interface ISysOperLogService
+public interface ISysOperLogService extends IService<SysOperLog>
 {
     /**
      * 新增操作日志
@@ -45,4 +48,6 @@ public interface ISysOperLogService
      * 清空操作日志
      */
     public void cleanOperLog();
+
+    PageResult<SysOperLog> selectOperLogPage(SysOperLog operLog);
 }

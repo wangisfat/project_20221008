@@ -1,6 +1,7 @@
 package com.wdyVBlog.system.service;
 
-import java.util.List;
+import com.baomidou.mybatisplus.extension.service.IService;
+import com.wdyVBlog.common.utils.PageResult;
 import com.wdyVBlog.system.domain.SysLogininfor;
 
 /**
@@ -8,7 +9,7 @@ import com.wdyVBlog.system.domain.SysLogininfor;
  * 
  * @author wdy
  */
-public interface ISysLogininforService
+public interface ISysLogininforService extends IService<SysLogininfor>
 {
     /**
      * 新增系统登录日志
@@ -23,13 +24,13 @@ public interface ISysLogininforService
      * @param logininfor 访问日志对象
      * @return 登录记录集合
      */
-    public List<SysLogininfor> selectLogininforList(SysLogininfor logininfor);
+    public PageResult<SysLogininfor> selectLogininforList(SysLogininfor logininfor);
 
     /**
      * 批量删除系统登录日志
      * 
      * @param infoIds 需要删除的登录日志ID
-     * @return
+     * @return 结果
      */
     public int deleteLogininforByIds(Long[] infoIds);
 

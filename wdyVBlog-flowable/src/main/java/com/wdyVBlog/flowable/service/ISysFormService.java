@@ -1,6 +1,7 @@
 package com.wdyVBlog.flowable.service;
 
-import java.util.List;
+import com.baomidou.mybatisplus.extension.service.IService;
+import com.wdyVBlog.common.utils.PageResult;
 import com.wdyVBlog.system.domain.SysForm;
 
 /**
@@ -8,7 +9,7 @@ import com.wdyVBlog.system.domain.SysForm;
  * @author XuanXuan Xuan
  * @date 2021-04-03
  */
-public interface ISysFormService 
+public interface ISysFormService extends IService<SysForm>
 {
     /**
      * 查询流程表单
@@ -24,7 +25,7 @@ public interface ISysFormService
      * @param sysForm 流程表单
      * @return 流程表单集合
      */
-    public List<SysForm> selectSysFormList(SysForm sysForm);
+    public PageResult<SysForm> selectSysFormList(SysForm sysForm);
 
     /**
      * 新增流程表单

@@ -1,8 +1,6 @@
 package com.wdyVBlog.web.controller.system;
 
-import java.io.IOException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -12,15 +10,17 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import com.wdyVBlog.common.annotation.Log;
-import com.wdyVBlog.common.config.WdyVBlogConfig;
+import com.wdyVBlog.common.config.ProjectConfig;
+import com.wdyVBlog.common.constant.UserConstants;
 import com.wdyVBlog.common.core.controller.BaseController;
 import com.wdyVBlog.common.core.domain.AjaxResult;
 import com.wdyVBlog.common.core.domain.entity.SysUser;
 import com.wdyVBlog.common.core.domain.model.LoginUser;
 import com.wdyVBlog.common.enums.BusinessType;
 import com.wdyVBlog.common.utils.SecurityUtils;
-import com.wdyVBlog.common.utils.ServletUtils;
+import com.wdyVBlog.common.utils.StringUtils;
 import com.wdyVBlog.common.utils.file.FileUploadUtils;
+import com.wdyVBlog.common.utils.file.MimeTypeUtils;
 import com.wdyVBlog.framework.web.service.TokenService;
 import com.wdyVBlog.system.service.ISysUserService;
 
@@ -45,7 +45,7 @@ public class SysProfileController extends BaseController
     @GetMapping
     public AjaxResult profile()
     {
-        LoginUser loginUser = tokenService.getLoginUser(ServletUtils.getRequest());
+        LoginUser loginUser = getLoginUser();
         SysUser user = loginUser.getUser();
         AjaxResult ajax = AjaxResult.success(user);
         ajax.put("roleGroup", userService.selectUserRoleGroup(loginUser.getUsername()));
@@ -58,17 +58,32 @@ public class SysProfileController extends BaseController
      */
     @Log(title = "个人信息", businessType = BusinessType.UPDATE)
     @PutMapping
-    @PreAuthorize("@ss.hasPermi('system:user:updateProfile')")
     public AjaxResult updateProfile(@RequestBody SysUser user)
     {
+        LoginUser loginUser = getLoginUser();
+        SysUser sysUser = loginUser.getUser();
+        user.setUserName(sysUser.getUserName());
+        if (StringUtils.isNotEmpty(user.getPhonenumber())
+                && UserConstants.NOT_UNIQUE.equals(userService.checkPhoneUnique(user)))
+        {
+            return AjaxResult.error("修改用户'" + user.getUserName() + "'失败，手机号码已存在");
+        }
+        if (StringUtils.isNotEmpty(user.getEmail())
+                && UserConstants.NOT_UNIQUE.equals(userService.checkEmailUnique(user)))
+        {
+            return AjaxResult.error("修改用户'" + user.getUserName() + "'失败，邮箱账号已存在");
+        }
+        user.setUserId(sysUser.getUserId());
+        user.setPassword(null);
+        user.setAvatar(null);
+        user.setDeptId(null);
         if (userService.updateUserProfile(user) > 0)
         {
-            LoginUser loginUser = tokenService.getLoginUser(ServletUtils.getRequest());
             // 更新缓存用户信息
-            loginUser.getUser().setNickName(user.getNickName());
-            loginUser.getUser().setPhonenumber(user.getPhonenumber());
-            loginUser.getUser().setEmail(user.getEmail());
-            loginUser.getUser().setSex(user.getSex());
+            sysUser.setNickName(user.getNickName());
+            sysUser.setPhonenumber(user.getPhonenumber());
+            sysUser.setEmail(user.getEmail());
+            sysUser.setSex(user.getSex());
             tokenService.setLoginUser(loginUser);
             return AjaxResult.success();
         }
@@ -79,11 +94,10 @@ public class SysProfileController extends BaseController
      * 重置密码
      */
     @Log(title = "个人信息", businessType = BusinessType.UPDATE)
-    @PreAuthorize("@ss.hasPermi('system:user:updatePwd')")
     @PutMapping("/updatePwd")
     public AjaxResult updatePwd(String oldPassword, String newPassword)
     {
-        LoginUser loginUser = tokenService.getLoginUser(ServletUtils.getRequest());
+        LoginUser loginUser = getLoginUser();
         String userName = loginUser.getUsername();
         String password = loginUser.getPassword();
         if (!SecurityUtils.matchesPassword(oldPassword, password))
@@ -109,12 +123,12 @@ public class SysProfileController extends BaseController
      */
     @Log(title = "用户头像", businessType = BusinessType.UPDATE)
     @PostMapping("/avatar")
-    public AjaxResult avatar(@RequestParam("avatarfile") MultipartFile file) throws IOException
+    public AjaxResult avatar(@RequestParam("avatarfile") MultipartFile file) throws Exception
     {
         if (!file.isEmpty())
         {
-            LoginUser loginUser = tokenService.getLoginUser(ServletUtils.getRequest());
-            String avatar = FileUploadUtils.upload(WdyVBlogConfig.getAvatarPath(), file);
+            LoginUser loginUser = getLoginUser();
+            String avatar = FileUploadUtils.upload(ProjectConfig.getAvatarPath(), file, MimeTypeUtils.IMAGE_EXTENSION);
             if (userService.updateUserAvatar(loginUser.getUsername(), avatar))
             {
                 AjaxResult ajax = AjaxResult.success();

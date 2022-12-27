@@ -1,6 +1,7 @@
 package com.wdyVBlog.quartz.service;
 
-import java.util.List;
+import com.baomidou.mybatisplus.extension.service.IService;
+import com.wdyVBlog.common.utils.PageResult;
 import org.quartz.SchedulerException;
 import com.wdyVBlog.common.exception.job.TaskException;
 import com.wdyVBlog.quartz.domain.SysJob;
@@ -10,7 +11,7 @@ import com.wdyVBlog.quartz.domain.SysJob;
  * 
  * @author wdy
  */
-public interface ISysJobService
+public interface ISysJobService extends IService<SysJob>
 {
     /**
      * 获取quartz调度器的计划任务
@@ -18,7 +19,7 @@ public interface ISysJobService
      * @param job 调度信息
      * @return 调度任务集合
      */
-    public List<SysJob> selectJobList(SysJob job);
+    public PageResult<SysJob> selectJobList(SysJob job);
 
     /**
      * 通过调度任务ID查询调度信息
@@ -74,7 +75,7 @@ public interface ISysJobService
      * @param job 调度信息
      * @return 结果
      */
-    public void run(SysJob job) throws SchedulerException;
+    public boolean run(SysJob job) throws SchedulerException;
 
     /**
      * 新增任务

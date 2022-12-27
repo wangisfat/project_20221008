@@ -1,6 +1,8 @@
 package com.wdyVBlog.system.mapper;
 
 import java.util.List;
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.wdyVBlog.system.domain.SysOperLog;
 
 /**
@@ -8,7 +10,7 @@ import com.wdyVBlog.system.domain.SysOperLog;
  * 
  * @author wdy
  */
-public interface SysOperLogMapper
+public interface SysOperLogMapper extends BaseMapper<SysOperLog>
 {
     /**
      * 新增操作日志
