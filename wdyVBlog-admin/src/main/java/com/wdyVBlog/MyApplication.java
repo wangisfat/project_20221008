@@ -19,6 +19,16 @@ public class MyApplication
     {
         // System.setProperty("spring.devtools.restart.enabled", "false");
         SpringApplication.run(MyApplication.class, args);
-        log.info("start success!");
+        System.out.println("启动成功  \n" +
+                "  　　　　　　 ＿＿＿\n" +
+                "  　　　　　／＞　　フ ＼\n" +
+                "  　　　　　|  　_　 _ l\n" +
+                "  　 　　　／  ミ＿xノ\n" +
+                "  　　 　 /　　　 　 |\n" +
+                "  　　　 /　 ヽ　　 ﾉ\n" +
+                "  　 　 │　　|　|　|\n" +
+                "  　／￣|　　 |　|　|\n" +
+                "  　| (￣ヽ＿_ヽ_)__)\n" +
+                "  　＼二つ");
     }
 }

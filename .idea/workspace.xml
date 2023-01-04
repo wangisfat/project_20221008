@@ -4,9 +4,372 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="073aacaf-babf-4bb8-86c4-2815c1db79bb" name="Changes" comment="项目去除若依化">
+    <list default="true" id="073aacaf-babf-4bb8-86c4-2815c1db79bb" name="Changes" comment="BUG修复">
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/.env.development" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/.env.production" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/.env.staging" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/.eslintignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/.eslintrc.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/babel.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/bin/build.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/bin/package.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/bin/run-web.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/build/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/public/html/ie.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/App.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/api/flowable/definition.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/api/flowable/finished.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/api/flowable/form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/api/flowable/process.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/api/flowable/todo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/api/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/api/menu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/api/monitor/cache.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/api/monitor/job.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/api/monitor/jobLog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/api/monitor/logininfor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/api/monitor/online.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/api/monitor/operlog.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/api/monitor/server.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/api/system/config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/api/system/dept.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/api/system/dict/data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/api/system/dict/type.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/api/system/menu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/api/system/notice.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/api/system/post.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/api/system/role.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/api/system/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/api/tool/gen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/401_images/401.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/404_images/404.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/404_images/404_cloud.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/404.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/bug.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/build.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/button.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/cascader.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/chart.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/checkbox.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/clipboard.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/code.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/color.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/component.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/dashboard.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/date-range.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/date.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/dict.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/documentation.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/download.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/drag.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/druid.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/edit.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/education.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/email.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/example.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/excel.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/exit-fullscreen.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/eye-open.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/eye.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/form.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/fullscreen.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/github.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/guide.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/input.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/international.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/job.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/language.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/link.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/list.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/lock.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/log.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/logininfor.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/message.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/money.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/monitor.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/nested.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/number.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/online.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/password.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/pdf.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/people.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/peoples.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/phone.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/post.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/qq.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/question.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/radio.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/rate.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/redis-list.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/redis.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/row.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/search.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/select.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/server.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/shopping.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/size.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/skill.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/slider.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/star.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/swagger.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/switch.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/system.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/tab.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/table.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/textarea.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/theme.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/time-range.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/time.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/tool.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/tree-table.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/tree.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/upload.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/user.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/validCode.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/wechat.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svg/zip.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/icons/svgo.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/images/dark.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/images/light.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/images/login-background.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/images/profile.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/logo/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/styles/btn.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/styles/element-ui.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/styles/element-variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/styles/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/styles/mixin.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/styles/ruoyi.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/styles/sidebar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/styles/transition.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/assets/styles/variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/BpmnViewer/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/BpmnViewer/src/BpmnViewer.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/Breadcrumb/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/Crontab/day.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/Crontab/hour.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/Crontab/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/Crontab/min.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/Crontab/month.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/Crontab/result.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/Crontab/second.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/Crontab/week.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/Crontab/year.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/DictData/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/DictTag/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/Editor/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/FileUpload/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/Hamburger/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/HeaderSearch/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/IconSelect/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/IconSelect/requireIcons.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/ImagePreview/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/ImageUpload/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/Pagination/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/PanThumb/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/ParentView/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/Process/BpmData.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/Process/PropertyPanel.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/Process/common/customTranslate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/Process/common/mixinExecutionListener.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/Process/common/mixinPanel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/Process/common/mixinXcrud.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/Process/common/parseElement.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/Process/components/custom/customContextPad.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/Process/components/nodePanel/gateway.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/Process/components/nodePanel/process.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/Process/components/nodePanel/property/executionListener.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/Process/components/nodePanel/property/listenerParam.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/Process/components/nodePanel/property/multiInstance.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/Process/components/nodePanel/property/signal.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/Process/components/nodePanel/property/taskListener.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/Process/components/nodePanel/sequenceFlow.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/Process/components/nodePanel/startEnd.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/Process/components/nodePanel/task.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/Process/flowable/flowable.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/Process/flowable/init.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/Process/flowable/showConfig.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/Process/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/Process/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/Process/lang/zh.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/RightPanel/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/RightToolbar/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/RuoYi/Doc/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/RuoYi/Git/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/Screenfull/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/SizeSelect/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/SvgIcon/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/ThemePicker/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/TopNav/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/customBpmn/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/iFrame/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/parser/Parser.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/parser/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/parser/example/Index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/parser/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/parser/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/render/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/render/render.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/render/slots/el-button.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/render/slots/el-checkbox-group.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/render/slots/el-input.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/render/slots/el-radio-group.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/render/slots/el-select.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/render/slots/el-upload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/tinymce/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/tinymce/config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/tinymce/example/Index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/tinymce/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/tinymce/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/tinymce/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/components/tinymce/zh_CN.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/directive/dialog/drag.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/directive/dialog/dragHeight.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/directive/dialog/dragWidth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/directive/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/directive/module/clipboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/directive/permission/hasPermi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/directive/permission/hasRole.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/layout/components/AppMain.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/layout/components/IframeToggle/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/layout/components/InnerLink/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/layout/components/Navbar.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/layout/components/Settings/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/layout/components/Sidebar/FixiOSBug.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/layout/components/Sidebar/Item.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/layout/components/Sidebar/Link.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/layout/components/Sidebar/Logo.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/layout/components/Sidebar/SidebarItem.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/layout/components/Sidebar/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/layout/components/TagsView/ScrollPane.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/layout/components/TagsView/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/layout/components/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/layout/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/layout/mixin/ResizeHandler.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/permission.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/plugins/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/plugins/cache.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/plugins/download.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/plugins/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/plugins/modal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/plugins/tab.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/router/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/settings.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/store/getters.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/store/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/store/modules/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/store/modules/dict.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/store/modules/permission.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/store/modules/settings.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/store/modules/tagsView.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/store/modules/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/styles/home.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/styles/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/styles/mixin.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/utils/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/utils/db.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/utils/dict/Dict.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/utils/dict/DictConverter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/utils/dict/DictData.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/utils/dict/DictMeta.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/utils/dict/DictOptions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/utils/dict/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/utils/errorCode.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/utils/generator/config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/utils/generator/css.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/utils/generator/drawingDefalut.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/utils/generator/html.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/utils/generator/icon.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/utils/generator/js.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/utils/generator/render.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/utils/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/utils/jsencrypt.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/utils/loadBeautifier.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/utils/loadMonaco.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/utils/loadScript.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/utils/loadTinymce.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/utils/permission.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/utils/pluginsConfig.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/utils/request.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/utils/ruoyi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/utils/scroll-to.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/utils/validate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/components/icons/element-icons.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/components/icons/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/components/icons/svg-icons.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/dashboard/BarChart.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/dashboard/LineChart.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/dashboard/PanelGroup.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/dashboard/PieChart.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/dashboard/RaddarChart.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/dashboard/mixins/resize.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/error/401.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/error/404.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/flowable/definition/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/flowable/definition/model.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/flowable/task/finished/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/flowable/task/form/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/flowable/task/process/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/flowable/task/record/flow.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/flowable/task/record/flowview.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/flowable/task/record/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/flowable/task/todo/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/index_v1.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/login.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/monitor/cache/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/monitor/cache/list.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/monitor/druid/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/monitor/job/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/monitor/job/log.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/monitor/logininfor/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/monitor/online/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/monitor/operlog/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/monitor/server/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/redirect.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/register.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/system/config/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/system/dept/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/system/dict/data.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/system/dict/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/system/menu/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/system/notice/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/system/post/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/system/role/authUser.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/system/role/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/system/role/selectUser.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/system/user/authRole.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/system/user/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/system/user/profile/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/system/user/profile/resetPwd.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/system/user/profile/userAvatar.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/system/user/profile/userInfo.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/tool/build/App.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/tool/build/CodeTypeDialog.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/tool/build/DraggableItem.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/tool/build/FormDrawer.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/tool/build/IconsDialog.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/tool/build/JsonDrawer.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/tool/build/ResourceDialog.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/tool/build/RightPanel.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/tool/build/TreeNodeDialog.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/tool/build/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/tool/build/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/src/views/tool/swagger/index.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wdyVBlog_ui/vue.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/config/ApplicationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-framework/src/main/java/com/wdyVBlog/framework/config/ApplicationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/src/main/java/com/wdyVBlog/MyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-admin/src/main/java/com/wdyVBlog/MyApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wdyVBlog-admin/src/main/resources/banner.txt" beforeDir="false" afterPath="$PROJECT_DIR$/wdyVBlog-admin/src/main/resources/banner.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +414,7 @@
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "MavenSettings",
     "show.run.dashboard.notification": "false",
-    "spring.configuration.checksum": "2ab45b2244d7ef91222ad05255d91584",
+    "spring.configuration.checksum": "ba2ec20689ab9a0030cc34975a94a020",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -80,7 +443,9 @@
       <workItem from="1671788556564" duration="307000" />
       <workItem from="1672038650730" duration="755000" />
       <workItem from="1672039431444" duration="4218000" />
-      <workItem from="1672131185991" duration="3082000" />
+      <workItem from="1672131185991" duration="5621000" />
+      <workItem from="1672190944080" duration="3885000" />
+      <workItem from="1672821233032" duration="1326000" />
     </task>
     <task id="LOCAL-00001" summary="项目初始化">
       <created>1672040339745</created>
@@ -96,7 +461,21 @@
       <option name="project" value="LOCAL" />
       <updated>1672133861399</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="BUG修复">
+      <created>1672134303167</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1672134303167</updated>
+    </task>
+    <task id="LOCAL-00004" summary="BUG修复">
+      <created>1672134430952</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1672134430952</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,6 +508,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="项目初始化" />
     <MESSAGE value="项目去除若依化" />
-    <option name="LAST_COMMIT_MESSAGE" value="项目去除若依化" />
+    <MESSAGE value="BUG修复" />
+    <option name="LAST_COMMIT_MESSAGE" value="BUG修复" />
   </component>
 </project>
